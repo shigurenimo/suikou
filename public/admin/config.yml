@@ -3,6 +3,7 @@ backend:
   branch: master
 media_folder: public/uploads
 public_folder: /uploads
+locale: "ja"
 collections:
   - name: "class-posts"
     label: "授業"
