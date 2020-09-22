@@ -5,3 +5,5 @@ title: TEST
 title_jp: テスト
 ---
 テスト
+
+![](/uploads/blog.png)
