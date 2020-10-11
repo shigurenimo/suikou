@@ -1,12 +1,66 @@
 backend:
   name: git-gateway
   branch: master
+local_backend: true
 media_folder: public/uploads
 public_folder: /uploads
 locale: "ja"
+i18n:
+  structure: single_file
+  locales: ["ja", "en"]
+  default_locale: "ja"
 collections:
-  - name: "class-posts"
-    label: "授業"
+  - label: "書籍"
+    i18n: true
+    name: "books"
+    folder: "public/collections/books"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "URL"
+        name: "slug"
+        widget: "string"
+      - label: 本のタイトル
+        name: title
+        widget: string
+        i18n: true
+      - label: 画像ファイル
+        name: image_file
+        widget: "image"
+  - label: "メディア"
+    i18n: true
+    name: "media-posts"
+    folder: "public/collections/media-posts"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "URL"
+        name: "slug"
+        widget: "string"
+      - label: "執筆日"
+        name: "published_at"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "記事のタイトル"
+        name: title
+        widget: string
+        i18n: true
+      - label: "画像ファイル"
+        name: image_file
+        widget: "image"
+  - label: "授業"
+    i18n: true
+    name: "class-posts"
     folder: "public/collections/class-posts"
     extension: "md"
     format: "frontmatter"
@@ -24,12 +78,82 @@ collections:
         format: "YYYY-MM-DD"
         dateFormat: "YYYY-MM-DD"
         timeFormat: false
-      - label: "記事のタイトル（英語）"
+      - label: "記事のタイトル"
         name: "title"
         widget: "string"
-      - label: "記事のタイトル（日本語）"
-        name: "title_jp"
+        i18n: true
+      - label: "内容"
+        name: "body"
+        i18n: true
+        widget: "markdown"
+  - label: "フィードバック"
+    name: "feedbacks"
+    folder: "public/collections/feedbacks"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "URL"
+        name: "slug"
+        widget: "string"
+      - label: "執筆日"
+        name: "published_at"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "記事のタイトル"
+        name: "title"
         widget: "string"
       - label: "内容"
         name: "body"
         widget: "markdown"
+      - label: "コメント"
+        name: "comments"
+        widget: "list"
+        summary: "{{fields.comment}}"
+        field:
+          label: "コメント"
+          name: comment
+          widget: string
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "site/content/about.yml"
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Intro
+            name: intro
+            widget: markdown
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Position
+                name: position
+                widget: string
+              - label: Photo
+                name: photo
+                widget: image
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Address, name: address, widget: string }
