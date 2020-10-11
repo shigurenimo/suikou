@@ -49,8 +49,8 @@ collections:
         name: "published_at"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: "記事のタイトル"
         name: title
         widget: string
@@ -76,8 +76,8 @@ collections:
         name: "published_at"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: "記事のタイトル"
         name: "title"
         widget: "string"
@@ -103,8 +103,8 @@ collections:
         name: "published_at"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: "記事のタイトル"
         name: "title"
         widget: "string"
