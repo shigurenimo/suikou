@@ -21,7 +21,7 @@ collections:
     identifier_field: slug
     summary: "{{title}}"
     fields:
-      - label: "URL"
+      - label: "ID（英語）"
         name: "slug"
         widget: "string"
       - label: 本のタイトル
@@ -42,7 +42,7 @@ collections:
     identifier_field: slug
     summary: "{{title}}"
     fields:
-      - label: "URL"
+      - label: "ID"
         name: "slug"
         widget: "string"
       - label: "執筆日"
@@ -69,7 +69,7 @@ collections:
     identifier_field: slug
     summary: "{{title}}"
     fields:
-      - label: "URL"
+      - label: "ID"
         name: "slug"
         widget: "string"
       - label: "執筆日"
@@ -96,7 +96,7 @@ collections:
     identifier_field: slug
     summary: "{{title}}"
     fields:
-      - label: "URL"
+      - label: "ID（）"
         name: "slug"
         widget: "string"
       - label: "執筆日"
@@ -119,6 +119,40 @@ collections:
           label: "コメント"
           name: comment
           widget: string
+  - label: "お知らせ"
+    name: "news-post"
+    folder: "public/collections/news-posts"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "ID"
+        name: "slug"
+        widget: "string"
+      - label: "執筆日"
+        name: "published_at"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "記事のタイトル"
+        name: "title"
+        widget: "string"
+      - label: "内容"
+        name: "body"
+        widget: "markdown"
+      - label: "外部のリンク（任意）"
+        name: "external_url"
+        widget: "string"
+      - label: "画像ファイル（任意）"
+        name: image_file_a
+        widget: "image"
+      - label: "画像ファイル（任意）"
+        name: image_file_b
+        widget: "image"
   - label: "Pages"
     name: "pages"
     files:
