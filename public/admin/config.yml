@@ -1,193 +1,171 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: 'git-gateway'
+  branch: 'master'
 local_backend: true
-media_folder: public/uploads
-public_folder: /uploads
-locale: "ja"
-i18n:
-  structure: single_file
-  locales: ["ja", "en"]
-  default_locale: "ja"
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+site_url: 'https://suiko.netlify.com'
+display_url: 'https://suiko.netlify.com'
+show_preview_links: true
+locale: 'ja'
 collections:
-  - label: "書籍"
-    i18n: true
-    name: "books"
-    folder: "public/collections/books"
-    extension: "md"
-    format: "frontmatter"
+  - name: 'news-post'
+    label: 'お知らせ'
+    folder: 'public/collections/news-posts'
+    extension: 'md'
+    format: 'frontmatter'
     create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
+    slug: '{{slug}}'
+    identifier_field: 'title_en'
+    summary: '{{title}} - {{date}}'
     fields:
-      - label: "ID（英語）"
-        name: "slug"
-        widget: "string"
-      - label: 本のタイトル
-        name: title
-        widget: string
-        i18n: true
-      - label: 画像ファイル
-        name: image_file
-        widget: "image"
-  - label: "メディア"
-    i18n: true
-    name: "media-posts"
-    folder: "public/collections/media-posts"
-    extension: "md"
-    format: "frontmatter"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
-    fields:
-      - label: "ID"
-        name: "slug"
-        widget: "string"
-      - label: "執筆日"
-        name: "published_at"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        date_format: "YYYY-MM-DD"
+      - name: 'title'
+        label: '記事のタイトル'
+        widget: 'string'
+      - name: 'title_en'
+        label: '記事のタイトル（英語）'
+        widget: 'string'
+      - name: 'date'
+        label: '執筆日'
+        widget: 'datetime'
+        format: 'YYYY-MM-DD'
+        date_format: 'YYYY-MM-DD'
         time_format: false
-      - label: "記事のタイトル"
-        name: title
-        widget: string
-        i18n: true
-      - label: "画像ファイル"
-        name: image_file
-        widget: "image"
-  - label: "授業"
-    i18n: true
-    name: "class-posts"
-    folder: "public/collections/class-posts"
-    extension: "md"
-    format: "frontmatter"
+      - name: 'body'
+        label: '内容'
+        widget: 'markdown'
+      - name: 'external_url'
+        label: '外部のリンク（任意）'
+        widget: 'string'
+      - name: 'image'
+        label: '画像ファイル（任意）'
+        widget: 'image'
+      - name: 'image_a'
+        label: '更に画像ファイル（任意）'
+        widget: 'image'
+  - label: 'メディア'
+    name: 'media-posts'
+    folder: 'public/collections/media-posts'
+    extension: 'md'
+    format: 'frontmatter'
     create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
+    slug: '{{slug}}'
+    identifier_field: 'title_en'
+    summary: '{{title}} - {{date}}'
     fields:
-      - label: "ID"
-        name: "slug"
-        widget: "string"
-      - label: "執筆日"
-        name: "published_at"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        date_format: "YYYY-MM-DD"
+      - name: 'title'
+        label: '記事のタイトル'
+        widget: 'string'
+      - name: title_en
+        label: '記事のタイトル（英語）'
+        widget: 'string'
+      - name: 'date'
+        label: '執筆日'
+        widget: 'datetime'
+        format: 'YYYY-MM-DD'
+        date_format: 'YYYY-MM-DD'
         time_format: false
-      - label: "記事のタイトル"
-        name: "title"
-        widget: "string"
-        i18n: true
-      - label: "内容"
-        name: "body"
-        i18n: true
-        widget: "markdown"
-  - label: "フィードバック"
-    name: "feedbacks"
-    folder: "public/collections/feedbacks"
-    extension: "md"
-    format: "frontmatter"
+      - name: 'image'
+        label: '画像ファイル'
+        widget: 'image'
+  - name: 'class-posts'
+    identifier_field: 'title_en'
+    label: '授業'
+    label_singular: '全ての授業'
+    description: 'eラーニングを公開しています。'
+    folder: 'public/collections/class-posts'
     create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
+    extension: 'md'
+    format: 'frontmatter'
+    preview_path: 'classes/'
+    slug: 'title_en'
+    summary: '{{title}} - {{date}}'
     fields:
-      - label: "ID（）"
-        name: "slug"
-        widget: "string"
-      - label: "執筆日"
-        name: "published_at"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        date_format: "YYYY-MM-DD"
+      - name: 'title'
+        label: '記事のタイトル（日本語）'
+        widget: 'string'
+      - name: 'title_en'
+        label: '記事のタイトル（英語）'
+        widget: 'string'
+      - name: 'date'
+        label: '執筆日'
+        widget: 'datetime'
+        format: 'YYYY-MM-DD'
+        date_format: 'YYYY-MM-DD'
         time_format: false
-      - label: "記事のタイトル"
-        name: "title"
-        widget: "string"
-      - label: "内容"
-        name: "body"
-        widget: "markdown"
-      - label: "コメント"
-        name: "comments"
-        widget: "list"
-        summary: "{{fields.comment}}"
-        field:
-          label: "コメント"
-          name: comment
-          widget: string
-  - label: "お知らせ"
-    name: "news-post"
-    folder: "public/collections/news-posts"
-    extension: "md"
-    format: "frontmatter"
+      - name: 'body'
+        label: '内容'
+        widget: 'markdown'
+  - name: 'feedbacks'
+    label: 'フィードバック'
+    folder: 'public/collections/feedbacks'
+    extension: 'md'
+    format: 'frontmatter'
     create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
+    slug: '{{slug}}'
+    identifier_field: 'title_en'
+    summary: '{{title}} - {{date}}'
     fields:
-      - label: "ID"
-        name: "slug"
-        widget: "string"
-      - label: "執筆日"
-        name: "published_at"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        date_format: "YYYY-MM-DD"
+      - name: 'title'
+        label: '記事のタイトル'
+        widget: 'string'
+      - name: 'title_en'
+        label: '記事のタイトル（英語）'
+        widget: 'string'
+      - name: 'date'
+        label: '執筆日'
+        widget: 'datetime'
+        format: 'YYYY-MM-DD'
+        date_format: 'YYYY-MM-DD'
         time_format: false
-      - label: "記事のタイトル"
-        name: "title"
-        widget: "string"
-      - label: "内容"
-        name: "body"
-        widget: "markdown"
-      - label: "外部のリンク（任意）"
-        name: "external_url"
-        widget: "string"
-      - label: "画像ファイル（任意）"
-        name: image_file_a
-        widget: "image"
-      - label: "画像ファイル（任意）"
-        name: image_file_b
-        widget: "image"
-  - label: "Pages"
-    name: "pages"
+      - name: 'body'
+        label: '内容'
+        widget: 'markdown'
+  - name: 'books'
+    label: '書籍'
+    create: true
+    extension: 'md'
+    preview_path: 'books/{{slug}}'
+    folder: 'public/collections/books'
+    format: 'frontmatter'
+    identifier_field: 'title_en'
+    summary: '{{title}}'
+    fields:
+      - name: 'title'
+        label: '本のタイトル（日本語）'
+        widget: 'string'
+      - name: 'title_en'
+        label: '本のタイトル（英語）'
+        widget: 'string'
+      - name: 'external_url'
+        label: '購入先のリンク'
+        widget: 'string'
+      - name: 'image'
+        label: '画像ファイル'
+        widget: 'image'
+  - name: 'pages'
+    label: 'その他ページ'
     files:
-      - label: "About Page"
-        name: "about"
-        file: "site/content/about.yml"
+      - name: 'about'
+        label: 'About Page'
+        file: 'site/content/about.yml'
         fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Intro
-            name: intro
-            widget: markdown
-          - label: Team
-            name: team
-            widget: list
+          - name: 'title'
+            label: 'Title'
+            widget: 'string'
+          - name: 'intro'
+            label: 'Intro'
+            widget: 'markdown'
+          - name: 'team'
+            label: 'Team'
+            widget: 'list'
             fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Position
-                name: position
-                widget: string
-              - label: Photo
-                name: photo
-                widget: image
-      - label: "Locations Page"
-        name: "locations"
-        file: "site/content/locations.yml"
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Address, name: address, widget: string }
+              - name: 'name'
+                label: 'Name'
+                widget: 'string'
+              - name: 'position'
+                label: 'Position'
+                widget: 'string'
+              - name: 'photo'
+                label: 'Photo'
+                widget: 'image'
