@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
+import { DivisionBackground } from '../home/DivisionBackground'
 
 type NewsPost = {
   date: string
@@ -28,6 +29,9 @@ const Index: FunctionComponent<Props> = ({ newsPosts }) => {
             <li key={post.id}>{post.title}</li>
           ))}
         </ul>
+      </section>
+      <section>
+        <DivisionBackground />
       </section>
       <p>{'Home'}</p>
     </main>
