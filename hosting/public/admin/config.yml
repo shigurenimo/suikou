@@ -2,16 +2,16 @@ backend:
   name: 'git-gateway'
   branch: 'master'
 local_backend: true
-media_folder: 'public/uploads'
+media_folder: 'hosting/public/uploads'
 public_folder: '/uploads'
-site_url: 'https://suiko.netlify.com'
-display_url: 'https://suiko.netlify.com'
+site_url: 'https://suikou.vercel.app'
+display_url: 'https://suikou.vercel.app'
 show_preview_links: true
 locale: 'ja'
 collections:
   - name: 'news-post'
     label: 'お知らせ'
-    folder: 'public/collections/news-posts'
+    folder: 'hosting/public/collections/news-posts'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -45,7 +45,7 @@ collections:
         widget: 'image'
   - label: 'メディア'
     name: 'media-posts'
-    folder: 'public/collections/media-posts'
+    folder: 'hosting/public/collections/media-posts'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -73,7 +73,7 @@ collections:
     label: '授業'
     label_singular: '全ての授業'
     description: 'eラーニングを公開しています。'
-    folder: 'public/collections/class-posts'
+    folder: 'hosting/public/collections/class-posts'
     create: true
     extension: 'md'
     format: 'frontmatter'
@@ -98,7 +98,7 @@ collections:
         widget: 'markdown'
   - name: 'feedbacks'
     label: 'フィードバック'
-    folder: 'public/collections/feedbacks'
+    folder: 'hosting/public/collections/feedbacks'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -126,7 +126,7 @@ collections:
     create: true
     extension: 'md'
     preview_path: 'books/{{slug}}'
-    folder: 'public/collections/books'
+    folder: 'hosting/public/collections/books'
     format: 'frontmatter'
     identifier_field: 'title_en'
     summary: '{{title}}'
