@@ -2,7 +2,37 @@ import { FunctionComponent } from 'react'
 
 export const DivisionBackground: FunctionComponent = () => {
   return (
-    <div>
+    <div
+      id={'background'}
+      className={'absolute top-0 bottom-0 flex justify-center items-center'}
+      style={{ zIndex: -1, left: '40%' }}
+    >
+      <div
+        className={'ball w-32 h-32 rounded-full absolute bg-red-400 opacity-25'}
+      />
+      <div
+        className={
+          'ball w-32 h-32 rounded-full absolute bg-purple-400 opacity-75'
+        }
+      />
+      <div
+        className={
+          'ball w-24 h-24 rounded-full absolute bg-blue-300 opacity-75'
+        }
+      />
+      <div
+        className={'ball w-32 h-32 rounded-full absolute bg-red-300 opacity-25'}
+      />
+      <div
+        className={
+          'ball w-32 h-32 rounded-full absolute bg-indigo-200 opacity-75'
+        }
+      />
+      <div
+        className={
+          'ball w-40 h-40 rounded-full absolute bg-indigo-300 opacity-75'
+        }
+      />
       <svg
         xmlns={'http://www.w3.org/2000/svg'}
         version={'1.1'}
@@ -31,42 +61,6 @@ export const DivisionBackground: FunctionComponent = () => {
           </filter>
         </defs>
       </svg>
-
-      <div
-        id={'background'}
-        className={'absolute inset-0 flex justify-center items-center'}
-      >
-        <div
-          className={
-            'ball w-32 h-32 rounded-full absolute bg-red-400 opacity-25'
-          }
-        />
-        <div
-          className={
-            'ball w-32 h-32 rounded-full absolute bg-purple-400 opacity-75'
-          }
-        />
-        <div
-          className={
-            'ball w-24 h-24 rounded-full absolute bg-blue-300 opacity-75'
-          }
-        />
-        <div
-          className={
-            'ball w-32 h-32 rounded-full absolute bg-red-300 opacity-25'
-          }
-        />
-        <div
-          className={
-            'ball w-32 h-32 rounded-full absolute bg-indigo-200 opacity-75'
-          }
-        />
-        <div
-          className={
-            'ball w-40 h-40 rounded-full absolute bg-indigo-300 opacity-75'
-          }
-        />
-      </div>
     </div>
   )
 }

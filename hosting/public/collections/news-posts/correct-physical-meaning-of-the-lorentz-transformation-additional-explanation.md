@@ -5,7 +5,6 @@ title: ローレンツ変換の正しい物理的意味 補遺バージョン
 image:
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
 ---
-
 仲座栄三 (Eizo NAKAZA)
 
 琉球大学工学部 社会基盤デザインコース

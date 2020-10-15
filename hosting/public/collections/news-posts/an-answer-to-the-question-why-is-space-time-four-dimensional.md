@@ -5,7 +5,6 @@ title: 物理学における不思議”なぜ時空は４次元か”に答え�
 image: "/uploads/4ae479e0925deee30b65dbfc7fa85982.pdf"
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
 ---
-
 仲座栄三 (Eizo NAKAZA)
 
 琉球大学工学部 社会基盤デザインコース

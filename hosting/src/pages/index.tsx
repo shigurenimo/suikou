@@ -1,17 +1,10 @@
+import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { DivisionBackground } from '../home/DivisionBackground'
-
-type NewsPost = {
-  date: string
-  title_en: string
-  title: string
-  image: string | null
-  external_url: string | null
-  content: string | null
-  id: string
-}
+import { DivisionPost } from '../home/DivisionPost'
+import { SectionHome } from '../home/SectionHome'
+import { NewsPost } from '../types/newsPost'
 
 type Props = {
   newsPosts: NewsPost[]
@@ -19,21 +12,20 @@ type Props = {
 
 const Index: FunctionComponent<Props> = ({ newsPosts }) => {
   return (
-    <main>
+    <main className={'p-4 md:p-8'}>
       <Head>
         <title>Create Next App</title>
       </Head>
+      <SectionHome />
       <section>
-        <ul>
-          {newsPosts.map((post) => (
-            <li key={post.id}>{post.title}</li>
+        <ul className={'max-w-screen-xl mx-auto w-full'}>
+          {newsPosts.map((post, i) => (
+            <li className={clsx(i !== 0 && 'pt-4 md:pt-16')} key={post.id}>
+              <DivisionPost post={post} />
+            </li>
           ))}
         </ul>
       </section>
-      <section>
-        <DivisionBackground />
-      </section>
-      <p>{'Home'}</p>
     </main>
   )
 }

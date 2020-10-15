@@ -2,7 +2,9 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
 
-export const readContents = async <T>(collectionName: string) => {
+export const readContents = async <T extends { date: string }>(
+  collectionName: string
+) => {
   const fileNames = await fs.readdir(
     join('public', 'collections', collectionName)
   )
@@ -26,10 +28,12 @@ export const readContents = async <T>(collectionName: string) => {
 
     const data = file.data as T
 
-    const content = file.content as string
+    const content = file.content.trim() as string
 
     contents.push({ ...data, content, id })
   }
 
-  return contents
+  return contents.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
 }
