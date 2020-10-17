@@ -1,14 +1,86 @@
 backend:
   name: 'git-gateway'
-  branch: 'master'
+  branch: 'main'
 local_backend: true
 media_folder: 'hosting/public/uploads'
 public_folder: '/uploads'
-site_url: 'https://suikou.vercel.app'
-display_url: 'https://suikou.vercel.app'
-show_preview_links: true
+site_url: 'https://suikou.netlify.app'
+display_url: 'https://suikou.netlify.app'
 locale: 'ja'
 collections:
+  - name: 'pages'
+    label: '固定ページ'
+    format: 'frontmatter'
+    files:
+      - name: 'about'
+        label: '研究室について'
+        file: 'hosting/public/collections/pages/about.md'
+        editor:
+          preview: false
+        fields:
+          - name: title
+            label: 'タイトル'
+            widget: 'string'
+          - name: body
+            label: '内容'
+            widget: 'markdown'
+      - name: 'access'
+        label: 'アクセス'
+        file: 'hosting/public/collections/pages/access.md'
+        editor:
+          preview: false
+        fields:
+          - name: title
+            label: 'タイトル'
+            widget: 'string'
+          - name: 'body'
+            label: '内容'
+            widget: 'markdown'
+      - name: 'nakaza'
+        label: '私について'
+        file: 'hosting/public/collections/pages/nakaza.md'
+        fields:
+          - name: name
+            label: 名前（日本語）
+            widget: 'string'
+          - name: name_en
+            label: 名前（英語）
+            widget: 'string'
+          - name: description
+            label: 説明（日本語）
+            widget: 'text'
+          - name: description_en
+            label: 説明（英語）
+            widget: 'text'
+          - name: url
+            label: 関連するURL
+            widget: 'string'
+          - name: email
+            label: メールアドレス
+            widget: 'string'
+          - name: histories
+            label: 略歴
+            widget: list
+            allow_add: true
+            collapsed: false
+            summary: '{{text}}'
+            fields:
+              - name: year
+                label: '年'
+                widget: number
+              - name: text
+                widget: 'string'
+                label: '内容（日本語）'
+              - name: text_en
+                widget: 'string'
+                label: '内容（英語）'
+      - name: 'project'
+        label: '研究・プロジェクト'
+        file: 'hosting/public/collections/pages/project.md'
+        fields:
+          - name: title
+            label: 研究タイトル（日本語）
+            widget: 'string'
   - name: 'news-post'
     label: 'お知らせ'
     folder: 'hosting/public/collections/news-posts'
@@ -16,6 +88,8 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -50,6 +124,8 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -79,6 +155,8 @@ collections:
     format: 'frontmatter'
     preview_path: 'classes/'
     slug: 'title_en'
+    editor:
+      preview: false
     summary: '{{title}} - {{date}}'
     fields:
       - name: 'title'
@@ -103,6 +181,8 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -137,35 +217,27 @@ collections:
       - name: 'title_en'
         label: '本のタイトル（英語）'
         widget: 'string'
-      - name: 'external_url'
+      - name: 'url'
         label: '購入先のリンク'
         widget: 'string'
       - name: 'image'
         label: '画像ファイル'
         widget: 'image'
-  - name: 'pages'
-    label: 'その他ページ'
-    files:
-      - name: 'about'
-        label: 'About Page'
-        file: 'site/content/about.yml'
-        fields:
-          - name: 'title'
-            label: 'Title'
-            widget: 'string'
-          - name: 'intro'
-            label: 'Intro'
-            widget: 'markdown'
-          - name: 'team'
-            label: 'Team'
-            widget: 'list'
-            fields:
-              - name: 'name'
-                label: 'Name'
-                widget: 'string'
-              - name: 'position'
-                label: 'Position'
-                widget: 'string'
-              - name: 'photo'
-                label: 'Photo'
-                widget: 'image'
+  - name: 'ozaki-posts'
+    label: '尾崎次郎基金'
+    create: false
+    extension: 'md'
+    folder: 'hosting/public/collections/ozaki-posts'
+    format: 'frontmatter'
+    identifier_field: 'slug'
+    summary: '{{title}}'
+    fields:
+      - name: 'slug'
+        label: 'ID'
+        widget: 'string'
+      - name: 'title'
+        label: 'タイトル（日本語）'
+        widget: 'string'
+      - name: 'body'
+        label: '内容'
+        widget: 'markdown'

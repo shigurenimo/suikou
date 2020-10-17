@@ -1,7 +1,7 @@
 ---
 title: 相対性原理に拠る相対性理論
 title_en: Relativity
-external_url: https://www.amazon.co.jp/相対性原理に拠る相対性理論-仲座栄三/dp/4899822111
+url: https://www.amazon.co.jp/相対性原理に拠る相対性理論-仲座栄三/dp/4899822111
 image: "/uploads/818SZGXWuUL-1.jpg"
 ---
 

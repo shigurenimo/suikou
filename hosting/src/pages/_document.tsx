@@ -22,7 +22,7 @@ class MyDocument extends Document {
             rel={'stylesheet'}
           />
         </Head>
-        <body>
+        <body className={'p-4 md:p-8'}>
           <Main />
           <NextScript />
         </body>

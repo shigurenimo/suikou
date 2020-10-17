@@ -1,7 +1,7 @@
 ---
 title: 新・相対性理論
 title_en: New theory of relativity
-external_url: https://www.amazon.co.jp/新・相対性理論-仲座栄三/dp/4899822855
+url: https://www.amazon.co.jp/新・相対性理論-仲座栄三/dp/4899822855
 image: "/uploads/711uFuEcWbL.jpg"
 ---
 

@@ -2,30 +2,26 @@ import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { DivisionPost } from '../home/DivisionPost'
 import { SectionHome } from '../home/SectionHome'
-import { NewsPost } from '../types/newsPost'
+import { CardPost } from '../post/CardPost'
+import { Post } from '../types/post'
 
-type Props = {
-  newsPosts: NewsPost[]
-}
+type Props = { posts: Post[] }
 
-const Index: FunctionComponent<Props> = ({ newsPosts }) => {
+const Index: FunctionComponent<Props> = ({ posts }) => {
   return (
-    <main className={'p-4 md:p-8'}>
+    <main>
       <Head>
-        <title>Create Next App</title>
+        <title>{'ホーム'}</title>
       </Head>
       <SectionHome />
-      <section>
-        <ul className={'max-w-screen-xl mx-auto w-full'}>
-          {newsPosts.map((post, i) => (
-            <li className={clsx(i !== 0 && 'pt-4 md:pt-16')} key={post.id}>
-              <DivisionPost post={post} />
-            </li>
-          ))}
-        </ul>
-      </section>
+      <ul className={'max-w-screen-xl mx-auto w-full'}>
+        {posts.map((post, i) => (
+          <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
+            <CardPost post={post} />
+          </li>
+        ))}
+      </ul>
     </main>
   )
 }
@@ -33,11 +29,15 @@ const Index: FunctionComponent<Props> = ({ newsPosts }) => {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { readContents } = await import('../helpers/readContents')
 
-  const newsPosts = await readContents<NewsPost>('news-posts')
+  const newsPosts = await readContents<Post>('news-posts')
 
-  return {
-    props: { newsPosts },
-  }
+  const mediaPosts = await readContents<Post>('media-posts')
+
+  const posts = [...newsPosts, ...mediaPosts].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
+
+  return { props: { posts } }
 }
 
 export default Index

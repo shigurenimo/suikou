@@ -1,7 +1,7 @@
 ---
 title: 新・弾性理論
 title_en: New theory of flasticity
-external_url: https://www.amazon.co.jp/新・弾性理論-仲座-栄三/dp/4899821883
+url: https://www.amazon.co.jp/新・弾性理論-仲座-栄三/dp/4899821883
 image: "/uploads/71tnADDz8IL.jpg"
 ---
 

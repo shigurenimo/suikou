@@ -2,8 +2,8 @@ import { FunctionComponent } from 'react'
 
 export const Footer: FunctionComponent = () => {
   return (
-    <footer className={'p-4 md:p-8 grid gap-y-1'}>
-      <p>{'FOOTER'}</p>
+    <footer className={'mt-4'}>
+      <p className={'text-sm'}>{'© 2016 - 2020 suikou.io'}</p>
     </footer>
   )
 }

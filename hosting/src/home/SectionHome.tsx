@@ -4,7 +4,7 @@ import { DivisionBackground } from './SectionBackground'
 export const SectionHome: FunctionComponent = () => {
   return (
     <div
-      className={'p-4 relative flex justify-center items-center'}
+      className={'relative flex justify-center items-center'}
       style={{ height: '40vh' }}
     >
       <DivisionBackground />

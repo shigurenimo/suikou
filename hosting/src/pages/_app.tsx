@@ -1,15 +1,13 @@
 import { AppProps } from 'next/app'
 import React, { FunctionComponent } from 'react'
-import { Footer } from '../layout/Footer'
-import { Header } from '../layout/Header'
+import { Aside } from '../layout/Aside'
 import '../styles/index.css'
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <Header />
+      <Aside />
       <Component {...pageProps} />
-      <Footer />
     </>
   )
 }

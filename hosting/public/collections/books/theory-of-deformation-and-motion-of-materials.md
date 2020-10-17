@@ -1,8 +1,8 @@
 ---
 title: 物質の変形と運動の理論
 title_en: Theory of deformation and motion of materials
-external_url: https://www.amazon.co.jp/物質の変形と運動の理論-仲座-栄三/dp/4899820909
-image: "41l6YybHtkL._SL500_.jpg"
+url: https://www.amazon.co.jp/物質の変形と運動の理論-仲座-栄三/dp/4899820909
+image: "/uploads/41l6YybHtkL._SL500_.jpg"
 ---
 
 Hooke の法則が材料の等方質を仮定するとき、いかように一般化されるか。流体の粘性法則は、どう一般化されるか。流体や弾性体の構成方程式および運動の支配方程式に物理的疑義を投じ、新しい構成方程式を示し検証する。
