@@ -6,8 +6,6 @@ import { LinkAnchor } from './LinkAnchor'
 export const Aside: FunctionComponent = () => {
   const { pathname } = useRouter()
 
-  console.log(pathname)
-
   return (
     <aside className={'w-full max-w-xs hidden md:block'}>
       <div className={'fixed w-full max-w-xs'}>
