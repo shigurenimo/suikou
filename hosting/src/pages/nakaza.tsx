@@ -12,10 +12,6 @@ type Props = {
 }
 
 const Nakaza: FunctionComponent<Props> = ({ nakazaPage, projectPage }) => {
-  const histories = [...nakazaPage.histories]
-
-  histories.reverse()
-
   return (
     <Main>
       <Head>
@@ -35,7 +31,7 @@ const Nakaza: FunctionComponent<Props> = ({ nakazaPage, projectPage }) => {
             <div className={'border px-4 pt-4 rounded-lg mt-4 md:mt-8'}>
               <h2 className={'font-bold text-lg'}>{'略歴'}</h2>
               <ul className={'divide-y'}>
-                {histories.map((history, index) => (
+                {nakazaPage.histories.map((history, index) => (
                   <li className={'py-4'} key={index}>
                     <div>
                       <span className={'font-bold'}>{history.year}</span>
@@ -76,7 +72,13 @@ const Nakaza: FunctionComponent<Props> = ({ nakazaPage, projectPage }) => {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { readMdFile } = await import('../helpers/readMdFile')
 
-  const nakazaPage = await readMdFile<NakazaPage>('pages', 'nakaza')
+  const unsoetedNakazaPage = await readMdFile<NakazaPage>('pages', 'nakaza')
+
+  const histories = [...unsoetedNakazaPage.histories]
+
+  histories.reverse()
+
+  const nakazaPage = { ...unsoetedNakazaPage, histories }
 
   const projectPage = await readMdFile<ProjectPage>('pages', 'project')
 
