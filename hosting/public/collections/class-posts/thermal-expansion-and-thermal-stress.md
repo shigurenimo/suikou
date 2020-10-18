@@ -1,5 +1,5 @@
 ---
-date: 2010/01/01
+date: 1970/01/01
 title_en: Thermal Expansion and Thermal Stress
 title: 熱膨張と熱応力
 ---

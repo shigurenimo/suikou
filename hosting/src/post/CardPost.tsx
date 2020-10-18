@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Post } from '../types/post'
+import { NewsPost } from '../types/newsPost'
 import { AnchorURL } from './AnchorURL'
 import { DivisionImage } from './DivisionImage'
 
-type Props = { post: Post }
+type Props = { post: NewsPost }
 
 export const CardPost: FunctionComponent<Props> = ({ post }) => {
   const hasPDF = post.image && post.image.includes('pdf')

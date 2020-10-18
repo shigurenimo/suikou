@@ -1,4 +1,9 @@
-html,
 body {
-  color: coral;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ',
+    Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
 }

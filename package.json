@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev:hosting": "yarn workspace hosting dev",
-    "build:netlify": "yarn workspace hosting build & yarn workspace hosting export",
+    "build:netlify": "echo 0",
     "dev:netlify": "npx netlify-cms-proxy-server"
   },
   "devDependencies": {

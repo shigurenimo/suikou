@@ -2,12 +2,13 @@ import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { List } from '../../layout/List'
-import { Main } from '../../layout/Main'
+import { HeadingPage } from '../../core/HeadingPage'
+import { List } from '../../core/List'
+import { Main } from '../../core/Main'
 import { CardPost } from '../../post/CardPost'
-import { Post } from '../../types/post'
+import { NewsPost } from '../../types/newsPost'
 
-type Props = { posts: Post[] }
+type Props = { posts: NewsPost[] }
 
 const NewsIndex: FunctionComponent<Props> = ({ posts }) => {
   return (
@@ -15,7 +16,7 @@ const NewsIndex: FunctionComponent<Props> = ({ posts }) => {
       <Head>
         <title>{'お知らせ'}</title>
       </Head>
-      <h1 className={'font-bold text-xl'}>{'お知らせ'}</h1>
+      <HeadingPage>{'お知らせ'}</HeadingPage>
       <List>
         {posts.map((post, i) => (
           <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
@@ -28,9 +29,13 @@ const NewsIndex: FunctionComponent<Props> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readContents } = await import('../../helpers/readContents')
+  const { readMdFiles } = await import('../../helpers/readMdFiles')
 
-  const posts = await readContents<Post>('news-posts')
+  const unsortedPosts = await readMdFiles<NewsPost>('news-posts')
+
+  const posts = unsortedPosts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
 
   return { props: { posts } }
 }

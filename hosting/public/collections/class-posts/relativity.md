@@ -1,5 +1,5 @@
 ---
-date: 2010/01/01
+date: 1970/03/01
 title_en: relativity
 title: 相対性原理に拠る相対性理論
 ---

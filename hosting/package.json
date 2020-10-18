@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "build:netlify": "next build & bext export"
   },
   "dependencies": {
     "@react-aria/button": "^3.2.1",

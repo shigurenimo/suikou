@@ -1,5 +1,5 @@
 ---
-date: 2020/08/02
+date: 2011/01/01
 title_en: Light and Shadows 2011
 title: 2011 共通教育科目「科学の光と影」
 ---

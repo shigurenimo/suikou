@@ -3,7 +3,6 @@ backend:
   branch: 'main'
 local_backend: true
 media_folder: 'hosting/public/uploads'
-public_folder: '/uploads'
 site_url: 'https://suikou.netlify.app'
 display_url: 'https://suikou.netlify.app'
 locale: 'ja'
@@ -15,8 +14,6 @@ collections:
       - name: 'about'
         label: '研究室について'
         file: 'hosting/public/collections/pages/about.md'
-        editor:
-          preview: false
         fields:
           - name: title
             label: 'タイトル'
@@ -27,8 +24,6 @@ collections:
       - name: 'access'
         label: 'アクセス'
         file: 'hosting/public/collections/pages/access.md'
-        editor:
-          preview: false
         fields:
           - name: title
             label: 'タイトル'
@@ -88,8 +83,6 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    editor:
-      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -124,8 +117,6 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    editor:
-      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -155,8 +146,6 @@ collections:
     format: 'frontmatter'
     preview_path: 'classes/'
     slug: 'title_en'
-    editor:
-      preview: false
     summary: '{{title}} - {{date}}'
     fields:
       - name: 'title'
@@ -181,8 +170,6 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    editor:
-      preview: false
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
     fields:
@@ -203,11 +190,11 @@ collections:
         widget: 'markdown'
   - name: 'books'
     label: '書籍'
-    create: true
-    extension: 'md'
-    preview_path: 'books/{{slug}}'
     folder: 'hosting/public/collections/books'
+    extension: 'md'
     format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
     identifier_field: 'title_en'
     summary: '{{title}}'
     fields:
@@ -223,12 +210,13 @@ collections:
       - name: 'image'
         label: '画像ファイル'
         widget: 'image'
-  - name: 'ozaki-posts'
-    label: '尾崎次郎基金'
-    create: false
+  - name: 'survey-posts'
+    label: '調査'
+    folder: 'hosting/public/collections/survey-posts'
     extension: 'md'
-    folder: 'hosting/public/collections/ozaki-posts'
     format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
     identifier_field: 'slug'
     summary: '{{title}}'
     fields:

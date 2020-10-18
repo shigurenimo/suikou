@@ -4,9 +4,9 @@ import Head from 'next/head'
 import { FunctionComponent } from 'react'
 import { SectionHome } from '../home/SectionHome'
 import { CardPost } from '../post/CardPost'
-import { Post } from '../types/post'
+import { NewsPost } from '../types/newsPost'
 
-type Props = { posts: Post[] }
+type Props = { posts: NewsPost[] }
 
 const Index: FunctionComponent<Props> = ({ posts }) => {
   return (
@@ -27,11 +27,11 @@ const Index: FunctionComponent<Props> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readContents } = await import('../helpers/readContents')
+  const { readMdFiles } = await import('../helpers/readMdFiles')
 
-  const newsPosts = await readContents<Post>('news-posts')
+  const newsPosts = await readMdFiles<NewsPost>('news-posts')
 
-  const mediaPosts = await readContents<Post>('media-posts')
+  const mediaPosts = await readMdFiles<NewsPost>('media-posts')
 
   const posts = [...newsPosts, ...mediaPosts].sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()

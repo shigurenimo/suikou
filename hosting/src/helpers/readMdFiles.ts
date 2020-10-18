@@ -2,7 +2,7 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
 
-export const readContents = async <T extends { type: string }>(
+export const readMdFiles = async <T extends { type: string }>(
   collectionName: string
 ) => {
   const fileNames = await fs.readdir(

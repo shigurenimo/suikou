@@ -1,7 +1,6 @@
 import { Content } from './content'
 
-export type ClassPost = Content & {
+export type FeedbackPost = Content & {
   date: string
-  title_en: string
   title: string
 }
