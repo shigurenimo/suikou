@@ -78,7 +78,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const nakazaPage = await readMdFile<NakazaPage>('pages', 'nakaza')
 
-  const projectPage = await readMdFile<NakazaPage>('pages', 'project')
+  const projectPage = await readMdFile<ProjectPage>('pages', 'project')
 
   return { props: { nakazaPage, projectPage } }
 }
