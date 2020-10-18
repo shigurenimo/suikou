@@ -7,14 +7,19 @@ import { List } from '../../core/List'
 import { Main } from '../../core/Main'
 import { CardBook } from '../../post/CardBook'
 import { Book } from '../../types/book'
+import { SiteConfig } from '../../types/sitePage'
 
-type Props = { posts: Book[] }
+type Props = {
+  posts: Book[]
+  site: SiteConfig
+}
 
-const ArticlesIndex: FunctionComponent<Props> = ({ posts }) => {
+const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
   return (
     <Main>
       <Head>
-        <title>{'書籍'}</title>
+        <title>{`書籍 | ${site.title}`}</title>
+        <meta content={site.description} name={'description'} />
       </Head>
       <HeadingPage>{'書籍'}</HeadingPage>
       <List>
@@ -33,7 +38,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const posts = await readMdFiles<Book>('books')
 
-  return { props: { posts } }
+  const { readMdFile } = await import('../../helpers/readMdFile')
+
+  const site = await readMdFile<SiteConfig>('configs', 'site')
+
+  return { props: { posts, site } }
 }
 
 export default ArticlesIndex

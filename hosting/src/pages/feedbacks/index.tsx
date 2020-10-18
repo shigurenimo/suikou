@@ -7,14 +7,19 @@ import { List } from '../../core/List'
 import { Main } from '../../core/Main'
 import { CardClassPost } from '../../post/CardClassPost'
 import { ClassPost } from '../../types/classPost'
+import { SiteConfig } from '../../types/sitePage'
 
-type Props = { posts: ClassPost[] }
+type Props = {
+  posts: ClassPost[]
+  site: SiteConfig
+}
 
-const FeedbacksIndex: FunctionComponent<Props> = ({ posts }) => {
+const FeedbacksIndex: FunctionComponent<Props> = ({ posts, site }) => {
   return (
     <Main>
       <Head>
-        <title>{'講義の感想'}</title>
+        <title>{`講義の感想 | ${site.title}`}</title>
+        <meta content={site.description} name={'description'} />
       </Head>
       <HeadingPage>{'講義の感想'}</HeadingPage>
       <List>
@@ -37,7 +42,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 
-  return { props: { posts } }
+  const { readMdFile } = await import('../../helpers/readMdFile')
+
+  const site = await readMdFile<SiteConfig>('configs', 'site')
+
+  return { props: { posts, site } }
 }
 
 export default FeedbacksIndex

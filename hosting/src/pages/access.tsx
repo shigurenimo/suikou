@@ -6,14 +6,19 @@ import { Article } from '../core/Article'
 import { HeadingPage } from '../core/HeadingPage'
 import { Main } from '../core/Main'
 import { Page } from '../types/page'
+import { SiteConfig } from '../types/sitePage'
 
-type Props = { page: Page }
+type Props = {
+  page: Page
+  site: SiteConfig
+}
 
-const Access: FunctionComponent<Props> = ({ page }) => {
+const Access: FunctionComponent<Props> = ({ page, site }) => {
   return (
     <Main>
       <Head>
-        <title>{page.title}</title>
+        <title>{`${page.title} | ${site.title}`}</title>
+        <meta content={site.description} name={'description'} />
       </Head>
       <Article>
         <HeadingPage>{page.title}</HeadingPage>
@@ -31,7 +36,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const page = await readMdFile<Page>('pages', 'access')
 
-  return { props: { page } }
+  const site = await readMdFile<SiteConfig>('configs', 'site')
+
+  return { props: { page, site } }
 }
 
 export default Access

@@ -7,8 +7,22 @@ site_url: 'https://suikou.netlify.app'
 display_url: 'https://suikou.netlify.app'
 locale: 'ja'
 collections:
+  - name: 'basics'
+    label: '基本情報'
+    format: 'frontmatter'
+    files:
+      - name: 'site'
+        label: 'Webサイトの基本情報'
+        file: 'hosting/public/collections/configs/site.md'
+        fields:
+          - name: title
+            label: 'Webサイトのタイトル'
+            widget: 'string'
+          - name: description
+            label: 'Webサイトの説明'
+            widget: 'string'
   - name: 'pages'
-    label: '固定ページ'
+    label: 'ページ'
     format: 'frontmatter'
     files:
       - name: 'about'
@@ -74,8 +88,18 @@ collections:
         file: 'hosting/public/collections/pages/project.md'
         fields:
           - name: title
-            label: 研究タイトル（日本語）
+            label: タイトル（日本語）
             widget: 'string'
+          - name: projects
+            label: プロジェクト
+            widget: list
+            allow_add: true
+            collapsed: false
+            summary: '{{text}}'
+            field:
+              name: title
+              widget: 'string'
+              label: '内容（日本語）'
   - name: 'news-post'
     label: 'お知らせ'
     folder: 'hosting/public/collections/news-posts'

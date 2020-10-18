@@ -5,17 +5,24 @@ import { Article } from '../core/Article'
 import { Main } from '../core/Main'
 import { NakazaPage } from '../types/nakazaPage'
 import { ProjectPage } from '../types/projectPage'
+import { SiteConfig } from '../types/sitePage'
 
 type Props = {
   nakazaPage: NakazaPage
   projectPage: ProjectPage
+  site: SiteConfig
 }
 
-const Nakaza: FunctionComponent<Props> = ({ nakazaPage, projectPage }) => {
+const Nakaza: FunctionComponent<Props> = ({
+  nakazaPage,
+  projectPage,
+  site,
+}) => {
   return (
     <Main>
       <Head>
-        <title>{nakazaPage.title}</title>
+        <title>{`${nakazaPage.title} | ${site.title}`}</title>
+        <meta content={site.description} name={'description'} />
       </Head>
       <Article>
         <div className={'md:flex'}>
@@ -82,7 +89,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const projectPage = await readMdFile<ProjectPage>('pages', 'project')
 
-  return { props: { nakazaPage, projectPage } }
+  const site = await readMdFile<SiteConfig>('configs', 'site')
+
+  return { props: { nakazaPage, projectPage, site } }
 }
 
 export default Nakaza

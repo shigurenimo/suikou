@@ -5,14 +5,19 @@ import { FunctionComponent } from 'react'
 import { SectionHome } from '../home/SectionHome'
 import { CardPost } from '../post/CardPost'
 import { NewsPost } from '../types/newsPost'
+import { SiteConfig } from '../types/sitePage'
 
-type Props = { posts: NewsPost[] }
+type Props = {
+  posts: NewsPost[]
+  site: SiteConfig
+}
 
-const Index: FunctionComponent<Props> = ({ posts }) => {
+const Index: FunctionComponent<Props> = ({ site, posts }) => {
   return (
     <main>
       <Head>
-        <title>{'ホーム'}</title>
+        <title>{site.title}</title>
+        <meta content={site.description} name={'description'} />
       </Head>
       <SectionHome />
       <ul className={'max-w-screen-xl mx-auto w-full'}>
@@ -33,11 +38,15 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const mediaPosts = await readMdFiles<NewsPost>('media-posts')
 
+  const { readMdFile } = await import('../helpers/readMdFile')
+
+  const site = await readMdFile<SiteConfig>('configs', 'site')
+
   const posts = [...newsPosts, ...mediaPosts].sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 
-  return { props: { posts } }
+  return { props: { posts, site } }
 }
 
 export default Index
