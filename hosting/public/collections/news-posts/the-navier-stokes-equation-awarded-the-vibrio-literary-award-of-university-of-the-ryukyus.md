@@ -1,5 +1,5 @@
 ---
-date: 2020/04/04
+date: 2018/04/04
 title_en:
   "“The Navier Stokes equation” awarded the Vibrio literary award of University
   of the Ryukyus."
