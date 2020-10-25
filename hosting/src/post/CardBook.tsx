@@ -6,7 +6,7 @@ type Props = { book: Book }
 
 export const CardBook: FunctionComponent<Props> = ({ book }) => {
   return (
-    <div className={'rounded-lg p-4 border border-gray-400 flex'}>
+    <div className={'rounded-lg p-4 border border-gray-400 flex bg-gray-100'}>
       <img
         alt={book.title}
         className={'w-32 rounded-lg border'}

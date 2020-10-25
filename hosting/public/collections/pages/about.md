@@ -48,9 +48,7 @@ Invited lecture : The 30st Annniversary Conference of KSOE
 
 \------------ Nakaza's governing equation of motion of a fluid (2005)
 
-
-$$\rho\frac{d{\bf v}}{dt}=\rho{\bf X} - grad p + \mu\Delta{\bf v} + \mu grad (div{\bf v})$$
-
+![https://www.bruot.org/tex2img/equations/tqiJLXT2YLbmCLI2QUMjDBCYcKjM86kV33M4T7dt3HZN/](https://www.bruot.org/tex2img/media/tqiJLXT2YLbmCLI2QUMjDBCYcKjM86kV33M4T7dt3HZN/tex2img_equation.svg)
 
 しかし、 Stokes自身の書いた論文（1845年）を注意深く読んでみると、彼は次のように述べている。「私の仮定に基づく理論は、現象を良く説明することになるだろう。だが、そうだからといって、このことが私の仮説の妥当性を支持するものでない。なぜなら、我々の周りで起こる流れ現象の殆どが非圧縮的であるからである。
 
@@ -61,7 +59,7 @@ $$\rho\frac{d{\bf v}}{dt}=\rho{\bf X} - grad p + \mu\Delta{\bf v} + \mu grad (di
 Nakaza's constitutive equaton of the viscosity stress for a real fluid (2005)
 
 
-$$\sigma\_{ij} = -p\delta\_{ij} + 2\mu e_{ij}$$
+![https://www.bruot.org/tex2img/equations/ipLXX6zD8URgfqzdkCfuh0YF9J9USvMoJftzJDsp9Xes/](https://www.bruot.org/tex2img/media/ipLXX6zD8URgfqzdkCfuh0YF9J9USvMoJftzJDsp9Xes/tex2img_equation.svg)
 
 
 流れを支配する方程式に名を冠するNavier（ナビエ）は、流体力学者というよりも橋や構造物を作る技術者であり、固体の力学を取り扱う弾性学、構造力学あるいは材料力学に関わる研究者であった。また、流体力学の支配方程式を構築する時代は、盛んに固体材料の変形を支配する方程式の議論が行われていた時代でもあった。固体の力学の礎となっているのが、Hookeの法則（1678）である。

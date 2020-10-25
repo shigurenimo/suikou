@@ -27,7 +27,7 @@ const Nakaza: FunctionComponent<Props> = ({
       <Article>
         <div className={'md:flex'}>
           <div className={'flex-1'}>
-            <div className={'p-4 border rounded-lg'}>
+            <div className={'p-4 border rounded-lg bg-gray-100'}>
               <h1 className={'text-gray-700'}>{'教授'}</h1>
               <h1 className={'pt-1'}>
                 <span className={'text-lg font-bold'}>{nakazaPage.name}</span>
@@ -35,7 +35,9 @@ const Nakaza: FunctionComponent<Props> = ({
               </h1>
               <p className={'pt-2'}>{nakazaPage.email}</p>
             </div>
-            <div className={'border px-4 pt-4 rounded-lg mt-4 md:mt-8'}>
+            <div
+              className={'border px-4 pt-4 rounded-lg bg-gray-100 mt-4 md:mt-8'}
+            >
               <h2 className={'font-bold text-lg'}>{'略歴'}</h2>
               <ul className={'divide-y'}>
                 {nakazaPage.histories.map((history, index) => (
@@ -51,7 +53,7 @@ const Nakaza: FunctionComponent<Props> = ({
             </div>
           </div>
           <div className={'flex-1 md:ml-8'}>
-            <div className={'p-4 border rounded-lg divide-y'}>
+            <div className={'p-4 border rounded-lg bg-gray-100 divide-y'}>
               <p className={'whitespace-pre-wrap pb-4'}>
                 {nakazaPage.description}
               </p>
@@ -59,7 +61,9 @@ const Nakaza: FunctionComponent<Props> = ({
                 {nakazaPage.description_en}
               </p>
             </div>
-            <div className={'px-4 pt-4 border rounded-lg mt-4 md:mt-8'}>
+            <div
+              className={'px-4 pt-4 border rounded-lg bg-gray-100 mt-4 md:mt-8'}
+            >
               <h2 className={'font-bold text-lg'}>{'研究・プロジェクト'}</h2>
               <ul className={'divide-y'}>
                 {projectPage.projects.map((history, index) => (

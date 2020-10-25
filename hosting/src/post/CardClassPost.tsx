@@ -8,7 +8,7 @@ export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
   const hasDate = !post.date.includes('1970')
 
   return (
-    <div className={'rounded-lg p-4 border border-gray-400'}>
+    <div className={'rounded-lg p-4 border border-gray-400 bg-gray-100'}>
       <h1 className={'font-bold text-lg'}>{post.title}</h1>
       <h2 className={'pt-2 text-sm'}>{post.title_en}</h2>
       {hasDate && (

@@ -17,7 +17,7 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
   const hasActions = hasPDF || hasURL
 
   return (
-    <div className={'rounded-lg p-4 border border-gray-400'}>
+    <div className={'rounded-lg p-4 border border-gray-400 bg-gray-100'}>
       <h1 className={'font-bold text-lg'}>{post.title}</h1>
       <h2 className={'pt-1 text-sm'}>{post.title_en}</h2>
       <p className={'text-sm pt-2'}>
