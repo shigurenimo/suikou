@@ -2,14 +2,14 @@ backend:
   name: 'git-gateway'
   branch: 'main'
 local_backend: true
-media_folder: 'hosting/public/uploads'
+media_folder: 'public/uploads'
 site_url: 'https://suikou.netlify.app'
 display_url: 'https://suikou.netlify.app'
 locale: 'ja'
 collections:
   - name: 'news-post'
     label: 'お知らせ'
-    folder: 'hosting/public/collections/news-posts'
+    folder: 'public/collections/news-posts'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -46,7 +46,7 @@ collections:
         required: false
   - label: 'メディア'
     name: 'media-posts'
-    folder: 'hosting/public/collections/media-posts'
+    folder: 'public/collections/media-posts'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -75,7 +75,7 @@ collections:
     label: '授業'
     label_singular: '全ての授業'
     description: 'eラーニングを公開しています。'
-    folder: 'hosting/public/collections/class-posts'
+    folder: 'public/collections/class-posts'
     create: true
     extension: 'md'
     format: 'frontmatter'
@@ -100,7 +100,7 @@ collections:
         widget: 'markdown'
   - name: 'feedbacks'
     label: 'フィードバック'
-    folder: 'hosting/public/collections/feedbacks'
+    folder: 'public/collections/feedbacks'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -125,7 +125,7 @@ collections:
         widget: 'markdown'
   - name: 'books'
     label: '書籍'
-    folder: 'hosting/public/collections/books'
+    folder: 'public/collections/books'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -149,7 +149,7 @@ collections:
         required: false
   - name: 'survey-posts'
     label: '調査'
-    folder: 'hosting/public/collections/survey-posts'
+    folder: 'public/collections/survey-posts'
     extension: 'md'
     format: 'frontmatter'
     create: true
@@ -172,7 +172,7 @@ collections:
     files:
       - name: 'site'
         label: 'Webサイトの基本情報'
-        file: 'hosting/public/collections/configs/site.md'
+        file: 'public/collections/configs/site.md'
         fields:
           - name: title
             label: 'Webサイトのタイトル'
@@ -186,7 +186,7 @@ collections:
     files:
       - name: 'about'
         label: '研究室について'
-        file: 'hosting/public/collections/pages/about.md'
+        file: 'public/collections/pages/about.md'
         fields:
           - name: title
             label: 'タイトル'
@@ -196,7 +196,7 @@ collections:
             widget: 'markdown'
       - name: 'access'
         label: 'アクセス'
-        file: 'hosting/public/collections/pages/access.md'
+        file: 'public/collections/pages/access.md'
         fields:
           - name: title
             label: 'タイトル'
@@ -206,7 +206,7 @@ collections:
             widget: 'markdown'
       - name: 'nakaza'
         label: '私について'
-        file: 'hosting/public/collections/pages/nakaza.md'
+        file: 'public/collections/pages/nakaza.md'
         fields:
           - name: name
             label: 名前（日本語）
@@ -244,7 +244,7 @@ collections:
                 label: '内容（英語）'
       - name: 'project'
         label: '研究・プロジェクト'
-        file: 'hosting/public/collections/pages/project.md'
+        file: 'public/collections/pages/project.md'
         fields:
           - name: title
             label: タイトル（日本語）
