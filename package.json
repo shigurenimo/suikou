@@ -4,10 +4,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build && next export",
     "build:netlify": "echo 0",
     "dev": "next dev",
     "dev:netlify": "npx netlify-cms-proxy-server",
+    "export": "next export",
     "start": "next start"
   },
   "dependencies": {
