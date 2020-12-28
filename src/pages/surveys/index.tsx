@@ -2,10 +2,10 @@ import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { HeadingPage } from '../../core/HeadingPage'
-import { List } from '../../core/List'
-import { Main } from '../../core/Main'
-import { CardClassPost } from '../../post/CardClassPost'
+import { CardClassPost } from '../../components/CardClassPost'
+import { HeadingPage } from '../../components/HeadingPage'
+import { List } from '../../components/List'
+import { Main } from '../../components/Main'
 import { ClassPost } from '../../types/classPost'
 import { SiteConfig } from '../../types/sitePage'
 
@@ -34,7 +34,7 @@ const SurveysIndex: FunctionComponent<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../../helpers/readMdFiles')
+  const { readMdFiles } = await import('../../utils/readMdFiles')
 
   const unsortedPosts = await readMdFiles<ClassPost>('survey-posts')
 
@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 
-  const { readMdFile } = await import('../../helpers/readMdFile')
+  const { readMdFile } = await import('../../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 

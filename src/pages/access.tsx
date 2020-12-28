@@ -2,9 +2,9 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Article } from '../core/Article'
-import { HeadingPage } from '../core/HeadingPage'
-import { Main } from '../core/Main'
+import { Article } from '../components/Article'
+import { HeadingPage } from '../components/HeadingPage'
+import { Main } from '../components/Main'
 import { Page } from '../types/page'
 import { SiteConfig } from '../types/sitePage'
 
@@ -32,7 +32,7 @@ const Access: FunctionComponent<Props> = ({ page, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFile } = await import('../helpers/readMdFile')
+  const { readMdFile } = await import('../utils/readMdFile')
 
   const page = await readMdFile<Page>('pages', 'access')
 

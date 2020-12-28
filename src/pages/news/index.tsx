@@ -2,10 +2,10 @@ import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { HeadingPage } from '../../core/HeadingPage'
-import { List } from '../../core/List'
-import { Main } from '../../core/Main'
-import { CardPost } from '../../post/CardPost'
+import { CardPost } from '../../components/CardPost'
+import { HeadingPage } from '../../components/HeadingPage'
+import { List } from '../../components/List'
+import { Main } from '../../components/Main'
 import { NewsPost } from '../../types/newsPost'
 import { SiteConfig } from '../../types/sitePage'
 
@@ -14,14 +14,14 @@ type Props = {
   site: SiteConfig
 }
 
-const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
+const NewsIndex: FunctionComponent<Props> = ({ posts, site }) => {
   return (
     <Main>
       <Head>
-        <title>{`メディア掲載 | ${site.title}`}</title>
+        <title>{`お知らせ | ${site.title}`}</title>
         <meta content={site.description} name={'description'} />
       </Head>
-      <HeadingPage>{'メディア掲載'}</HeadingPage>
+      <HeadingPage>{'お知らせ'}</HeadingPage>
       <List>
         {posts.map((post, i) => (
           <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
@@ -34,19 +34,19 @@ const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../../helpers/readMdFiles')
+  const { readMdFiles } = await import('../../utils/readMdFiles')
 
-  const unsortedPosts = await readMdFiles<NewsPost>('media-posts')
+  const unsortedPosts = await readMdFiles<NewsPost>('news-posts')
 
   const posts = unsortedPosts.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 
-  const { readMdFile } = await import('../../helpers/readMdFile')
+  const { readMdFile } = await import('../../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 
   return { props: { posts, site } }
 }
 
-export default ArticlesIndex
+export default NewsIndex

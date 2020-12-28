@@ -2,10 +2,10 @@ import clsx from 'clsx'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { HeadingPage } from '../../core/HeadingPage'
-import { List } from '../../core/List'
-import { Main } from '../../core/Main'
-import { CardBook } from '../../post/CardBook'
+import { CardBook } from '../../components/CardBook'
+import { HeadingPage } from '../../components/HeadingPage'
+import { List } from '../../components/List'
+import { Main } from '../../components/Main'
 import { Book } from '../../types/book'
 import { SiteConfig } from '../../types/sitePage'
 
@@ -34,11 +34,11 @@ const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../../helpers/readMdFiles')
+  const { readMdFiles } = await import('../../utils/readMdFiles')
 
   const posts = await readMdFiles<Book>('books')
 
-  const { readMdFile } = await import('../../helpers/readMdFile')
+  const { readMdFile } = await import('../../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 

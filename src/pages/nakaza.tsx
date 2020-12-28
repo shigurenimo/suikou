@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { FunctionComponent } from 'react'
-import { Article } from '../core/Article'
-import { Main } from '../core/Main'
+import { Article } from '../components/Article'
+import { Main } from '../components/Main'
 import { NakazaPage } from '../types/nakazaPage'
 import { ProjectPage } from '../types/projectPage'
 import { SiteConfig } from '../types/sitePage'
@@ -27,7 +27,7 @@ const Nakaza: FunctionComponent<Props> = ({
       <Article>
         <div className={'md:flex'}>
           <div className={'flex-1'}>
-            <div className={'p-4 border rounded-lg bg-gray-100'}>
+            <div className={'p-4 border rounded-lg bg-gray-50'}>
               <h1 className={'text-gray-700'}>{'教授'}</h1>
               <h1 className={'pt-1'}>
                 <span className={'text-lg font-bold'}>{nakazaPage.name}</span>
@@ -36,7 +36,7 @@ const Nakaza: FunctionComponent<Props> = ({
               <p className={'pt-2'}>{nakazaPage.email}</p>
             </div>
             <div
-              className={'border px-4 pt-4 rounded-lg bg-gray-100 mt-4 md:mt-8'}
+              className={'border px-4 pt-4 rounded-lg bg-gray-50 mt-4 md:mt-8'}
             >
               <h2 className={'font-bold text-lg'}>{'略歴'}</h2>
               <ul className={'divide-y'}>
@@ -53,7 +53,7 @@ const Nakaza: FunctionComponent<Props> = ({
             </div>
           </div>
           <div className={'flex-1 md:ml-8'}>
-            <div className={'p-4 border rounded-lg bg-gray-100 divide-y'}>
+            <div className={'p-4 border rounded-lg bg-gray-50 divide-y'}>
               <p className={'whitespace-pre-wrap pb-4'}>
                 {nakazaPage.description}
               </p>
@@ -62,7 +62,7 @@ const Nakaza: FunctionComponent<Props> = ({
               </p>
             </div>
             <div
-              className={'px-4 pt-4 border rounded-lg bg-gray-100 mt-4 md:mt-8'}
+              className={'px-4 pt-4 border rounded-lg bg-gray-50 mt-4 md:mt-8'}
             >
               <h2 className={'font-bold text-lg'}>{'研究・プロジェクト'}</h2>
               <ul className={'divide-y'}>
@@ -81,7 +81,7 @@ const Nakaza: FunctionComponent<Props> = ({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFile } = await import('../helpers/readMdFile')
+  const { readMdFile } = await import('../utils/readMdFile')
 
   const unsoetedNakazaPage = await readMdFile<NakazaPage>('pages', 'nakaza')
 
