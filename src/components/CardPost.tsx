@@ -13,7 +13,7 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
   const hasPNG =
     post.image && (post.image.includes('png') || post.image.includes('jpg'))
 
-  const hasURL = post.external_url !== null
+  const hasURL = !!post.external_url
 
   const hasActions = hasPDF || hasURL
 

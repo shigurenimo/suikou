@@ -16,6 +16,7 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
+    sortable_fields: ['date', 'title']
     fields:
       - name: 'title'
         label: '記事のタイトル'
@@ -53,6 +54,7 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
+    sortable_fields: ['date', 'title']
     fields:
       - name: 'title'
         label: '記事のタイトル'
@@ -82,6 +84,7 @@ collections:
     preview_path: 'classes/'
     slug: 'title_en'
     summary: '{{title}} - {{date}}'
+    sortable_fields: ['date', 'title']
     fields:
       - name: 'title'
         label: '記事のタイトル（日本語）'
@@ -107,6 +110,7 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'title_en'
     summary: '{{title}} - {{date}}'
+    sortable_fields: ['date', 'title']
     fields:
       - name: 'title'
         label: '記事のタイトル'
@@ -132,6 +136,7 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'title_en'
     summary: '{{title}}'
+    sortable_fields: ['title', 'title_en']
     fields:
       - name: 'title'
         label: '本のタイトル（日本語）'
@@ -156,6 +161,7 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'slug'
     summary: '{{title}}'
+    sortable_fields: ['title', 'slug']
     fields:
       - name: 'slug'
         label: 'ID'
