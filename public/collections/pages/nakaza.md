@@ -1,12 +1,6 @@
 ---
-title: 研究・プロジェクト
-name_en: EIzo NAKAZA
 name: 仲座 栄三
-description_en: |-
-  Coastal, Hydraulic, Dsaster-Prevention, and  Environental Engineering
-
-  In particular, he engaged in educations and researches on coastal disaster prevention and coastal environmental conservation in Okinawa.
-  After the 2011 Tohoku Tsunami disaster, he has repeatedly been  presenting so many lectures at various opportunities, on "the huge-tsunami disaster in Okinawa", and been suggesting disaster prevention and mitigation activities. Numerical simulations on river flooding and wave phenomena along coastal areas are the current topics. He has also been publishing many papers on the related fields.
+name_en: EIzo NAKAZA
 description: |-
   工学博士  Doctor of Engineering
   専門  海岸工学・防災工学・水工学 ・沿岸環境
@@ -14,16 +8,22 @@ description: |-
 
   特に、沖縄の海岸防災、沿岸環境保全の研究に従事、
   関連論文多数。震災後は、「類推、沖縄における大津波災害」 など各地で講演を重ね、防災及び減災活動を行なっている。
-external_url: http://kenkyushadb.lab.u-ryukyu.ac.jp/profile/ja.jedIwqKbIBcO2EI3eg0HBQ==.html
-email: enakaza @ tec.u-ryukyu.ac.jp
+description_en: >-
+  Coastal, Hydraulic, Dsaster-Prevention, and  Environental Engineering
+
+
+  In particular, he engaged in educations and researches on coastal disaster prevention and coastal environmental conservation in Okinawa.
+
+  After the 2011 Tohoku Tsunami disaster, he has repeatedly been  presenting so many lectures at various opportunities, on "the huge-tsunami disaster in Okinawa", and been suggesting disaster prevention and mitigation activities. Numerical simulations on river flooding and wave phenomena along coastal areas are the current topics. He has also been publishing many papers on the related fields.
+url: https://kenkyushadb.lab.u-ryukyu.ac.jp/html/100000991_ja.html?k=eizo+nakaza
 histories:
   - year: 1958
     text_en: born in MIyako Island
     text: 宮古島に生まれる
   - year: 1985
-    text_en: Accistant Professor
+    text_en: Assistant Professor
     text: 琉球大学工学部助手
-  - year: 1996
+  - year: 1995
     text_en: Associate Professor
     text: 琉球大学工学部助教授
   - year: 2003
@@ -44,5 +44,7 @@ histories:
   - year: 2016
     text_en: DIrector of the University Library
     text: 琉球大学付属図書館長
+title: 研究・プロジェクト
+external_url: http://kenkyushadb.lab.u-ryukyu.ac.jp/profile/ja.jedIwqKbIBcO2EI3eg0HBQ==.html
+email: enakaza @ tec.u-ryukyu.ac.jp
 ---
-
