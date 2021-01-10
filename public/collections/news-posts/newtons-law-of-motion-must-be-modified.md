@@ -3,7 +3,7 @@ title: ニュートンの運動法則は修正されなければならない
 title_en: Newton's law of motion must be modified
 date: 2021/01/11
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/19965
-image: /public/uploads/711uFuEcWbL.jpg
+image: ""
 ---
 我々が教科書で学ぶニュートンの運動の法則は、一般に次のように述べられている。
 
