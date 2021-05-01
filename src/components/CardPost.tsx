@@ -24,7 +24,11 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
       <p className={'text-sm pt-2'}>{toDateText(post.date)}</p>
       {hasActions && (
         <div className={'pt-2'}>
-          {hasPDF && <AnchorURL href={post.image}>{'PDFファイル'}</AnchorURL>}
+          {hasPDF && (
+            <AnchorURL href={post.image.replace('public/', '')}>
+              {'PDFファイル'}
+            </AnchorURL>
+          )}
           {hasURL && (
             <AnchorURL hasPadding={hasPDF} href={post.external_url}>
               {'詳細ページ'}
@@ -34,10 +38,9 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
       )}
       {hasPNG && <DivisionImage alt={post.title} src={post.image} />}
       {post.content && (
-        <ReactMarkdown
-          className={'markdown whitespace-pre-wrap'}
-          source={post.content}
-        />
+        <ReactMarkdown className={'markdown whitespace-pre-wrap'}>
+          {post.content}
+        </ReactMarkdown>
       )}
     </div>
   )

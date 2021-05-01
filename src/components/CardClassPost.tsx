@@ -17,10 +17,9 @@ export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
         </p>
       )}
       {post.content && (
-        <ReactMarkdown
-          className={'markdown whitespace-pre-wrap pt-2'}
-          source={post.content}
-        />
+        <ReactMarkdown className={'markdown whitespace-pre-wrap pt-2'}>
+          {post.content}
+        </ReactMarkdown>
       )}
     </div>
   )

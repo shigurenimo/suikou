@@ -22,10 +22,9 @@ const Access: FunctionComponent<Props> = ({ page, site }) => {
       </Head>
       <Article>
         <HeadingPage>{page.title}</HeadingPage>
-        <ReactMarkdown
-          className={'markdown whitespace-pre-wrap pt-4 md:pt-8'}
-          source={page.content}
-        />
+        <ReactMarkdown className={'markdown whitespace-pre-wrap pt-4 md:pt-8'}>
+          {page.content}
+        </ReactMarkdown>
       </Article>
     </Main>
   )

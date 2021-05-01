@@ -3,5 +3,11 @@
     "**/node_modules": true,
     ".next": true,
     "out": true
-  }
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "deno.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
