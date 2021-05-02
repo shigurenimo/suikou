@@ -45,11 +45,11 @@ collections:
         label: '更に画像ファイル'
         widget: 'image'
         required: false
-      - name: 'image'
+      - name: 'file'
         label: 'PDFファイル'
         widget: 'file'
         required: false
-      - name: 'image'
+      - name: 'file_a'
         label: '更にPDFファイル'
         widget: 'file'
         required: false
