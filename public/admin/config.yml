@@ -34,16 +34,24 @@ collections:
         label: '内容'
         widget: 'markdown'
       - name: 'external_url'
-        label: '外部のリンク（任意）'
+        label: '外部のリンク'
         widget: 'string'
         required: false
       - name: 'image'
-        label: '画像ファイル（任意）'
+        label: '画像ファイル'
         widget: 'image'
         required: false
       - name: 'image_a'
-        label: '更に画像ファイル（任意）'
+        label: '更に画像ファイル'
         widget: 'image'
+        required: false
+      - name: 'image'
+        label: 'PDFファイル'
+        widget: 'file'
+        required: false
+      - name: 'image'
+        label: '更にPDFファイル'
+        widget: 'file'
         required: false
   - label: 'メディア'
     name: 'media-posts'
