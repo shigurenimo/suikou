@@ -8,14 +8,22 @@ import { DivisionImage } from './DivisionImage'
 type Props = { post: NewsPost }
 
 export const CardPost: FunctionComponent<Props> = ({ post }) => {
-  const hasPDF = post.image && post.image.includes('pdf')
+  const hasPdfC = post.image && post.image.includes('pdf')
+
+  const hasPdfD = post.image_a && post.image_a.includes('pdf')
+
+  const hasPdfA = post.file && post.file.includes('pdf')
+
+  const hasPdfB = post.file_a && post.file_a.includes('pdf')
+
+  const hasPdf = hasPdfA || hasPdfB || hasPdfC || hasPdfD
 
   const hasPNG =
     post.image && (post.image.includes('png') || post.image.includes('jpg'))
 
   const hasURL = !!post.external_url
 
-  const hasActions = hasPDF || hasURL
+  const hasActions = hasPdf || hasURL
 
   return (
     <div className={'rounded-lg p-4 border border-gray-400 bg-gray-50'}>
@@ -24,14 +32,24 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
       <p className={'text-sm pt-2'}>{toDateText(post.date)}</p>
       {hasActions && (
         <div className={'pt-2'}>
-          {hasPDF && (
+          {hasPdfA && (
+            <AnchorURL href={post.file.replace('public/', '')}>
+              {'PDFファイル'}
+            </AnchorURL>
+          )}
+          {hasPdfB && (
+            <AnchorURL href={post.file_a.replace('public/', '')}>
+              {'PDFファイル'}
+            </AnchorURL>
+          )}
+          {hasPdfC && (
             <AnchorURL href={post.image.replace('public/', '')}>
               {'PDFファイル'}
             </AnchorURL>
           )}
-          {hasURL && (
-            <AnchorURL hasPadding={hasPDF} href={post.external_url}>
-              {'詳細ページ'}
+          {hasPdfD && (
+            <AnchorURL href={post.image_a.replace('public/', '')}>
+              {'PDFファイル'}
             </AnchorURL>
           )}
         </div>

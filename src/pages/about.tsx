@@ -7,6 +7,7 @@ import { HeadingPage } from '../components/HeadingPage'
 import { Main } from '../components/Main'
 import { Page } from '../types/page'
 import { SiteConfig } from '../types/sitePage'
+import { readMdFile } from '../utils/readMdFile'
 
 type Props = {
   page: Page
@@ -31,8 +32,6 @@ const About: FunctionComponent<Props> = ({ page, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFile } = await import('../utils/readMdFile')
-
   const page = await readMdFile<Page>('pages', 'about')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')

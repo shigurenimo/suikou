@@ -6,6 +6,7 @@ import { Main } from '../components/Main'
 import { NakazaPage } from '../types/nakazaPage'
 import { ProjectPage } from '../types/projectPage'
 import { SiteConfig } from '../types/sitePage'
+import { readMdFile } from '../utils/readMdFile'
 
 type Props = {
   nakazaPage: NakazaPage
@@ -81,8 +82,6 @@ const Nakaza: FunctionComponent<Props> = ({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFile } = await import('../utils/readMdFile')
-
   const unsoetedNakazaPage = await readMdFile<NakazaPage>('pages', 'nakaza')
 
   const histories = [...unsoetedNakazaPage.histories]

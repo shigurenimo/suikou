@@ -8,6 +8,8 @@ import { List } from '../../components/List'
 import { Main } from '../../components/Main'
 import { Book } from '../../types/book'
 import { SiteConfig } from '../../types/sitePage'
+import { readMdFile } from '../../utils/readMdFile'
+import { readMdFiles } from '../../utils/readMdFiles'
 
 type Props = {
   posts: Book[]
@@ -34,11 +36,7 @@ const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../../utils/readMdFiles')
-
   const posts = await readMdFiles<Book>('books')
-
-  const { readMdFile } = await import('../../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 

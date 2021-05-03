@@ -8,6 +8,8 @@ import { List } from '../../components/List'
 import { Main } from '../../components/Main'
 import { NewsPost } from '../../types/newsPost'
 import { SiteConfig } from '../../types/sitePage'
+import { readMdFile } from '../../utils/readMdFile'
+import { readMdFiles } from '../../utils/readMdFiles'
 
 type Props = {
   posts: NewsPost[]
@@ -34,15 +36,11 @@ const NewsIndex: FunctionComponent<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../../utils/readMdFiles')
-
   const unsortedPosts = await readMdFiles<NewsPost>('news-posts')
 
   const posts = unsortedPosts.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
-
-  const { readMdFile } = await import('../../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 

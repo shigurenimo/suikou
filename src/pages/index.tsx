@@ -6,6 +6,8 @@ import { CardPost } from '../components/CardPost'
 import { SectionHome } from '../components/SectionHome'
 import { NewsPost } from '../types/newsPost'
 import { SiteConfig } from '../types/sitePage'
+import { readMdFiles } from '../utils/readMdFiles'
+import { readMdFile } from '../utils/readMdFile'
 
 type Props = {
   posts: NewsPost[]
@@ -32,13 +34,9 @@ const Index: FunctionComponent<Props> = ({ site, posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { readMdFiles } = await import('../utils/readMdFiles')
-
   const newsPosts = await readMdFiles<NewsPost>('news-posts')
 
   const mediaPosts = await readMdFiles<NewsPost>('media-posts')
-
-  const { readMdFile } = await import('../utils/readMdFile')
 
   const site = await readMdFile<SiteConfig>('configs', 'site')
 
