@@ -22,3 +22,5 @@ external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
 これにより新しい物理学上の革命と新たな発見を模索してもらいたい。
 
 詳しくは、参考サイトをご覧ください。
+
+http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
