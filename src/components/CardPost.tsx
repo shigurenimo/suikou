@@ -52,6 +52,11 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
               {'PDFファイル'}
             </AnchorURL>
           )}
+          {hasURL && (
+            <AnchorURL hasPadding={hasPdf} href={post.external_url}>
+              {'外部リンク'}
+            </AnchorURL>
+          )}
         </div>
       )}
       {hasPNG && <DivisionImage alt={post.title} src={post.image} />}
