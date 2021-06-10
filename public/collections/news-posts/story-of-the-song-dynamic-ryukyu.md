@@ -1,5 +1,5 @@
 ---
-title: 「ダイナミック琉球」はどのようにして生まれたか
+title: 「ダイナミック琉球」の誕生の話
 title_en: Story of the song "Dynamic Ryukyu"
 date: 2021/06/10
 file: /public/uploads/「ダイナミック琉球」が生まれたストーリー　その１-コピー.pdf
