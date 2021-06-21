@@ -79,12 +79,11 @@ const Nakaza: FunctionComponent<Props> = ({
               </Stack>
             </Box>
           </Stack>
-          <Stack flex={1}>
+          <Stack flex={1} spacing={8}>
             <Stack
-              borderWidth={1}
-              p={4}
+              p={8}
               rounded={'lg'}
-              bg={'gray.50'}
+              bg={'gray.100'}
               divider={<StackDivider borderColor="gray.200" />}
             >
               <Text pb={4} whiteSpace={'pre-wrap'}>
@@ -97,10 +96,9 @@ const Nakaza: FunctionComponent<Props> = ({
             <Stack
               rounded={'lg'}
               spacing={{ base: 4, md: 8 }}
-              px={4}
-              pt={4}
-              borderWidth={1}
-              bg={'gray.50'}
+              px={8}
+              pt={8}
+              bg={'gray.100'}
             >
               <Text fontSize={'lg'} fontWeight={'bold'}>
                 {'研究・プロジェクト'}
