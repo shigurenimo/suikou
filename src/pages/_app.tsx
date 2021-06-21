@@ -21,12 +21,10 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <>
-      <ChakraProvider>
-        <Aside />
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </>
+    <ChakraProvider>
+      <Aside />
+      <Component {...pageProps} />
+    </ChakraProvider>
   )
 }
 
