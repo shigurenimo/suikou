@@ -1,5 +1,6 @@
 import clsx from 'clsx'
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
+import { Box, Button, Link } from '@chakra-ui/react'
 
 type Props = {
   href: string
@@ -12,13 +13,16 @@ export const AnchorURL: FunctionComponent<Props> = ({
   hasPadding,
 }) => {
   return (
-    <a
-      className={clsx('rounded text-blue-700 font-bold', hasPadding && 'ml-4')}
+    <Button
+      as={'a'}
+      fontWeight={'bold'}
+      textColor={'blue'}
+      rounded={'md'}
       target={'_blank'}
       rel={'noreferrer'}
       href={href}
     >
       {children}
-    </a>
+    </Button>
   )
 }
