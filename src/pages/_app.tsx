@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import React, { FunctionComponent, useEffect } from 'react'
 import { Aside } from '../components/Aside'
 import '../index.css'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -21,8 +22,10 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Aside />
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Aside />
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   )
 }
