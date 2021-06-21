@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
+import { Box, Text } from '@chakra-ui/react'
 
 class MyDocument extends Document {
   public render() {
@@ -32,10 +33,10 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className={'p-4 md:p-8'}>
+        <Text p={4} spacing={{ base: 4, md: 8 }}>
           <Main />
           <NextScript />
-        </body>
+        </Text>
       </Html>
     )
   }

@@ -4,6 +4,7 @@ import React, { FunctionComponent, useEffect } from 'react'
 import { Aside } from '../components/Aside'
 import '../index.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import { theme } from '../core/theme'
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -21,7 +22,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Aside />
       <Component {...pageProps} />
     </ChakraProvider>
