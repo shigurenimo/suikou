@@ -2,8 +2,7 @@
 date: 2018/01/15
 title_en: Experimental and Numerical Modeling of Tsunami Mitigation
 title: 運河を用いた津波減災の実験的及び数値解析的研究
-image: "/uploads/ASCEWW.1943-5460-Canal-Tsunami-ASCE-NAKAZA.pdf"
-external_url:
+file: "/uploads/ASCEWW.1943-5460-Canal-Tsunami-ASCE-NAKAZA.pdf"
 ---
 
 仲座栄三 (Eizo NAKAZA)

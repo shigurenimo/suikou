@@ -2,7 +2,6 @@
 date: 2018/04/21
 title_en: Comprehensive descriptions of the new relativity theory has been posted
 title: 新相対性理論の包括的説明掲載される
-image:
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/22286
 ---
 仲座栄三 (Eizo NAKAZA)

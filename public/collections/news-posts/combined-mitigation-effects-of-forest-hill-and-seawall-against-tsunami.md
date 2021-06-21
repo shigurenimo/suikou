@@ -2,8 +2,7 @@
 date: 2018/01/14
 title_en: COMBINED MITIGATION EFFECTS OF FOREST, HILL AND SEAWALL AGAINST TSUNAMI
 title: 植生帯・丘・護岸による複合的津波減勢効果に関する研究
-image: "/uploads/0419b9d1185df20438cc4c485fdd7a45.pdf"
-external_url:
+file: "/uploads/0419b9d1185df20438cc4c485fdd7a45.pdf"
 ---
 
 仲座栄三 (Eizo NAKAZA)

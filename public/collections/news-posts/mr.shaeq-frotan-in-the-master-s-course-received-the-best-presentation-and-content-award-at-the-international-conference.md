@@ -4,8 +4,6 @@ title_en:
   Mr. Shaeq Frotan in the Master's course  received the best presentation and
   content award at the international conference.
 title: 修士課程留学生　Shaeq Frotanさん　国際会議においてベスト発表及び内容賞を受賞
-image:
-external_url:
 ---
 
 ![](/uploads/Certificate-of-the-Conferene-1-e1539571810219.jpg)

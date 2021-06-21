@@ -2,7 +2,7 @@
 date: 2018/03/04
 title_en: The spirit of “YUI-MAARU (mutual support spirit)” from  Okinawa to the World.
 title: 沖縄から「ゆいま～る」の精神を全世界へ
-image: "/uploads/ae578461572f4dbe51300b7ce505085c-1.pdf"
+file: "/uploads/ae578461572f4dbe51300b7ce505085c-1.pdf"
 external_url: https://www.sc.ouj.ac.jp/center/okinawa/news/2018/02/10160928.html
 ---
 ![](/uploads/DSCF5611.jpg)

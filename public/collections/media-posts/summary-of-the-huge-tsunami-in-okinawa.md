@@ -2,7 +2,6 @@
 date: 2019/02/18
 title_en: Summary of the huge tsunami in Okinawa
 title: 沖縄地方における巨大津波についてまとめるー沖縄タイムス　宮里美紀記者
-image:
 ---
 
 ## Possibility of Huge Tsunami in Okinawa region is reported by Okinawa Times, M. Miyazato

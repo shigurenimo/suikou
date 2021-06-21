@@ -2,8 +2,7 @@
 date: 2018/04/02
 title_en: I have finished the task of the library director.
 title: 図書館長の任務を無事終了いたしました。
-image: "/uploads/668d8e4d09613c06e0bc3abbda474552.pdf"
-external_url:
+file: "/uploads/668d8e4d09613c06e0bc3abbda474552.pdf"
 ---
 
 仲座栄三 (EIzo NAKAZA)

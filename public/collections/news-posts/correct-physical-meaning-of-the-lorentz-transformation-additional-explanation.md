@@ -2,7 +2,6 @@
 date: 2017/08/22
 title_en: Correct physical meaning of the Lorentz transformation-Additional explanation
 title: ローレンツ変換の正しい物理的意味 補遺バージョン
-image:
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
 ---
 仲座栄三 (Eizo NAKAZA)

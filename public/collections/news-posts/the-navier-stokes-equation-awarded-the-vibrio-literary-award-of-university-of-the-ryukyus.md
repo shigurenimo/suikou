@@ -4,7 +4,7 @@ title_en:
   "“The Navier Stokes equation” awarded the Vibrio literary award of University
   of the Ryukyus."
 title: ナビエストークス方程式、琉球大学びぶりお文学賞を受賞する
-image: "/uploads/fcfc2a66f13477eb17de0d405c2287d6.pdf"
+file: "/uploads/fcfc2a66f13477eb17de0d405c2287d6.pdf"
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/21286
 ---
 

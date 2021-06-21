@@ -4,8 +4,7 @@ title_en:
   Resolving our erroneous interpretation of the Galilean Transformation, accepted
   in Physics Essays
 title: 我々のガリレイ変換に対する認識は誤っていた
-image: "/uploads/20151027.pdf"
-external_url:
+file: "/uploads/20151027.pdf"
 ---
 
 ガリレイ変換に対する我々の認識は、アインシュタインによって彼の相対性理論に取り入れられた。変換後の時間や空間座標の値が、運動系のそれらに等しいとするガリレイ変換に対する我々の認識がそのま持ち込まれ、結果として、双子のパラドックスなど、時間や長さに関するパラドックスを派生させた。

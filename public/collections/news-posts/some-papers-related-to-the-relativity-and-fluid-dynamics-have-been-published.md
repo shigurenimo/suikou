@@ -2,7 +2,6 @@
 date: 2017/04/08
 title_en: Some papers related to the relativity and fluid dynamics have been published.
 title: 沖縄科学防災環境学会へ論文掲載いたしました。
-image:
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/19965
 ---
 

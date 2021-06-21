@@ -4,8 +4,6 @@ title_en:
   Introduction of Nakaza's Lab. in the Civil Engineering Course of University
   of the Ryukyus
 title: 社会基盤デザインコース仲座研究室紹介
-image: []
-external_url:
 ---
 
 琉球大学工学部工学科

@@ -4,7 +4,7 @@ title_en:
   Written documents and tsunami deposits reveal the world biggest tsunami in
   Ryukyu Island of Japan- Disaster mitigation against huge tsunamis
 title: 古文書・津波堆積物が示す世界最大規模の津波の実態と対応策
-image: "/uploads/古文書　津波堆積物が示す世界最大規模の津波の実態と対応策　仲座栄三.pdf"
+file: "/uploads/古文書　津波堆積物が示す世界最大規模の津波の実態と対応策　仲座栄三.pdf"
 external_url:
 ---
 

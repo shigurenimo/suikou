@@ -2,8 +2,6 @@
 date: 2017/03/25
 title_en: The new site of the Nakaza's lab has been opened
 title: 新しいホームページを開設しました。
-image:
-external_url:
 ---
 ![](/uploads/c6570891b98024c496d9d0332d332e7d.jpg)
 

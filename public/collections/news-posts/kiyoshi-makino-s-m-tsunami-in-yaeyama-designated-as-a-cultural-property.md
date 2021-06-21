@@ -2,7 +2,7 @@
 date: 2020/06/15
 title_en: Kiyoshi Makino's "M Tsunami in Yaeyama" designated as a cultural property
 title: 牧野清著「八重山の明和大津波」を文化財指定へ
-image: "/uploads/堆積物から水底される琉球諸島における歴史先史津波について.pdf"
+file: "/uploads/堆積物から水底される琉球諸島における歴史先史津波について.pdf"
 external_url: https://www.jstage.jst.go.jp/article/kaigan/71/2/71_I_193/_pdf
 ---
 

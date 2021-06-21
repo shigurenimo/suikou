@@ -3,8 +3,8 @@ backend:
   branch: 'main'
 local_backend: true
 media_folder: 'public/uploads'
-site_url: 'https://suikou.netlify.app'
-display_url: 'https://suikou.netlify.app'
+site_url: 'https://suikou.io'
+display_url: 'https://suikou.io'
 locale: 'ja'
 collections:
   - name: 'news-post'
@@ -37,20 +37,16 @@ collections:
         label: '外部のリンク'
         widget: 'string'
         required: false
-      - name: 'image'
-        label: '画像ファイル'
-        widget: 'image'
-        required: false
-      - name: 'image_a'
-        label: '更に画像ファイル'
-        widget: 'image'
-        required: false
       - name: 'file'
-        label: 'PDFファイル'
+        label: '画像またはPDFファイル（その１）'
         widget: 'file'
         required: false
       - name: 'file_a'
-        label: '更にPDFファイル'
+        label: '画像またはPDFファイル（その２）'
+        widget: 'file'
+        required: false
+      - name: 'file_b'
+        label: '画像またはPDFファイル（その３）'
         widget: 'file'
         required: false
   - label: 'メディア'
@@ -76,9 +72,17 @@ collections:
         format: 'YYYY/MM/DD'
         date_format: 'YYYY/MM/DD'
         time_format: false
-      - name: 'image'
-        label: '画像ファイル'
-        widget: 'image'
+      - name: 'file'
+        label: '画像またはPDFファイル（その１）'
+        widget: 'file'
+        required: false
+      - name: 'file_a'
+        label: '画像またはPDFファイル（その２）'
+        widget: 'file'
+        required: false
+      - name: 'file_b'
+        label: '画像またはPDFファイル（その３）'
+        widget: 'file'
         required: false
   - name: 'class-posts'
     identifier_field: 'title_en'

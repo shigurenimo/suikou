@@ -4,8 +4,7 @@ title_en:
   Makino's Yaeyama Meiwa Oho Tsunami and Tsunami Oho Ishi ( Meiwa Huge Tsunami
   and  Tsunami Boulder )
 title: 牧野清著「八重山の明和大津波」と大浜崎原の「津波大石」について
-image: "/uploads/牧野清著八重山の明和大津波と大浜崎原の津波大石について　初版.pdf"
-external_url:
+file: "/uploads/牧野清著八重山の明和大津波と大浜崎原の津波大石について　初版.pdf"
 ---
 
 本資料は、牧野清著「八重山の明和大津波」を正しく理解するための補足資料となっている。また、牧野清氏が命名した大浜崎原の津波大石の起源について、詳しく説明してある。
