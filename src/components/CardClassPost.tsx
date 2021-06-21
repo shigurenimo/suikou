@@ -1,6 +1,7 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { ClassPost } from '../types/classPost'
+import { Box, Text } from '@chakra-ui/react'
 
 type Props = { post: ClassPost }
 
@@ -9,17 +10,26 @@ export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
 
   return (
     <div className={'rounded-lg p-4 border border-gray-400 bg-gray-50'}>
-      <h1 className={'font-bold text-lg'}>{post.title}</h1>
-      <h2 className={'pt-2 text-sm'}>{post.title_en}</h2>
+      <Text fontSize={'lg'} fontWeight={'bold'}>
+        {post.title}
+      </Text>
+      <Text pt={2} fontSize={'sm'}>
+        {post.title_en}
+      </Text>
       {hasDate && (
-        <p className={'text-sm pt-2'}>
+        <Text fontSize={'sm'} pt={2}>
           {post.date.replace('/', '月').replace('/', '日')}
-        </p>
+        </Text>
       )}
       {post.content && (
-        <ReactMarkdown className={'markdown whitespace-pre-wrap pt-2'}>
+        <Box
+          className={'markdown'}
+          whiteSpace={'pre-wrap'}
+          pt={2}
+          as={ReactMarkdown}
+        >
           {post.content}
-        </ReactMarkdown>
+        </Box>
       )}
     </div>
   )

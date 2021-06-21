@@ -1,6 +1,14 @@
+import {
+  Box,
+  HStack,
+  Stack,
+  StackDivider,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Article } from '../components/Article'
 import { Main } from '../components/Main'
 import { NakazaPage } from '../types/nakazaPage'
@@ -26,56 +34,92 @@ const Nakaza: FunctionComponent<Props> = ({
         <meta content={site.description} name={'description'} />
       </Head>
       <Article>
-        <div className={'md:flex'}>
-          <div className={'flex-1'}>
-            <div className={'p-4 border rounded-lg bg-gray-50'}>
-              <h1 className={'text-gray-700'}>{'教授'}</h1>
-              <h1 className={'pt-1'}>
-                <span className={'text-lg font-bold'}>{nakazaPage.name}</span>
-                <span className={'text-sm pl-4'}>{nakazaPage.name_en}</span>
-              </h1>
-              <p className={'pt-2'}>{nakazaPage.email}</p>
-            </div>
-            <div
-              className={'border px-4 pt-4 rounded-lg bg-gray-50 mt-4 md:mt-8'}
-            >
-              <h2 className={'font-bold text-lg'}>{'略歴'}</h2>
-              <ul className={'divide-y'}>
+        <Stack
+          direction={{ base: 'column', lg: 'row' }}
+          spacing={{ base: 4, md: 8 }}
+        >
+          <Stack spacing={{ base: 4, md: 8 }} flex={1}>
+            <Text p={8} rounded={'lg'} bg={'gray.100'}>
+              <Text textColor={'gray.700'}>{'教授'}</Text>
+              <Text pt={1}>
+                <HStack>
+                  <Text fontWeight={'bold'} fontSize={'2xl'}>
+                    {nakazaPage.name}
+                  </Text>
+                  <Text fontSize={'sm'} pl={4}>
+                    {nakazaPage.name_en}
+                  </Text>
+                </HStack>
+              </Text>
+              <Text pt={2}>{nakazaPage.email}</Text>
+            </Text>
+            <Box rounded={'lg'} bg={'gray.100'} p={8}>
+              <Text fontWeight={'bold'} fontSize={'lg'}>
+                {'略歴'}
+              </Text>
+              <Stack
+                as={'ul'}
+                divider={<StackDivider borderColor="gray.200" />}
+              >
                 {nakazaPage.histories.map((history, index) => (
-                  <li className={'py-4'} key={index}>
+                  <Box py={4} key={index}>
                     <div>
-                      <span className={'font-bold'}>{history.year}</span>
-                      <span className={'ml-2'}>{history.text}</span>
+                      <Text fontWeight={'bold'} as={'span'} fontSize={'2xl'}>
+                        {history.year}
+                      </Text>
+                      <Text ml={2} as={'span'}>
+                        {history.text}
+                      </Text>
                     </div>
-                    <span className={'pt-2'}>{history.text_en}</span>
-                  </li>
+                    <Text pt={2} as={'span'}>
+                      {history.text_en}
+                    </Text>
+                  </Box>
                 ))}
-              </ul>
-            </div>
-          </div>
-          <div className={'flex-1 md:ml-8'}>
-            <div className={'p-4 border rounded-lg bg-gray-50 divide-y'}>
-              <p className={'whitespace-pre-wrap pb-4'}>
-                {nakazaPage.description}
-              </p>
-              <p className={'whitespace-pre-wrap pt-4'}>
-                {nakazaPage.description_en}
-              </p>
-            </div>
-            <div
-              className={'px-4 pt-4 border rounded-lg bg-gray-50 mt-4 md:mt-8'}
+              </Stack>
+            </Box>
+          </Stack>
+          <Stack flex={1}>
+            <Stack
+              borderWidth={1}
+              p={4}
+              rounded={'lg'}
+              bg={'gray.50'}
+              divider={<StackDivider borderColor="gray.200" />}
             >
-              <h2 className={'font-bold text-lg'}>{'研究・プロジェクト'}</h2>
-              <ul className={'divide-y'}>
+              <Text pb={4} whiteSpace={'pre-wrap'}>
+                {nakazaPage.description}
+              </Text>
+              <Text pt={4} whiteSpace={'pre-wrap'}>
+                {nakazaPage.description_en}
+              </Text>
+            </Stack>
+            <Stack
+              rounded={'lg'}
+              spacing={{ base: 4, md: 8 }}
+              px={4}
+              pt={4}
+              borderWidth={1}
+              bg={'gray.50'}
+            >
+              <Text fontSize={'lg'} fontWeight={'bold'}>
+                {'研究・プロジェクト'}
+              </Text>
+              <Stack
+                as={'ul'}
+                divider={<StackDivider borderColor="gray.200" />}
+              >
                 {projectPage.projects.map((history, index) => (
-                  <li className={'py-4'} key={index}>
-                    <span>{history.title}</span>
-                  </li>
+                  <Box as={'li'}>
+                    <Text py={4} textAlgin={'left'} key={index}>
+                      {history.title}
+                    </Text>
+                  </Box>
                 ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Stack>
       </Article>
     </Main>
   )

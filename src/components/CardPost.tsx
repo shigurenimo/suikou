@@ -1,9 +1,10 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { NewsPost } from '../types/newsPost'
 import { toDateText } from '../utils/toDateText'
 import { AnchorURL } from './AnchorURL'
 import { DivisionImage } from './DivisionImage'
+import { Box, HStack, Text } from '@chakra-ui/react'
 
 type Props = { post: NewsPost }
 
@@ -27,11 +28,15 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
 
   return (
     <div className={'rounded-lg p-4 border border-gray-400 bg-gray-50'}>
-      <h1 className={'font-bold text-lg'}>{post.title}</h1>
-      <h2 className={'pt-1 text-sm'}>{post.title_en}</h2>
+      <Text fontSize={'lg'} fontWeight={'bold'}>
+        {post.title}
+      </Text>
+      <Text pt={1} fontSize={'sm'}>
+        {post.title_en}
+      </Text>
       <p className={'text-sm pt-2'}>{toDateText(post.date)}</p>
       {hasActions && (
-        <div className={'pt-2'}>
+        <HStack pt={2}>
           {hasPdfA && (
             <AnchorURL href={post.file.replace('public/', '')}>
               {'PDFファイル'}
@@ -57,13 +62,13 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
               {'外部リンク'}
             </AnchorURL>
           )}
-        </div>
+        </HStack>
       )}
       {hasPNG && <DivisionImage alt={post.title} src={post.image} />}
       {post.content && (
-        <ReactMarkdown className={'markdown whitespace-pre-wrap'}>
+        <Box className={'markdown'} whiteSpace={'pre-wrap'} as={ReactMarkdown}>
           {post.content}
-        </ReactMarkdown>
+        </Box>
       )}
     </div>
   )
