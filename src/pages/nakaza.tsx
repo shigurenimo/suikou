@@ -98,6 +98,7 @@ const Nakaza: FunctionComponent<Props> = ({
               spacing={{ base: 4, md: 8 }}
               px={8}
               pt={8}
+              pb={4}
               bg={'gray.100'}
             >
               <Text fontSize={'lg'} fontWeight={'bold'}>
