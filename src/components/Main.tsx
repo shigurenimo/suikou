@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react'
+import { Text } from '@chakra-ui/react'
 
 export const Main: FunctionComponent = ({ children }) => {
-  return <main className={'w-full'}>{children}</main>
+  return <Text w={'full'}>{children}</Text>
 }

@@ -1,5 +1,10 @@
 import { FunctionComponent } from 'react'
+import { Text } from '@chakra-ui/react'
 
 export const HeadingPage: FunctionComponent = ({ children }) => {
-  return <h1 className={'font-bold text-xl'}>{children}</h1>
+  return (
+    <Text fontWeight={'bold'} fontSize={'xl'}>
+      {children}
+    </Text>
+  )
 }

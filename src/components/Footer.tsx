@@ -1,9 +1,12 @@
 import { FunctionComponent } from 'react'
+import { Text } from '@chakra-ui/react'
 
 export const Footer: FunctionComponent = () => {
   return (
-    <footer className={'mt-4'}>
-      <p className={'text-sm'}>{'© 2016 - 2021 suikou.io'}</p>
-    </footer>
+    <Text mt={4}>
+      <Text fontSize={'sm'} fontWeight={'bold'}>
+        {'© 2016 - 2021 suikou.io'}
+      </Text>
+    </Text>
   )
 }

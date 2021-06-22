@@ -9,7 +9,13 @@ export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
   const hasDate = !post.date.includes('1970')
 
   return (
-    <div className={'rounded-lg p-4 border border-gray-400 bg-gray-50'}>
+    <Box
+      rounded={'lg'}
+      p={4}
+      borderWidth={1}
+      borderColor={'gray.400'}
+      bg={'gray.50'}
+    >
       <Text fontSize={'lg'} fontWeight={'bold'}>
         {post.title}
       </Text>
@@ -31,6 +37,6 @@ export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
           {post.content}
         </Box>
       )}
-    </div>
+    </Box>
   )
 }

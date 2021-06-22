@@ -27,14 +27,16 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
   const hasActions = hasPdf || hasURL
 
   return (
-    <div className={'rounded-lg p-4 border border-gray-400 bg-gray-50'}>
+    <Box rounded={'lg'} p={8} bg={'gray.100'}>
       <Text fontSize={'lg'} fontWeight={'bold'}>
         {post.title}
       </Text>
       <Text pt={1} fontSize={'sm'}>
         {post.title_en}
       </Text>
-      <p className={'text-sm pt-2'}>{toDateText(post.date)}</p>
+      <Text fontSize={'sm'} pt={2}>
+        {toDateText(post.date)}
+      </Text>
       {hasActions && (
         <HStack pt={2}>
           {hasPdfA && (
@@ -70,6 +72,6 @@ export const CardPost: FunctionComponent<Props> = ({ post }) => {
           {post.content}
         </Box>
       )}
-    </div>
+    </Box>
   )
 }

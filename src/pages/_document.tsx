@@ -33,10 +33,10 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <Text p={4} spacing={{ base: 4, md: 8 }}>
+        <body>
           <Main />
           <NextScript />
-        </Text>
+        </body>
       </Html>
     )
   }
