@@ -1,12 +1,21 @@
-import { FunctionComponent } from 'react'
+import { Stack, Text } from '@chakra-ui/react'
+import React, { FunctionComponent } from 'react'
 
 export const Header: FunctionComponent = () => {
   return (
-    <header className={'p-4 md:p-8'}>
-      <a className={'font-bold'}>{'ホーム'}</a>
-      <a className={'ml-4 font-bold'}>{'メディア'}</a>
-      <a className={'ml-4 font-bold'}>{'授業'}</a>
-      <a className={'ml-4 font-bold'}>{'フィードバック'}</a>
-    </header>
+    <Stack p={{ base: 4, md: 8 }}>
+      <Text fontSize={'bold'} as={'a'}>
+        {'ホーム'}
+      </Text>
+      <Text ml={4} as={'a'} fontWeight={'bold'}>
+        {'メディア'}
+      </Text>
+      <Text ml={4} as={'a'} fontWeight={'bold'}>
+        {'授業'}
+      </Text>
+      <Text ml={4} as={'a'} fontWeight={'bold'}>
+        {'フィードバック'}
+      </Text>
+    </Stack>
   )
 }

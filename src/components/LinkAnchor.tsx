@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
+import { Text } from '@chakra-ui/react'
 
 type Props = {
   href: string
@@ -14,7 +15,7 @@ export const LinkAnchor: FunctionComponent<Props> = ({
 }) => {
   return (
     <Link href={href}>
-      <a className={clsx(active && 'text-blue-700')}>{children}</a>
+      <Text textColor={active ? 'blue' : null}>{children}</Text>
     </Link>
   )
 }
