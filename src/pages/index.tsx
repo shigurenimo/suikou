@@ -8,6 +8,7 @@ import { NewsPost } from '../types/newsPost'
 import { SiteConfig } from '../types/sitePage'
 import { readMdFiles } from '../utils/readMdFiles'
 import { readMdFile } from '../utils/readMdFile'
+import { Box } from '@chakra-ui/react'
 
 type Props = {
   posts: NewsPost[]
@@ -22,13 +23,13 @@ const Index: FunctionComponent<Props> = ({ site, posts }) => {
         <meta content={site.description} name={'description'} />
       </Head>
       <SectionHome />
-      <ul className={'max-w-screen-xl mx-auto w-full'}>
+      <Box as={'ul'} maxWidth={'1280px'} mx={'auto'} w={'full'}>
         {posts.map((post, i) => (
           <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
             <CardPost post={post} />
           </li>
         ))}
-      </ul>
+      </Box>
     </main>
   )
 }

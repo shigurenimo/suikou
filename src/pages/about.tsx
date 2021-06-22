@@ -8,7 +8,7 @@ import { Main } from '../components/Main'
 import { Page } from '../types/page'
 import { SiteConfig } from '../types/sitePage'
 import { readMdFile } from '../utils/readMdFile'
-import { Box, HStack, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 type Props = {
   page: Page
@@ -25,6 +25,7 @@ const About: FunctionComponent<Props> = ({ page, site }) => {
       <Article>
         <HeadingPage>{page.title}</HeadingPage>
         <Box
+          as={ReactMarkdown}
           className={'markdown'}
           whiteSpace={'pre-wrap'}
           pt={{ base: 4, md: 8 }}
