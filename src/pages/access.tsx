@@ -28,6 +28,7 @@ const Access: FunctionComponent<Props> = ({ page, site }) => {
           className={'markdown'}
           whiteSpace={'pre-wrap'}
           pt={{ base: 4, md: 8 }}
+          as={ReactMarkdown}
         >
           {page.content}
         </Box>
