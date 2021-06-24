@@ -1,11 +1,10 @@
-import clsx from 'clsx'
+import { List, ListItem } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { FunctionComponent } from 'react'
-import { CardClassPost } from '../../components/CardClassPost'
-import { HeadingPage } from '../../components/HeadingPage'
-import { List } from '../../components/List'
-import { Main } from '../../components/Main'
+import React, { FunctionComponent } from 'react'
+import { CardClassPost } from '../../core/components/CardClassPost'
+import { HeadingPage } from '../../core/components/HeadingPage'
+import { Main } from '../../core/components/Main'
 import { ClassPost } from '../../types/classPost'
 import { SiteConfig } from '../../types/sitePage'
 import { readMdFile } from '../../utils/readMdFile'
@@ -24,11 +23,11 @@ const SurveysIndex: FunctionComponent<Props> = ({ posts, site }) => {
         <meta content={site.description} name={'description'} />
       </Head>
       <HeadingPage>{'尾崎次郎基金による東北地方大津波災害調査'}</HeadingPage>
-      <List>
+      <List spacing={{ base: 4, md: 6 }}>
         {posts.map((post, i) => (
-          <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
+          <ListItem key={post.id}>
             <CardClassPost post={post} />
-          </li>
+          </ListItem>
         ))}
       </List>
     </Main>

@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import React, { FunctionComponent, useEffect } from 'react'
-import { Aside } from '../components/Aside'
+import { Aside } from '../core/components/Aside'
 import '../index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../core/theme'

@@ -1,14 +1,14 @@
-import clsx from 'clsx'
+import { Box, Stack } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { FunctionComponent } from 'react'
-import { CardPost } from '../components/CardPost'
-import { SectionHome } from '../components/SectionHome'
+import React, { FunctionComponent } from 'react'
+import { CardPost } from '../core/components/CardPost'
+import { Main } from '../core/components/Main'
+import { SectionHome } from '../core/components/SectionHome'
 import { NewsPost } from '../types/newsPost'
 import { SiteConfig } from '../types/sitePage'
-import { readMdFiles } from '../utils/readMdFiles'
 import { readMdFile } from '../utils/readMdFile'
-import { Box, Text } from '@chakra-ui/react'
+import { readMdFiles } from '../utils/readMdFiles'
 
 type Props = {
   posts: NewsPost[]
@@ -17,20 +17,26 @@ type Props = {
 
 const Index: FunctionComponent<Props> = ({ site, posts }) => {
   return (
-    <main>
+    <Main>
       <Head>
         <title>{site.title}</title>
         <meta content={site.description} name={'description'} />
       </Head>
       <SectionHome />
-      <Box as={'ul'} maxWidth={'1280px'} mx={'auto'} w={'full'}>
+      <Stack
+        as={'ul'}
+        maxW={'1280px'}
+        mx={'auto'}
+        w={'full'}
+        spacing={{ base: 4, md: 8 }}
+      >
         {posts.map((post, i) => (
-          <Text className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
-            <CardPost post={post} />
-          </Text>
+          <Box as={'li'}>
+            <CardPost post={post} key={post.id} />
+          </Box>
         ))}
-      </Box>
-    </main>
+      </Stack>
+    </Main>
   )
 }
 

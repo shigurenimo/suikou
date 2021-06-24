@@ -1,26 +1,22 @@
-import clsx from 'clsx'
+import { Button } from '@chakra-ui/react'
 import React, { FunctionComponent } from 'react'
-import { Box, Button, Link } from '@chakra-ui/react'
 
 type Props = {
   href: string
-  hasPadding?: boolean
 }
 
-export const AnchorURL: FunctionComponent<Props> = ({
-  children,
-  href,
-  hasPadding,
-}) => {
+export const AnchorURL: FunctionComponent<Props> = ({ children, href }) => {
   return (
     <Button
       as={'a'}
       fontWeight={'bold'}
-      textColor={'blue'}
       rounded={'md'}
       target={'_blank'}
       rel={'noreferrer'}
       href={href}
+      colorScheme={'purple'}
+      size={'sm'}
+      variant={'solid'}
     >
       {children}
     </Button>

@@ -13,6 +13,7 @@ export const Aside: FunctionComponent = () => {
       display={{ base: 'none', md: 'block' }}
       w={'100%'}
       maxW={'xs'}
+      p={{ base: 4, md: 6 }}
     >
       <Stack pb={4} fontWeight={'bold'}>
         <LinkAnchor active={pathname === '/'} href={'/'}>

@@ -1,14 +1,14 @@
+import { Box } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { FunctionComponent } from 'react'
-import ReactMarkdown from 'react-markdown'
-import { Article } from '../components/Article'
-import { HeadingPage } from '../components/HeadingPage'
-import { Main } from '../components/Main'
+import React, { FunctionComponent } from 'react'
+import { Article } from '../core/components/Article'
+import { BoxMarkdown } from '../core/components/BoxMarkdown'
+import { HeadingPage } from '../core/components/HeadingPage'
+import { Main } from '../core/components/Main'
 import { Page } from '../types/page'
 import { SiteConfig } from '../types/sitePage'
 import { readMdFile } from '../utils/readMdFile'
-import { Box, HStack, Text } from '@chakra-ui/react'
 
 type Props = {
   page: Page
@@ -24,13 +24,8 @@ const Access: FunctionComponent<Props> = ({ page, site }) => {
       </Head>
       <Article>
         <HeadingPage>{page.title}</HeadingPage>
-        <Box
-          className={'markdown'}
-          whiteSpace={'pre-wrap'}
-          pt={{ base: 4, md: 8 }}
-          as={ReactMarkdown}
-        >
-          {page.content}
+        <Box>
+          <BoxMarkdown>{page.content}</BoxMarkdown>
         </Box>
       </Article>
     </Main>

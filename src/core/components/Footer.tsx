@@ -1,12 +1,12 @@
-import { FunctionComponent } from 'react'
-import { Text } from '@chakra-ui/react'
+import { Stack, Text } from '@chakra-ui/react'
+import React, { FunctionComponent } from 'react'
 
 export const Footer: FunctionComponent = () => {
   return (
-    <Text mt={4}>
+    <Stack>
       <Text fontSize={'sm'} fontWeight={'bold'}>
         {'© 2016 - 2021 suikou.io'}
       </Text>
-    </Text>
+    </Stack>
   )
 }

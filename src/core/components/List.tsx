@@ -3,7 +3,7 @@ import { Box, Text } from '@chakra-ui/react'
 
 export const List: FunctionComponent = ({ children }) => {
   return (
-    <Text maxWidth={'1280px'} w={'full'} pt={{ base: 4, md: 8 }}>
+    <Text maxW={'1280px'} w={'full'} pt={{ base: 4, md: 8 }}>
       {children}
     </Text>
   )

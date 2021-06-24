@@ -1,11 +1,10 @@
-import clsx from 'clsx'
+import { List, ListItem } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { FunctionComponent } from 'react'
-import { CardBook } from '../../components/CardBook'
-import { HeadingPage } from '../../components/HeadingPage'
-import { List } from '../../components/List'
-import { Main } from '../../components/Main'
+import React, { FunctionComponent } from 'react'
+import { CardBook } from '../../core/components/CardBook'
+import { HeadingPage } from '../../core/components/HeadingPage'
+import { Main } from '../../core/components/Main'
 import { Book } from '../../types/book'
 import { SiteConfig } from '../../types/sitePage'
 import { readMdFile } from '../../utils/readMdFile'
@@ -24,11 +23,11 @@ const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
         <meta content={site.description} name={'description'} />
       </Head>
       <HeadingPage>{'書籍'}</HeadingPage>
-      <List>
+      <List spacing={{ base: 4, md: 6 }}>
         {posts.map((post, i) => (
-          <li className={clsx(i !== 0 && 'pt-4 md:pt-8')} key={post.id}>
+          <ListItem key={post.id}>
             <CardBook book={post} />
-          </li>
+          </ListItem>
         ))}
       </List>
     </Main>
