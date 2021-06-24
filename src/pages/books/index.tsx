@@ -24,7 +24,7 @@ const ArticlesIndex: FunctionComponent<Props> = ({ posts, site }) => {
       </Head>
       <HeadingPage>{'書籍'}</HeadingPage>
       <List spacing={{ base: 4, md: 6 }}>
-        {posts.map((post, i) => (
+        {posts.map((post) => (
           <ListItem key={post.id}>
             <CardBook book={post} />
           </ListItem>

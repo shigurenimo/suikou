@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react'
+import { List, ListItem } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import React, { FunctionComponent } from 'react'
@@ -23,19 +23,13 @@ const Index: FunctionComponent<Props> = ({ site, posts }) => {
         <meta content={site.description} name={'description'} />
       </Head>
       <SectionHome />
-      <Stack
-        as={'ul'}
-        maxW={'1280px'}
-        mx={'auto'}
-        w={'full'}
-        spacing={{ base: 4, md: 8 }}
-      >
-        {posts.map((post, i) => (
-          <Box as={'li'}>
+      <List spacing={{ base: 4, md: 6 }}>
+        {posts.map((post) => (
+          <ListItem key={post.id}>
             <CardPost post={post} key={post.id} />
-          </Box>
+          </ListItem>
         ))}
-      </Stack>
+      </List>
     </Main>
   )
 }

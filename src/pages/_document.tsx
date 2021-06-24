@@ -1,6 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
-import { Box, Text } from '@chakra-ui/react'
 
 class MyDocument extends Document {
   public render() {

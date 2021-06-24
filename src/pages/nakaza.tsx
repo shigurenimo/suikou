@@ -98,8 +98,8 @@ const Nakaza: FunctionComponent<Props> = ({
                 divider={<StackDivider borderColor={'gray.300'} />}
               >
                 {projectPage.projects.map((history, index) => (
-                  <Stack as={'li'}>
-                    <Text py={2} textAlgin={'left'} key={index}>
+                  <Stack as={'li'} key={index}>
+                    <Text py={2} textAlgin={'left'}>
                       {history.title}
                     </Text>
                   </Stack>

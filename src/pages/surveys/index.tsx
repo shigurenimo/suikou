@@ -24,7 +24,7 @@ const SurveysIndex: FunctionComponent<Props> = ({ posts, site }) => {
       </Head>
       <HeadingPage>{'尾崎次郎基金による東北地方大津波災害調査'}</HeadingPage>
       <List spacing={{ base: 4, md: 6 }}>
-        {posts.map((post, i) => (
+        {posts.map((post) => (
           <ListItem key={post.id}>
             <CardClassPost post={post} />
           </ListItem>
