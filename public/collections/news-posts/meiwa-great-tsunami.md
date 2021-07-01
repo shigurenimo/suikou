@@ -2,6 +2,7 @@
 title: 明和大津波に関する記事です
 title_en: Meiwa Great Tsunami
 date: 2021/07/01
+file: /public/uploads/琉球新報　記事　沖縄にも巨大津波　仲座栄三　0305-2021　再１震災１０年（２）.pdf
 ---
 以前に、新聞に記載された情報です。
 
