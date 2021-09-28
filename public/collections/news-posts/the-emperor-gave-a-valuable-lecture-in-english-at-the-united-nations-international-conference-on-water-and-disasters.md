@@ -1,6 +1,6 @@
 ---
-title: 天皇陛下　「国連の水と災害に関する国際会議」にて英語による貴重講演
-title_en: The emperor gave a valuable lecture in English at the United Nations
+title: 天皇陛下　「国連の水と災害に関する国際会議」にて英語による基調講演
+title_en: The emperor gave a keynote speech in English at the United Nations
   International Conference on Water and Disasters.
 date: 2021/07/01
 external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/bitstream/20.500.12001/24686/1/vol5no2p17.pdf
