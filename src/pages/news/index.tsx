@@ -1,7 +1,7 @@
 import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { CardPost } from "../../core/components/CardPost"
 import { HeadingPage } from "../../core/components/HeadingPage"
 import { Main } from "../../core/components/Main"
@@ -15,7 +15,7 @@ type Props = {
   site: SiteConfig
 }
 
-const NewsIndex: FunctionComponent<Props> = ({ posts, site }) => {
+const NewsIndex: FC<Props> = ({ posts, site }) => {
   return (
     <Main>
       <Head>

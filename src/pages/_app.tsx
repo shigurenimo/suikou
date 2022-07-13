@@ -1,12 +1,12 @@
 import { ChakraProvider } from "@chakra-ui/react"
 import { AppProps } from "next/app"
 import { useRouter } from "next/router"
-import React, { FunctionComponent, useEffect } from "react"
+import React, { FC, useEffect } from "react"
 import { Aside } from "../core/components/Aside"
 import "../index.css"
 import { theme } from "../core/theme"
 
-const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
+const App: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
 
   useEffect(() => {

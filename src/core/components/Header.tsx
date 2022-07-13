@@ -1,7 +1,7 @@
 import { Stack, Text } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 
-export const Header: FunctionComponent = () => {
+export const Header: FC = () => {
   return (
     <Stack p={{ base: 4, md: 8 }}>
       <Text fontSize={"bold"} as={"a"}>

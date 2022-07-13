@@ -1,10 +1,14 @@
 import { Heading } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC, ReactNode } from "react"
 
-export const HeadingPage: FunctionComponent = ({ children }) => {
+type Props = {
+  children: ReactNode
+}
+
+export const HeadingPage: FC<Props> = (props) => {
   return (
     <Heading fontWeight={"bold"} fontSize={"xl"}>
-      {children}
+      {props.children}
     </Heading>
   )
 }

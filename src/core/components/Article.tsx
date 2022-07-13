@@ -1,10 +1,14 @@
 import { Stack } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC, ReactNode } from "react"
 
-export const Article: FunctionComponent = ({ children }) => {
+type Props = {
+  children: ReactNode
+}
+
+export const Article: FC<Props> = (props) => {
   return (
     <Stack maxW={"1280px"} w={"full"} spacing={6}>
-      {children}
+      {props.children}
     </Stack>
   )
 }

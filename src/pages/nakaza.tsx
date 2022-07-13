@@ -1,7 +1,7 @@
 import { Heading, HStack, Stack, StackDivider, Text } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { Article } from "../core/components/Article"
 import { Main } from "../core/components/Main"
 import { NakazaPage } from "../types/nakazaPage"
@@ -15,11 +15,7 @@ type Props = {
   site: SiteConfig
 }
 
-const Nakaza: FunctionComponent<Props> = ({
-  nakazaPage,
-  projectPage,
-  site,
-}) => {
+const Nakaza: FC<Props> = ({ nakazaPage, projectPage, site }) => {
   return (
     <Main>
       <Head>
@@ -99,7 +95,7 @@ const Nakaza: FunctionComponent<Props> = ({
               >
                 {projectPage.projects.map((history, index) => (
                   <Stack as={"li"} key={index}>
-                    <Text py={2} textAlgin={"left"}>
+                    <Text py={2} align={"left"}>
                       {history.title}
                     </Text>
                   </Stack>

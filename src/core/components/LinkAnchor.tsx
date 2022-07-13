@@ -1,25 +1,22 @@
 import { Text } from "@chakra-ui/react"
 import Link from "next/link"
-import { FunctionComponent } from "react"
+import { FC, ReactNode } from "react"
 
 type Props = {
   href: string
   active: boolean
+  children: ReactNode
 }
 
-export const LinkAnchor: FunctionComponent<Props> = ({
-  active,
-  children,
-  href,
-}) => {
+export const LinkAnchor: FC<Props> = (props) => {
   return (
-    <Link href={href}>
+    <Link href={props.href}>
       <Text
         as={"a"}
         cursor={"pointer"}
-        textColor={active ? "purple.500" : null}
+        textColor={props.active ? "purple.500" : null}
       >
-        {children}
+        {props.children}
       </Text>
     </Link>
   )

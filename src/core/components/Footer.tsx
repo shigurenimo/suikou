@@ -1,7 +1,7 @@
 import { Stack, Text } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 
-export const Footer: FunctionComponent = () => {
+export const Footer: FC = () => {
   return (
     <Stack>
       <Text fontSize={"sm"} fontWeight={"bold"}>

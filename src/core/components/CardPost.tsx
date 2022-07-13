@@ -1,5 +1,5 @@
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { NewsPost } from "../../types/newsPost"
 import { toDateText } from "../../utils/toDateText"
 import { usePostFiles } from "../hooks/usePostFiles"
@@ -9,7 +9,7 @@ import { BoxMarkdown } from "./BoxMarkdown"
 
 type Props = { post: NewsPost }
 
-export const CardPost: FunctionComponent<Props> = ({ post }) => {
+export const CardPost: FC<Props> = ({ post }) => {
   const imageFiles = usePostFiles(
     [post.file, post.file_a, post.file_b, post.file_c],
     [".png", ".jpg", ".jpeg"],

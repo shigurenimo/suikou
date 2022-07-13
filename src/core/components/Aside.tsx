@@ -1,10 +1,10 @@
 import { Stack } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { Footer } from "./Footer"
 import { LinkAnchor } from "./LinkAnchor"
 
-export const Aside: FunctionComponent = () => {
+export const Aside: FC = () => {
   const { pathname } = useRouter()
 
   return (

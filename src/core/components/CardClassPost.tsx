@@ -1,11 +1,11 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { ClassPost } from "../../types/classPost"
 import { BoxMarkdown } from "./BoxMarkdown"
 
 type Props = { post: ClassPost }
 
-export const CardClassPost: FunctionComponent<Props> = ({ post }) => {
+export const CardClassPost: FC<Props> = ({ post }) => {
   const hasDate = !post.date.includes("1970")
 
   return (

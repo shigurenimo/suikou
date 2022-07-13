@@ -1,14 +1,14 @@
 import { Box, Stack } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 
-export const DivisionBackground: FunctionComponent = () => {
+export const DivisionBackground: FC = () => {
   return (
     <Stack
       id={"background"}
       position={"absolute"}
       flex={1}
-      justify={"center"}
-      items={"center"}
+      justifyContent={"center"}
+      alignItems={"center"}
       style={{ zIndex: -1, left: "2%" }}
     >
       <Box

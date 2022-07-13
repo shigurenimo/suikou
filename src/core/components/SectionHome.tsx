@@ -1,15 +1,15 @@
 import { Box, Stack, Text } from "@chakra-ui/react"
-import { FunctionComponent } from "react"
+import { FC } from "react"
 import { DivisionBackground } from "./SectionBackground"
 
-export const SectionHome: FunctionComponent = () => {
+export const SectionHome: FC = () => {
   return (
     <Box>
       <Stack
         flex={1}
         position={"relative"}
-        justify={"center"}
-        items={"center"}
+        justifyContent={"center"}
+        alignItems={"center"}
         h={"20vh"}
       >
         <DivisionBackground />

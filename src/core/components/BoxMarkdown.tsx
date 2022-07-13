@@ -8,10 +8,14 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC, ReactNode } from "react"
 import ReactMarkdown from "react-markdown"
 
-export const BoxMarkdown: FunctionComponent = (props) => {
+type Props = {
+  children: ReactNode
+}
+
+export const BoxMarkdown: FC<Props> = (props) => {
   if (typeof props.children !== "string") {
     return <>{props.children}</>
   }

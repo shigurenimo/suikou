@@ -1,11 +1,12 @@
 import { Button } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC, ReactNode } from "react"
 
 type Props = {
   href: string
+  children: ReactNode
 }
 
-export const AnchorURL: FunctionComponent<Props> = ({ children, href }) => {
+export const AnchorURL: FC<Props> = (props) => {
   return (
     <Button
       as={"a"}
@@ -13,12 +14,12 @@ export const AnchorURL: FunctionComponent<Props> = ({ children, href }) => {
       rounded={"md"}
       target={"_blank"}
       rel={"noreferrer"}
-      href={href}
+      href={props.href}
       colorScheme={"purple"}
       size={"sm"}
       variant={"solid"}
     >
-      {children}
+      {props.children}
     </Button>
   )
 }

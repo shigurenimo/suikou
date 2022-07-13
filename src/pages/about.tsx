@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
 import Head from "next/head"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { Article } from "../core/components/Article"
 import { BoxMarkdown } from "../core/components/BoxMarkdown"
 import { HeadingPage } from "../core/components/HeadingPage"
@@ -14,7 +14,7 @@ type Props = {
   site: SiteConfig
 }
 
-const About: FunctionComponent<Props> = ({ page, site }) => {
+const About: FC<Props> = ({ page, site }) => {
   return (
     <Main>
       <Head>

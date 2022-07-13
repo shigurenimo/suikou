@@ -1,12 +1,12 @@
 import { Box, Img } from "@chakra-ui/react"
-import { FunctionComponent } from "react"
+import { FC } from "react"
 
 type Props = {
   alt: string
   src: string
 }
 
-export const BoxImage: FunctionComponent<Props> = (props) => {
+export const BoxImage: FC<Props> = (props) => {
   return (
     <Box>
       <Img

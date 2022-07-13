@@ -1,11 +1,11 @@
 import { Box, HStack, Img, Text } from "@chakra-ui/react"
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import { Book } from "../../types/book"
 import { AnchorURL } from "./AnchorURL"
 
 type Props = { book: Book }
 
-export const CardBook: FunctionComponent<Props> = ({ book }) => {
+export const CardBook: FC<Props> = ({ book }) => {
   return (
     <HStack rounded={"md"} p={6} bg={"gray.100"} spacing={4}>
       <Img w={32} rounded={"lg"} alt={book.title} src={book.image} />
