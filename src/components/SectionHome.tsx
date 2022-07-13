@@ -1,6 +1,6 @@
 import { Box, Stack, Text } from "@chakra-ui/react"
 import { FC } from "react"
-import { DivisionBackground } from "./SectionBackground"
+import { DivisionBackground } from "src/components/SectionBackground"
 
 export const SectionHome: FC = () => {
   return (

@@ -107,6 +107,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
         img(props) {
           return (
             <Image
+              alt={props.alt}
               maxW={"lg"}
               mx={"auto"}
               w={"100%"}

@@ -1,7 +1,7 @@
 import { Box, HStack, Img, Text } from "@chakra-ui/react"
 import React, { FC } from "react"
-import { Book } from "../../types/book"
-import { AnchorURL } from "./AnchorURL"
+import { AnchorURL } from "src/components/AnchorURL"
+import { Book } from "src/types/book"
 
 type Props = { book: Book }
 

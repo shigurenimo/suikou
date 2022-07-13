@@ -1,11 +1,11 @@
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 import React, { FC } from "react"
-import { NewsPost } from "../../types/newsPost"
-import { toDateText } from "../../utils/toDateText"
-import { usePostFiles } from "../hooks/usePostFiles"
-import { AnchorURL } from "./AnchorURL"
-import { BoxImage } from "./BoxImage"
-import { BoxMarkdown } from "./BoxMarkdown"
+import { AnchorURL } from "src/components/AnchorURL"
+import { BoxImage } from "src/components/BoxImage"
+import { BoxMarkdown } from "src/components/BoxMarkdown"
+import { usePostFiles } from "src/hooks/usePostFiles"
+import { NewsPost } from "src/types/newsPost"
+import { toDateText } from "src/utils/toDateText"
 
 type Props = { post: NewsPost }
 

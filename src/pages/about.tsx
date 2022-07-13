@@ -1,13 +1,13 @@
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { Article } from "../core/components/Article"
-import { BoxMarkdown } from "../core/components/BoxMarkdown"
-import { HeadingPage } from "../core/components/HeadingPage"
-import { Main } from "../core/components/Main"
-import { Page } from "../types/page"
-import { SiteConfig } from "../types/sitePage"
-import { readMdFile } from "../utils/readMdFile"
+import { Article } from "src/components/Article"
+import { BoxMarkdown } from "src/components/BoxMarkdown"
+import { HeadingPage } from "src/components/HeadingPage"
+import { Main } from "src/components/Main"
+import { Page } from "src/types/page"
+import { SiteConfig } from "src/types/sitePage"
+import { readMdFile } from "src/utils/readMdFile"
 
 type Props = {
   page: Page

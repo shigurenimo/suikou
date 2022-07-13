@@ -2,12 +2,12 @@ import { Heading, HStack, Stack, StackDivider, Text } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { Article } from "../core/components/Article"
-import { Main } from "../core/components/Main"
-import { NakazaPage } from "../types/nakazaPage"
-import { ProjectPage } from "../types/projectPage"
-import { SiteConfig } from "../types/sitePage"
-import { readMdFile } from "../utils/readMdFile"
+import { Article } from "src/components/Article"
+import { Main } from "src/components/Main"
+import { NakazaPage } from "src/types/nakazaPage"
+import { ProjectPage } from "src/types/projectPage"
+import { SiteConfig } from "src/types/sitePage"
+import { readMdFile } from "src/utils/readMdFile"
 
 type Props = {
   nakazaPage: NakazaPage
