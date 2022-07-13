@@ -49,7 +49,7 @@ if (getApps().length === 0) {
     appId: "1:1056518212822:web:ca40589b75cbf38a05cd77",
     measurementId: "G-Q1B4GLE32V",
   })
-  if (process.env.NODE_ENV === "production") {
+  if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {
     setAnalyticsCollectionEnabled(getAnalytics(), true)
   }
 }
