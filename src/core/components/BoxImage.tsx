@@ -1,5 +1,5 @@
-import { Box, Img } from '@chakra-ui/react'
-import { FunctionComponent } from 'react'
+import { Box, Img } from "@chakra-ui/react"
+import { FunctionComponent } from "react"
 
 type Props = {
   alt: string
@@ -10,9 +10,9 @@ export const BoxImage: FunctionComponent<Props> = (props) => {
   return (
     <Box>
       <Img
-        maxW={'md'}
+        maxW={"md"}
         borderWidth={1}
-        rounded={'lg'}
+        rounded={"lg"}
         alt={props.alt}
         src={props.src}
       />

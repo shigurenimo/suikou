@@ -4,6 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "format": "prettier --write src",
+    "lint": "eslint --fix src",
     "build": "next build && next export",
     "build:netlify": "echo 0",
     "dev": "next dev",
@@ -40,12 +42,12 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.19.0",
     "eslint-config-next": "^12.2.2",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "postcss-preset-env": "^7.7.2",
     "prettier": "^2.7.1",
-    "prettier-plugin-organize-imports": "3.0.0",
     "pretty-quick": "^3.1.3",
     "typescript": "^4.7.4"
   },

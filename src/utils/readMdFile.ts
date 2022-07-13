@@ -1,27 +1,27 @@
-import { promises as fs } from 'fs'
-import matter from 'gray-matter'
-import { join } from 'path'
+import { promises as fs } from "fs"
+import { join } from "path"
+import matter from "gray-matter"
 
 export const readMdFile = async <T extends { type: string }>(
   collectionName: string,
-  fileName: string
+  fileName: string,
 ) => {
   const filePath = join(
-    'public',
-    'collections',
+    "public",
+    "collections",
     collectionName,
-    `${fileName}.md`
+    `${fileName}.md`,
   )
 
   const stat = await fs.stat(filePath)
 
   if (!stat.isFile()) {
-    throw new Error('not found')
+    throw new Error("not found")
   }
 
   const id = fileName
 
-  const text = await fs.readFile(filePath, 'utf-8')
+  const text = await fs.readFile(filePath, "utf-8")
 
   const file = matter(text)
 

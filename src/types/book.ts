@@ -1,4 +1,4 @@
-import { Content } from './content'
+import { Content } from "./content"
 
 export type Book = Content & {
   image: string | null

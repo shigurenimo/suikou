@@ -1,6 +1,6 @@
 export const usePostFiles = (
   files: (string | null)[],
-  extensions: string[]
+  extensions: string[],
 ) => {
   return files
     .filter((file) => file)

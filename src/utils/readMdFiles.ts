@@ -1,28 +1,28 @@
-import { promises as fs } from 'fs'
-import matter from 'gray-matter'
-import { join } from 'path'
+import { promises as fs } from "fs"
+import { join } from "path"
+import matter from "gray-matter"
 
 export const readMdFiles = async <T extends { type: string }>(
-  collectionName: string
+  collectionName: string,
 ) => {
   const fileNames = await fs.readdir(
-    join('public', 'collections', collectionName)
+    join("public", "collections", collectionName),
   )
 
   const contents: T[] = []
 
   for (const fileName of fileNames) {
-    const filePath = join('public', 'collections', collectionName, fileName)
+    const filePath = join("public", "collections", collectionName, fileName)
 
     const stat = await fs.stat(filePath)
 
     if (!stat.isFile()) continue
 
-    if (!fileName.endsWith('.md')) continue
+    if (!fileName.endsWith(".md")) continue
 
-    const id = fileName.replace('.md', '')
+    const id = fileName.replace(".md", "")
 
-    const text = await fs.readFile(filePath, 'utf-8')
+    const text = await fs.readFile(filePath, "utf-8")
 
     const file = matter(text)
 

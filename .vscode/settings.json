@@ -1,11 +1,14 @@
 {
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "deno.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.xml": "html",
+    "*.svg": "html"
+  },
   "files.exclude": {
     "**/node_modules": true,
     "*.lock": true,
@@ -19,9 +22,6 @@
   "search.exclude": {
     "yarn.lock": true
   },
-  "files.associations": {
-    "*.xml": "html",
-    "*.svg": "html"
-  },
-  "deno.enable": false
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }

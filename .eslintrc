@@ -1,27 +1,12 @@
 {
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
-  ],
-  "plugins": ["@typescript-eslint", "react"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
+  "extends": ["next"],
+  "plugins": ["unused-imports"],
   "env": {
     "node": true,
     "es6": true
   },
   "rules": {
-    "@typescript-eslint/camelcase": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/no-use-before-define": 0,
-    "@typescript-eslint/prefer-interface": 0,
-    "react/display-name": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0
+    "import/order": ["error", { "alphabetize": { "order": "asc" } }],
+    "unused-imports/no-unused-imports": "error"
   }
 }
