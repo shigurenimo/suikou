@@ -1,9 +1,9 @@
 ---
-date: 2018/05/07
-title_en: An answer to the question "Why is Space-Time Four-dimensional?"
 title: 物理学における不思議”なぜ時空は４次元か”に答える
-image: "/uploads/4ae479e0925deee30b65dbfc7fa85982.pdf"
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
+title_en: An answer to the question "Why is Space-Time Four-dimensional?"
+date: 2018/05/07
+image: /uploads/4ae479e0925deee30b65dbfc7fa85982.pdf
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 仲座栄三 (Eizo NAKAZA)
 
