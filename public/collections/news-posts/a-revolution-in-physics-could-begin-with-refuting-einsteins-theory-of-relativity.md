@@ -3,7 +3,7 @@ title: 物理革命はアインシュタインの相対性理論を論駁する�
 title_en: A revolution in Physics could begin with refuting Einstein's theory of
   relativity
 date: 2021/01/06
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 アインシュタインの相対性理論が教育現場において連綿と教え続けられている。その理論には、数多くのパラドックスを伴うのであるが、それはなしの礫となり、木に竹をつぐような説明で茶を濁している現状がある。
 
@@ -21,6 +21,4 @@ external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
 
 これにより新しい物理学上の革命と新たな発見を模索してもらいたい。
 
-詳しくは、参考サイトをご覧ください。
-
-http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
+詳しくは、参考サイト（Physics)をご覧ください。
