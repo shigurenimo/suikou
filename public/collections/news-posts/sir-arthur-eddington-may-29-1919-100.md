@@ -1,9 +1,9 @@
 ---
-date: 2017/08/22
-title_en: Sir Arthur Eddington, May 29, 1919 の皆既日食観測から100年
 title: 100 years, since the Sir Arthur Eddington's historical observation, May
   29, 1919.
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
+title_en: Sir Arthur Eddington, May 29, 1919 の皆既日食観測から100年
+date: 2017/08/22
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 仲座栄三 (Eizo NAKAZA)
 
