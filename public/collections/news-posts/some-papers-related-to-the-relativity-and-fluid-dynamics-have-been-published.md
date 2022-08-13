@@ -1,8 +1,8 @@
 ---
-date: 2017/04/08
-title_en: Some papers related to the relativity and fluid dynamics have been published.
 title: 沖縄科学防災環境学会へ論文掲載いたしました。
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/19965
+title_en: Some papers related to the relativity and fluid dynamics have been published.
+date: 2017/04/08
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 
 仲座栄三 (Eizo NAKAZA)
