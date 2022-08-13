@@ -2,7 +2,7 @@
 title: ニュートンの運動法則は修正されなければならない
 title_en: Newton's law of motion must be modified
 date: 2021/01/11
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/19965
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 我々が教科書で学ぶニュートンの運動の法則は、一般に次のように述べられている。
 
@@ -23,5 +23,3 @@ external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/19965
 一方で、これまでにも度々述べてきているように、アインシュタインの相対性理論は誤っており、その本質は、相対論的電磁気学として再定義されなければならない。
 
 教科書の説明はいかに修正されなければならないかなど、詳しくは、本サイトの関連ページ、あるいは詳細ページをご参考ください。
-
-http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/20766
