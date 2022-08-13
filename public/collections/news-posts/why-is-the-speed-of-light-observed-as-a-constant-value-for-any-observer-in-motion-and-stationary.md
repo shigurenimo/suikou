@@ -1,9 +1,9 @@
 ---
-date: 2017/11/28
-title_en: Why is the speed of light observed as a constant value for any observer in
-  motion and stationary?
 title: 光の速度が一定となって観測される物理的説明
-external_url: http://okinawa-repo.lib.u-ryukyu.ac.jp/handle/20.500.12001/21868
+title_en: Why is the speed of light observed as a constant value for any
+  observer in motion and stationary?
+date: 2017/11/28
+external_url: https://u-ryukyu.repo.nii.ac.jp/search?page=1&size=20&sort=-createdate&search_type=2&q=1657698443681&timestamp=1658722077.3386552
 ---
 仲座栄三 (Eizo NAKAZA)
 
