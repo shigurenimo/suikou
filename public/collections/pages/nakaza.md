@@ -41,6 +41,9 @@ histories:
   - year: 2013
     text_en: Vice President
     text: 琉球大学副学長
+  - text: 放送大学客員教授
+    text_en: Visiting Professor
+    year: 2015
   - year: 2016
     text_en: DIrector of the University Library
     text: 琉球大学付属図書館長
