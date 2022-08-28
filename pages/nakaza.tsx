@@ -28,7 +28,7 @@ const Nakaza: FC<Props> = (props) => {
           spacing={{ base: 4, md: 6 }}
         >
           <Stack spacing={{ base: 4, md: 6 }} flex={1}>
-            <Stack p={6} rounded={"lg"} bg={"gray.700"}>
+            <Stack p={4} rounded={"lg"} bg={"gray.700"}>
               <Text opacity={0.8}>{"教授"}</Text>
               <Text>
                 <HStack>
@@ -42,7 +42,7 @@ const Nakaza: FC<Props> = (props) => {
               </Text>
               <Text>{props.nakazaPage.email}</Text>
             </Stack>
-            <Stack rounded={"lg"} bg={"gray.700"} px={6} pt={6} pb={4}>
+            <Stack rounded={"lg"} bg={"gray.700"} p={4}>
               <Heading as={"h2"} fontWeight={"bold"} fontSize={"lg"}>
                 {"略歴"}
               </Heading>
@@ -66,7 +66,7 @@ const Nakaza: FC<Props> = (props) => {
           </Stack>
           <Stack flex={1} spacing={{ base: 4, md: 6 }}>
             <Stack
-              p={6}
+              p={4}
               rounded={"lg"}
               bg={"gray.700"}
               divider={<StackDivider borderColor={"gray.300"} />}
@@ -78,14 +78,7 @@ const Nakaza: FC<Props> = (props) => {
                 {props.nakazaPage.description_en.trim()}
               </Text>
             </Stack>
-            <Stack
-              rounded={"lg"}
-              spacing={4}
-              px={6}
-              pt={6}
-              pb={4}
-              bg={"gray.700"}
-            >
+            <Stack rounded={"lg"} spacing={4} p={4} bg={"gray.700"}>
               <Heading as={"h2"} fontSize={"lg"} fontWeight={"bold"}>
                 {"研究・プロジェクト"}
               </Heading>
