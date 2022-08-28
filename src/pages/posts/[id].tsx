@@ -32,6 +32,7 @@ const PagePost: FC<Props> = (props) => {
 
   const hasActions = pdfFiles.length > 0
 
+  // <Main />
   return (
     <Stack rounded={"md"} p={6} spacing={4}>
       <Stack>

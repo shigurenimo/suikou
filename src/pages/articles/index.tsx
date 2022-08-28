@@ -1,6 +1,5 @@
 import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
-import Head from "next/head"
 import React, { FC } from "react"
 import { CardPost } from "src/components/CardPost"
 import { HeadingPage } from "src/components/HeadingPage"
@@ -17,11 +16,7 @@ type Props = {
 
 const ArticlesIndex: FC<Props> = ({ posts, site }) => {
   return (
-    <Main>
-      <Head>
-        <title>{`メディア掲載 | ${site.title}`}</title>
-        <meta content={site.description} name={"description"} />
-      </Head>
+    <Main title={`メディア掲載 | ${site.title}`} description={site.description}>
       <HeadingPage>{"メディア掲載"}</HeadingPage>
       <List spacing={{ base: 4, md: 6 }}>
         {posts.map((post) => (
