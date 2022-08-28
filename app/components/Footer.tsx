@@ -5,7 +5,7 @@ export const Footer: FC = () => {
   return (
     <Stack>
       <Text fontSize={"sm"} fontWeight={"bold"}>
-        {"© 2016 - 2021 suikou.io"}
+        {"© 2016 - 2022 suikou.io"}
       </Text>
     </Stack>
   )

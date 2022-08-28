@@ -9,7 +9,7 @@ export const CardClassPost: FC<Props> = ({ post }) => {
   const hasDate = !post.date.includes("1970")
 
   return (
-    <Stack rounded={"md"} p={6} bg={"gray.100"} spacing={4}>
+    <Stack rounded={"md"} p={6} bg={"gray.700"} spacing={4}>
       <Stack>
         <Heading as={"h1"} fontSize={"lg"} fontWeight={"bold"}>
           {post.title}
@@ -22,7 +22,7 @@ export const CardClassPost: FC<Props> = ({ post }) => {
         )}
       </Stack>
       {post.content && (
-        <Box bg={"gray.50"} p={4} rounded={"md"}>
+        <Box bg={"gray.600"} p={4} rounded={"md"}>
           <BoxMarkdown>{post.content}</BoxMarkdown>
         </Box>
       )}

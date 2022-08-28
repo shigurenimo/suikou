@@ -15,7 +15,7 @@ export const AnchorURL: FC<Props> = (props) => {
       target={"_blank"}
       rel={"noreferrer"}
       href={props.href}
-      colorScheme={"purple"}
+      colorScheme={"blue"}
       size={"sm"}
       variant={"solid"}
     >

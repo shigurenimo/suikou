@@ -14,7 +14,7 @@ export const LinkAnchor: FC<Props> = (props) => {
       <Text
         as={"a"}
         cursor={"pointer"}
-        textColor={props.active ? "purple.500" : null}
+        textColor={props.active ? "blue.500" : null}
       >
         {props.children}
       </Text>

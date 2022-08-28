@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import { Heading, HStack, Stack, Text } from "@chakra-ui/react"
 import React, { FC } from "react"
 import { AnchorURL } from "app/components/AnchorURL"
 import { BoxImage } from "app/components/BoxImage"
@@ -25,36 +25,40 @@ export const CardPost: FC<Props> = ({ post }) => {
   const hasActions = pdfFiles.length > 0
 
   return (
-    <Stack rounded={"md"} p={6} bg={"gray.100"} spacing={4}>
-      <Stack>
-        <Heading as={"h1"} fontSize={"xl"} fontWeight={"bold"}>
-          {post.title}
-        </Heading>
-        <Text fontSize={"sm"}>{post.title_en}</Text>
-        <Text fontSize={"sm"}>{toDateText(post.date)}</Text>
+    <Stack rounded={"md"} bg={"gray.700"} spacing={0} boxShadow={"lg"} p={3}>
+      <Stack bg={"gray.600"} p={3} rounded={"md"} boxShadow={"lg"} spacing={4}>
+        <Stack spacing={1}>
+          <Text fontSize={"sm"} fontWeight={"bold"}>
+            {toDateText(post.date)}
+          </Text>
+          <Heading as={"h1"} fontSize={"2xl"} fontWeight={"bold"}>
+            {post.title}
+          </Heading>
+          <Text fontSize={"sm"} opacity={0.8}>
+            {post.title_en}
+          </Text>
+        </Stack>
+        {hasActions && (
+          <HStack spacing={4}>
+            {pdfFiles.map((fileURL, index) => (
+              <AnchorURL href={fileURL.replace("public/", "")} key={fileURL}>
+                {pdfFiles.length > 1
+                  ? `PDFファイル（その${index + 1}）`
+                  : "PDFファイル"}
+              </AnchorURL>
+            ))}
+            {hasURL && (
+              <AnchorURL href={post.external_url}>{"外部リンク"}</AnchorURL>
+            )}
+          </HStack>
+        )}
       </Stack>
-      {hasActions && (
-        <HStack spacing={4}>
-          {pdfFiles.map((fileURL, index) => (
-            <AnchorURL href={fileURL.replace("public/", "")} key={fileURL}>
-              {pdfFiles.length > 1
-                ? `PDFファイル（その${index + 1}）`
-                : "PDFファイル"}
-            </AnchorURL>
-          ))}
-          {hasURL && (
-            <AnchorURL href={post.external_url}>{"外部リンク"}</AnchorURL>
-          )}
-        </HStack>
-      )}
-      {imageFiles.map((imageURL) => (
-        <BoxImage alt={post.title} src={imageURL} key={imageURL} />
-      ))}
-      {post.content && (
-        <Box bg={"gray.50"} p={4} rounded={"md"}>
-          <BoxMarkdown>{post.content}</BoxMarkdown>
-        </Box>
-      )}
+      <Stack px={1} pt={4} spacing={4}>
+        {imageFiles.map((imageURL) => (
+          <BoxImage alt={post.title} src={imageURL} key={imageURL} />
+        ))}
+        {post.content && <BoxMarkdown>{post.content}</BoxMarkdown>}
+      </Stack>
     </Stack>
   )
 }

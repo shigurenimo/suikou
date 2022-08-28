@@ -10,10 +10,13 @@ export const Aside: FC = () => {
   return (
     <Stack
       as={"aside"}
+      position={"sticky"}
+      top={0}
       display={{ base: "none", md: "block" }}
-      w={"100%"}
-      maxW={"xs"}
-      p={{ base: 4, md: 6 }}
+      minW={"14rem"}
+      h={"100%"}
+      py={{ base: 4, md: 6 }}
+      pl={{ base: 4, md: 6 }}
     >
       <Stack pb={4} fontWeight={"bold"}>
         <LinkAnchor active={pathname === "/"} href={"/"}>

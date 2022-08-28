@@ -83,7 +83,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
         p(props) {
           return (
             <Text
-              lineHeight={{ md: 8 }}
+              lineHeight={1.5}
               mt={props.node.position?.start.line === 1 ? 0 : 4}
               whiteSpace={"pre-wrap"}
             >

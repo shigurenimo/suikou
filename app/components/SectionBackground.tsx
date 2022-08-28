@@ -24,7 +24,7 @@ export const DivisionBackground: FC = () => {
         h={32}
         rounded={"full"}
         position={"absolute"}
-        bg={"purple.400"}
+        bg={"blue.400"}
         opacity={75}
       />
       <Box

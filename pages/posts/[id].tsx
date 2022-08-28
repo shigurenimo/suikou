@@ -60,7 +60,7 @@ const PagePost: FC<Props> = (props) => {
         <BoxImage alt={props.post.title} src={imageURL} key={imageURL} />
       ))}
       {props.post.content && (
-        <Box bg={"gray.50"} p={4} rounded={"md"}>
+        <Box bg={"gray.600"} p={4} rounded={"md"}>
           <BoxMarkdown>{props.post.content}</BoxMarkdown>
         </Box>
       )}

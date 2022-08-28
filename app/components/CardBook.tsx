@@ -7,7 +7,7 @@ type Props = { book: Book }
 
 export const CardBook: FC<Props> = ({ book }) => {
   return (
-    <HStack rounded={"md"} p={6} bg={"gray.100"} spacing={4}>
+    <HStack rounded={"md"} p={6} bg={"gray.700"} spacing={4}>
       <Img w={32} rounded={"lg"} alt={book.title} src={book.image} />
       <Box pl={4}>
         <Text fontSize={"lg"} fontWeight={"bold"}>
