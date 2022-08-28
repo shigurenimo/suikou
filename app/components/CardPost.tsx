@@ -24,8 +24,10 @@ export const CardPost: FC<Props> = ({ post }) => {
 
   const hasActions = pdfFiles.length > 0
 
+  const hasContent = post.content.length > 0
+
   return (
-    <Stack rounded={"md"} bg={"gray.700"} spacing={0} boxShadow={"lg"} p={3}>
+    <Stack rounded={"md"} bg={"gray.700"} spacing={4} boxShadow={"lg"} p={4}>
       <Stack bg={"gray.600"} p={3} rounded={"md"} boxShadow={"lg"} spacing={4}>
         <Stack spacing={1}>
           <Text fontSize={"sm"} fontWeight={"bold"}>
@@ -53,12 +55,10 @@ export const CardPost: FC<Props> = ({ post }) => {
           </HStack>
         )}
       </Stack>
-      <Stack px={1} pt={4} spacing={4}>
-        {imageFiles.map((imageURL) => (
-          <BoxImage alt={post.title} src={imageURL} key={imageURL} />
-        ))}
-        {post.content && <BoxMarkdown>{post.content}</BoxMarkdown>}
-      </Stack>
+      {imageFiles.map((imageURL) => (
+        <BoxImage alt={post.title} src={imageURL} key={imageURL} />
+      ))}
+      {hasContent && <BoxMarkdown>{post.content}</BoxMarkdown>}
     </Stack>
   )
 }

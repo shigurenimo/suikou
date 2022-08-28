@@ -7,7 +7,7 @@ type Props = {
 
 export const Article: FC<Props> = (props) => {
   return (
-    <Stack maxW={"1280px"} w={"full"} spacing={6}>
+    <Stack maxW={"1280px"} w={"full"} spacing={6} alignItems={"flex-start"}>
       {props.children}
     </Stack>
   )

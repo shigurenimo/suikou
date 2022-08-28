@@ -81,15 +81,18 @@ export const BoxMarkdown: FC<Props> = (props) => {
           )
         },
         p(props) {
-          return (
-            <Text
-              lineHeight={1.5}
-              mt={props.node.position?.start.line === 1 ? 0 : 4}
-              whiteSpace={"pre-wrap"}
-            >
-              {props.children}
-            </Text>
-          )
+          if (props.children.some((a) => typeof a === "string")) {
+            return (
+              <Text
+                lineHeight={1.5}
+                mt={props.node.position?.start.line === 1 ? 0 : 4}
+                whiteSpace={"pre-wrap"}
+              >
+                {props.children}
+              </Text>
+            )
+          }
+          return <>{props.children}</>
         },
         a(props) {
           return (
@@ -99,6 +102,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
               rel={"noreferrer"}
               target={"_blank"}
               fontWeight={"bold"}
+              wordBreak={"break-all"}
             >
               {props.children}
             </Link>
@@ -112,6 +116,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
               mx={"auto"}
               w={"100%"}
               rounded={"lg"}
+              ml={0}
               {...props}
             />
           )

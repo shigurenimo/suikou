@@ -29,7 +29,7 @@ const Nakaza: FC<Props> = (props) => {
         >
           <Stack spacing={{ base: 4, md: 6 }} flex={1}>
             <Stack p={6} rounded={"lg"} bg={"gray.700"}>
-              <Text textColor={"gray.700"}>{"教授"}</Text>
+              <Text opacity={0.8}>{"教授"}</Text>
               <Text>
                 <HStack>
                   <Heading as={"h1"} fontWeight={"bold"} fontSize={"2xl"}>

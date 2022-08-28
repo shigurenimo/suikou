@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
@@ -24,9 +23,7 @@ const Access: FC<Props> = (props) => {
       </Head>
       <Article>
         <HeadingPage>{props.page.title}</HeadingPage>
-        <Box>
-          <BoxMarkdown>{props.page.content}</BoxMarkdown>
-        </Box>
+        <BoxMarkdown>{props.page.content}</BoxMarkdown>
       </Article>
     </Main>
   )

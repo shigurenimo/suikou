@@ -15,6 +15,7 @@ export const BoxImage: FC<Props> = (props) => {
         rounded={"lg"}
         alt={props.alt}
         src={props.src}
+        w={"100%"}
       />
     </Box>
   )
