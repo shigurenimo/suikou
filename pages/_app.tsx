@@ -54,4 +54,8 @@ if (getApps().length === 0) {
   }
 }
 
+if (typeof window !== "undefined") {
+  localStorage.removeItem("chakra-ui-color-mode")
+}
+
 export default App
