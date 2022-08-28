@@ -2,29 +2,29 @@ import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { CardClassPost } from "src/components/CardClassPost"
-import { HeadingPage } from "src/components/HeadingPage"
-import { Main } from "src/components/Main"
-import { ClassPost } from "src/types/classPost"
-import { SiteConfig } from "src/types/sitePage"
-import { readMdFile } from "src/utils/readMdFile"
-import { readMdFiles } from "src/utils/readMdFiles"
+import { CardClassPost } from "app/components/CardClassPost"
+import { HeadingPage } from "app/components/HeadingPage"
+import { Main } from "app/components/Main"
+import { ClassPost } from "app/types/classPost"
+import { SiteConfig } from "app/types/sitePage"
+import { readMdFile } from "app/utils/readMdFile"
+import { readMdFiles } from "app/utils/readMdFiles"
 
 type Props = {
   posts: ClassPost[]
   site: SiteConfig
 }
 
-const ArticlesIndex: FC<Props> = ({ posts, site }) => {
+const FeedbacksIndex: FC<Props> = (props) => {
   return (
     <Main>
       <Head>
-        <title>{`eラーニング | ${site.title}`}</title>
-        <meta content={site.description} name={"description"} />
+        <title>{`講義の感想 | ${props.site.title}`}</title>
+        <meta content={props.site.description} name={"description"} />
       </Head>
-      <HeadingPage>{"eラーニング"}</HeadingPage>
+      <HeadingPage>{"講義の感想"}</HeadingPage>
       <List spacing={{ base: 4, md: 6 }}>
-        {posts.map((post) => (
+        {props.posts.map((post) => (
           <ListItem key={post.id}>
             <CardClassPost post={post} />
           </ListItem>
@@ -35,7 +35,7 @@ const ArticlesIndex: FC<Props> = ({ posts, site }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const unsortedPosts = await readMdFiles<ClassPost>("class-posts")
+  const unsortedPosts = await readMdFiles<ClassPost>("feedbacks")
 
   const posts = unsortedPosts.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -46,4 +46,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return { props: { posts, site } }
 }
 
-export default ArticlesIndex
+export default FeedbacksIndex

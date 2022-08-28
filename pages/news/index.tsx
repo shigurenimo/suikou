@@ -2,29 +2,29 @@ import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { CardPost } from "src/components/CardPost"
-import { HeadingPage } from "src/components/HeadingPage"
-import { Main } from "src/components/Main"
-import { NewsPost } from "src/types/newsPost"
-import { SiteConfig } from "src/types/sitePage"
-import { readMdFile } from "src/utils/readMdFile"
-import { readMdFiles } from "src/utils/readMdFiles"
+import { CardPost } from "app/components/CardPost"
+import { HeadingPage } from "app/components/HeadingPage"
+import { Main } from "app/components/Main"
+import { NewsPost } from "app/types/newsPost"
+import { SiteConfig } from "app/types/sitePage"
+import { readMdFile } from "app/utils/readMdFile"
+import { readMdFiles } from "app/utils/readMdFiles"
 
 type Props = {
   posts: NewsPost[]
   site: SiteConfig
 }
 
-const NewsIndex: FC<Props> = ({ posts, site }) => {
+const NewsIndex: FC<Props> = (props) => {
   return (
     <Main>
       <Head>
-        <title>{`お知らせ | ${site.title}`}</title>
-        <meta content={site.description} name={"description"} />
+        <title>{`お知らせ | ${props.site.title}`}</title>
+        <meta content={props.site.description} name={"description"} />
       </Head>
       <HeadingPage>{"お知らせ"}</HeadingPage>
       <List spacing={{ base: 4, md: 6 }}>
-        {posts.map((post) => (
+        {props.posts.map((post) => (
           <ListItem key={post.id}>
             <CardPost post={post} />
           </ListItem>

@@ -1,7 +1,7 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react"
 import React, { FC } from "react"
-import { BoxMarkdown } from "src/components/BoxMarkdown"
-import { ClassPost } from "src/types/classPost"
+import { BoxMarkdown } from "app/components/BoxMarkdown"
+import { ClassPost } from "app/types/classPost"
 
 type Props = { post: ClassPost }
 

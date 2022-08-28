@@ -1,9 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react"
 import { AppProps } from "next/app"
 import React, { FC, useEffect } from "react"
-import { Aside } from "src/components/Aside"
-import "src/index.css"
-import { theme } from "src/theme"
+import { Aside } from "app/components/Aside"
+import { theme } from "app/theme"
 import { getApps, initializeApp } from "firebase/app"
 import { Router } from "next/router"
 import {
@@ -11,6 +10,7 @@ import {
   getAnalytics,
   setAnalyticsCollectionEnabled,
 } from "firebase/analytics"
+import "app/index.css"
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {

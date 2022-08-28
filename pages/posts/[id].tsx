@@ -1,13 +1,13 @@
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 import { GetStaticPaths, GetStaticProps } from "next"
 import { FC } from "react"
-import { AnchorURL } from "src/components/AnchorURL"
-import { BoxImage } from "src/components/BoxImage"
-import { BoxMarkdown } from "src/components/BoxMarkdown"
-import { usePostFiles } from "src/hooks/usePostFiles"
-import { NewsPost } from "src/types/newsPost"
-import { readMdFiles } from "src/utils/readMdFiles"
-import { toDateText } from "src/utils/toDateText"
+import { AnchorURL } from "app/components/AnchorURL"
+import { BoxImage } from "app/components/BoxImage"
+import { BoxMarkdown } from "app/components/BoxMarkdown"
+import { usePostFiles } from "app/hooks/usePostFiles"
+import { NewsPost } from "app/types/newsPost"
+import { readMdFiles } from "app/utils/readMdFiles"
+import { toDateText } from "app/utils/toDateText"
 
 type Props = {
   post: NewsPost
