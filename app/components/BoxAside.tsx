@@ -1,10 +1,10 @@
 import { Stack } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import React, { FC } from "react"
-import { Footer } from "app/components/Footer"
+import { BoxFooter } from "app/components/BoxFooter"
 import { LinkAnchor } from "app/components/LinkAnchor"
 
-export const Aside: FC = () => {
+export const BoxAside: FC = () => {
   const { pathname } = useRouter()
 
   return (
@@ -74,7 +74,7 @@ export const Aside: FC = () => {
           {"書籍"}
         </LinkAnchor>
       </Stack>
-      <Footer />
+      <BoxFooter />
     </Stack>
   )
 }

@@ -8,7 +8,7 @@ type Props = {
   description?: string
 }
 
-export const Main: FC<Props> = (props) => {
+export const BoxMain: FC<Props> = (props) => {
   return (
     <>
       <Head>

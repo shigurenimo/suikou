@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode
 }
 
-export const AnchorURL: FC<Props> = (props) => {
+export const ButtonAnchorURL: FC<Props> = (props) => {
   return (
     <Button
       as={"a"}

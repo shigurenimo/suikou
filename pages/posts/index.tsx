@@ -2,9 +2,9 @@ import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { CardPost } from "app/components/CardPost"
+import { BoxCardPost } from "app/components/BoxCardPost"
 import { HeadingPage } from "app/components/HeadingPage"
-import { Main } from "app/components/Main"
+import { BoxMain } from "app/components/BoxMain"
 import { NewsPost } from "app/types/newsPost"
 import { SiteConfig } from "app/types/sitePage"
 import { readMdFile } from "app/utils/readMdFile"
@@ -21,7 +21,7 @@ const PagePosts: FC<Props> = (props) => {
   }
 
   return (
-    <Main>
+    <BoxMain>
       <Head>
         <title>{`お知らせ | ${props.site.title}`}</title>
         <meta content={props.site.description} name={"description"} />
@@ -30,7 +30,7 @@ const PagePosts: FC<Props> = (props) => {
       <List spacing={{ base: 4, md: 6 }}>
         {props.posts.map((post) => (
           <ListItem key={post.id}>
-            <CardPost
+            <BoxCardPost
               post={post}
               onOpen={() => {
                 onOpen(post.id)
@@ -39,7 +39,7 @@ const PagePosts: FC<Props> = (props) => {
           </ListItem>
         ))}
       </List>
-    </Main>
+    </BoxMain>
   )
 }
 

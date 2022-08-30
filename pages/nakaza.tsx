@@ -2,8 +2,8 @@ import { Heading, HStack, Stack, StackDivider, Text } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { Article } from "app/components/Article"
-import { Main } from "app/components/Main"
+import { BoxArticle } from "app/components/BoxArticle"
+import { BoxMain } from "app/components/BoxMain"
 import { NakazaPage } from "app/types/nakazaPage"
 import { ProjectPage } from "app/types/projectPage"
 import { SiteConfig } from "app/types/sitePage"
@@ -17,12 +17,12 @@ type Props = {
 
 const Nakaza: FC<Props> = (props) => {
   return (
-    <Main>
+    <BoxMain>
       <Head>
         <title>{`${props.nakazaPage.title} | ${props.site.title}`}</title>
         <meta content={props.site.description} name={"description"} />
       </Head>
-      <Article>
+      <BoxArticle>
         <Stack
           direction={{ base: "column", xl: "row" }}
           spacing={{ base: 4, md: 6 }}
@@ -30,7 +30,7 @@ const Nakaza: FC<Props> = (props) => {
           <Stack spacing={{ base: 4, md: 6 }} flex={1}>
             <Stack p={4} rounded={"lg"} bg={"gray.700"}>
               <Text opacity={0.8}>{"教授"}</Text>
-              <Text>
+              <Stack>
                 <HStack>
                   <Heading as={"h1"} fontWeight={"bold"} fontSize={"2xl"}>
                     {props.nakazaPage.name}
@@ -39,7 +39,7 @@ const Nakaza: FC<Props> = (props) => {
                     {props.nakazaPage.name_en}
                   </Text>
                 </HStack>
-              </Text>
+              </Stack>
               <Text>{props.nakazaPage.email}</Text>
             </Stack>
             <Stack rounded={"lg"} bg={"gray.700"} p={4}>
@@ -97,8 +97,8 @@ const Nakaza: FC<Props> = (props) => {
             </Stack>
           </Stack>
         </Stack>
-      </Article>
-    </Main>
+      </BoxArticle>
+    </BoxMain>
   )
 }
 

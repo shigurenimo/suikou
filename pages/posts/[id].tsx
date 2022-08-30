@@ -1,14 +1,14 @@
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 import { GetStaticPaths, GetStaticProps } from "next"
 import { FC } from "react"
-import { AnchorURL } from "app/components/AnchorURL"
+import { ButtonAnchorURL } from "app/components/ButtonAnchorURL"
 import { BoxImage } from "app/components/BoxImage"
 import { BoxMarkdown } from "app/components/BoxMarkdown"
 import { usePostFiles } from "app/hooks/usePostFiles"
 import { NewsPost } from "app/types/newsPost"
 import { readMdFiles } from "app/utils/readMdFiles"
 import { toDateText } from "app/utils/toDateText"
-import { Main } from "app/components/Main"
+import { BoxMain } from "app/components/BoxMain"
 
 type Props = {
   post: NewsPost
@@ -35,7 +35,7 @@ const PagePost: FC<Props> = (props) => {
 
   // <Main />
   return (
-    <Main>
+    <BoxMain>
       <Stack rounded={"md"} bg={"gray.700"} spacing={4} boxShadow={"lg"} p={4}>
         <Box
           bg={"gray.600"}
@@ -55,16 +55,19 @@ const PagePost: FC<Props> = (props) => {
         {hasActions && (
           <HStack spacing={4}>
             {pdfFiles.map((fileURL, index) => (
-              <AnchorURL href={fileURL.replace("public/", "")} key={fileURL}>
+              <ButtonAnchorURL
+                href={fileURL.replace("public/", "")}
+                key={fileURL}
+              >
                 {pdfFiles.length > 1
                   ? `PDFファイル（その${index + 1}）`
                   : "PDFファイル"}
-              </AnchorURL>
+              </ButtonAnchorURL>
             ))}
             {hasURL && (
-              <AnchorURL href={props.post.external_url}>
+              <ButtonAnchorURL href={props.post.external_url}>
                 {"外部リンク"}
-              </AnchorURL>
+              </ButtonAnchorURL>
             )}
           </HStack>
         )}
@@ -73,7 +76,7 @@ const PagePost: FC<Props> = (props) => {
         ))}
         {props.post.content && <BoxMarkdown>{props.post.content}</BoxMarkdown>}
       </Stack>
-    </Main>
+    </BoxMain>
   )
 }
 

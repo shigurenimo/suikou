@@ -1,7 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react"
 import { AppProps } from "next/app"
 import React, { FC, useEffect } from "react"
-import { Aside } from "app/components/Aside"
+import { BoxAside } from "app/components/BoxAside"
 import { theme } from "app/theme"
 import { getApps, initializeApp } from "firebase/app"
 import { Router } from "next/router"
@@ -33,7 +33,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Aside />
+      <BoxAside />
       <Component {...pageProps} />
     </ChakraProvider>
   )

@@ -2,9 +2,9 @@ import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import React, { FC } from "react"
-import { CardBook } from "app/components/CardBook"
+import { BoxCardBook } from "app/components/BoxCardBook"
 import { HeadingPage } from "app/components/HeadingPage"
-import { Main } from "app/components/Main"
+import { BoxMain } from "app/components/BoxMain"
 import { Book } from "app/types/book"
 import { SiteConfig } from "app/types/sitePage"
 import { readMdFile } from "app/utils/readMdFile"
@@ -17,7 +17,7 @@ type Props = {
 
 const ArticlesIndex: FC<Props> = (props) => {
   return (
-    <Main>
+    <BoxMain>
       <Head>
         <title>{`書籍 | ${props.site.title}`}</title>
         <meta content={props.site.description} name={"description"} />
@@ -26,11 +26,11 @@ const ArticlesIndex: FC<Props> = (props) => {
       <List spacing={{ base: 4, md: 6 }}>
         {props.posts.map((post) => (
           <ListItem key={post.id}>
-            <CardBook book={post} />
+            <BoxCardBook book={post} />
           </ListItem>
         ))}
       </List>
-    </Main>
+    </BoxMain>
   )
 }
 

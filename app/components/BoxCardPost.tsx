@@ -1,6 +1,6 @@
 import { Box, Heading, HStack, IconButton, Stack, Text } from "@chakra-ui/react"
 import React, { FC } from "react"
-import { AnchorURL } from "app/components/AnchorURL"
+import { ButtonAnchorURL } from "app/components/ButtonAnchorURL"
 import { BoxImage } from "app/components/BoxImage"
 import { BoxMarkdown } from "app/components/BoxMarkdown"
 import { usePostFiles } from "app/hooks/usePostFiles"
@@ -13,7 +13,7 @@ type Props = {
   onOpen?(): void
 }
 
-export const CardPost: FC<Props> = (props) => {
+export const BoxCardPost: FC<Props> = (props) => {
   const imageFiles = usePostFiles(
     [props.post.file, props.post.file_a, props.post.file_b, props.post.file_c],
     [".png", ".jpg", ".jpeg"],
@@ -57,19 +57,19 @@ export const CardPost: FC<Props> = (props) => {
             {hasActions && (
               <HStack spacing={4}>
                 {pdfFiles.map((fileURL, index) => (
-                  <AnchorURL
+                  <ButtonAnchorURL
                     href={fileURL.replace("public/", "")}
                     key={fileURL}
                   >
                     {pdfFiles.length > 1
                       ? `PDFファイル（その${index + 1}）`
                       : "PDFファイル"}
-                  </AnchorURL>
+                  </ButtonAnchorURL>
                 ))}
                 {hasURL && (
-                  <AnchorURL href={props.post.external_url}>
+                  <ButtonAnchorURL href={props.post.external_url}>
                     {"外部リンク"}
-                  </AnchorURL>
+                  </ButtonAnchorURL>
                 )}
               </HStack>
             )}

@@ -1,7 +1,7 @@
 import { Box, Stack } from "@chakra-ui/react"
 import React, { FC } from "react"
 
-export const DivisionBackground: FC = () => {
+export const BoxBackground: FC = () => {
   return (
     <Stack
       id={"background"}

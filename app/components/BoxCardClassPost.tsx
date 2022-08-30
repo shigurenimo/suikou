@@ -5,7 +5,7 @@ import { ClassPost } from "app/types/classPost"
 
 type Props = { post: ClassPost }
 
-export const CardClassPost: FC<Props> = ({ post }) => {
+export const BoxCardClassPost: FC<Props> = ({ post }) => {
   const hasDate = !post.date.includes("1970")
 
   const hasContent = post.content.length > 0

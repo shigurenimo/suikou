@@ -1,9 +1,9 @@
 import { List, ListItem } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import React, { FC } from "react"
-import { CardPost } from "app/components/CardPost"
+import { BoxCardPost } from "app/components/BoxCardPost"
 import { HeadingPage } from "app/components/HeadingPage"
-import { Main } from "app/components/Main"
+import { BoxMain } from "app/components/BoxMain"
 import { NewsPost } from "app/types/newsPost"
 import { SiteConfig } from "app/types/sitePage"
 import { readMdFile } from "app/utils/readMdFile"
@@ -16,7 +16,7 @@ type Props = {
 
 const ArticlesIndex: FC<Props> = (props) => {
   return (
-    <Main
+    <BoxMain
       title={`メディア掲載 | ${props.site.title}`}
       description={props.site.description}
     >
@@ -24,11 +24,11 @@ const ArticlesIndex: FC<Props> = (props) => {
       <List spacing={{ base: 4, md: 6 }}>
         {props.posts.map((post) => (
           <ListItem key={post.id}>
-            <CardPost post={post} />
+            <BoxCardPost post={post} />
           </ListItem>
         ))}
       </List>
-    </Main>
+    </BoxMain>
   )
 }
 
