@@ -39,7 +39,7 @@ export const Aside: FC = () => {
         </LinkAnchor>
       </Stack>
       <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname.startsWith("/news")} href={"/news"}>
+        <LinkAnchor active={pathname.startsWith("/posts")} href={"/posts"}>
           {"お知らせ"}
         </LinkAnchor>
       </Stack>

@@ -15,7 +15,11 @@ type Props = {
   site: SiteConfig
 }
 
-const NewsIndex: FC<Props> = (props) => {
+const PagePosts: FC<Props> = (props) => {
+  const onOpen = (postId: string) => {
+    window.open(`/posts/${postId}`, "_blank")
+  }
+
   return (
     <Main>
       <Head>
@@ -26,7 +30,12 @@ const NewsIndex: FC<Props> = (props) => {
       <List spacing={{ base: 4, md: 6 }}>
         {props.posts.map((post) => (
           <ListItem key={post.id}>
-            <CardPost post={post} />
+            <CardPost
+              post={post}
+              onOpen={() => {
+                onOpen(post.id)
+              }}
+            />
           </ListItem>
         ))}
       </List>
@@ -46,4 +55,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return { props: { posts, site } }
 }
 
-export default NewsIndex
+export default PagePosts

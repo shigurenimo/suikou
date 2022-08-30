@@ -8,6 +8,7 @@ import { usePostFiles } from "app/hooks/usePostFiles"
 import { NewsPost } from "app/types/newsPost"
 import { readMdFiles } from "app/utils/readMdFiles"
 import { toDateText } from "app/utils/toDateText"
+import { Main } from "app/components/Main"
 
 type Props = {
   post: NewsPost
@@ -34,37 +35,45 @@ const PagePost: FC<Props> = (props) => {
 
   // <Main />
   return (
-    <Stack rounded={"md"} p={6} spacing={4}>
-      <Stack>
-        <Heading as={"h1"} fontSize={"xl"} fontWeight={"bold"}>
-          {props.post.title}
-        </Heading>
-        <Text fontSize={"sm"}>{props.post.title_en}</Text>
-        <Text fontSize={"sm"}>{toDateText(props.post.date)}</Text>
-      </Stack>
-      {hasActions && (
-        <HStack spacing={4}>
-          {pdfFiles.map((fileURL, index) => (
-            <AnchorURL href={fileURL.replace("public/", "")} key={fileURL}>
-              {pdfFiles.length > 1
-                ? `PDFファイル（その${index + 1}）`
-                : "PDFファイル"}
-            </AnchorURL>
-          ))}
-          {hasURL && (
-            <AnchorURL href={props.post.external_url}>{"外部リンク"}</AnchorURL>
-          )}
-        </HStack>
-      )}
-      {imageFiles.map((imageURL) => (
-        <BoxImage alt={props.post.title} src={imageURL} key={imageURL} />
-      ))}
-      {props.post.content && (
-        <Box bg={"gray.600"} p={4} rounded={"md"}>
-          <BoxMarkdown>{props.post.content}</BoxMarkdown>
+    <Main>
+      <Stack rounded={"md"} bg={"gray.700"} spacing={4} boxShadow={"lg"} p={4}>
+        <Box
+          bg={"gray.600"}
+          p={3}
+          boxShadow={"lg"}
+          overflow={"hidden"}
+          rounded={"md"}
+        >
+          <Stack>
+            <Heading as={"h1"} fontSize={"xl"} fontWeight={"bold"}>
+              {props.post.title}
+            </Heading>
+            <Text fontSize={"sm"}>{props.post.title_en}</Text>
+            <Text fontSize={"sm"}>{toDateText(props.post.date)}</Text>
+          </Stack>
         </Box>
-      )}
-    </Stack>
+        {hasActions && (
+          <HStack spacing={4}>
+            {pdfFiles.map((fileURL, index) => (
+              <AnchorURL href={fileURL.replace("public/", "")} key={fileURL}>
+                {pdfFiles.length > 1
+                  ? `PDFファイル（その${index + 1}）`
+                  : "PDFファイル"}
+              </AnchorURL>
+            ))}
+            {hasURL && (
+              <AnchorURL href={props.post.external_url}>
+                {"外部リンク"}
+              </AnchorURL>
+            )}
+          </HStack>
+        )}
+        {imageFiles.map((imageURL) => (
+          <BoxImage alt={props.post.title} src={imageURL} key={imageURL} />
+        ))}
+        {props.post.content && <BoxMarkdown>{props.post.content}</BoxMarkdown>}
+      </Stack>
+    </Main>
   )
 }
 

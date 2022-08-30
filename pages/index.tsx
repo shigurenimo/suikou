@@ -16,6 +16,10 @@ type Props = {
 }
 
 const Index: FC<Props> = (props) => {
+  const onOpen = (postId: string) => {
+    window.open(`/posts/${postId}`, "_blank")
+  }
+
   return (
     <Main>
       <Head>
@@ -26,7 +30,12 @@ const Index: FC<Props> = (props) => {
       <List spacing={{ base: 4, md: 6 }}>
         {props.posts.map((post) => (
           <ListItem key={post.id}>
-            <CardPost post={post} key={post.id} />
+            <CardPost
+              post={post}
+              onOpen={() => {
+                onOpen(post.id)
+              }}
+            />
           </ListItem>
         ))}
       </List>
