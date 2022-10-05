@@ -1,5 +1,5 @@
 ---
-title: レオナルドダビンチの「男性の横顔」の黄金比に重ねられた女性の裸体の謎
+title: レオナルドダビンチの「男性の横顔」の黄金比に重ねられた女性の裸体の謎　〈一つの発見か？）
 title_en: The Mystery of the Female nude Superimposed on the Golden Ratio of
   Leonardo da Vinci's "Male Profile"
 date: 2022/09/19
