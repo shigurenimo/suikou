@@ -3,6 +3,7 @@ title: Hydraulics and Fluid Dynamics Sumit 開催される
 title_en: Hydraulics and Fluid Dynamics Sumit was opened.
 date: 2022/12/26
 file: /public/uploads/流体運動の支配方程式とその歴史的変遷-　fluid-dynamis-and-hydraulics-sumit-in-2022-1225-コピー.pdf
+file_a: /public/uploads/説明ppt　流体運動の支配方程式　20221225-コピー.pdf
 ---
 中央大学研究開発機構教授　福岡 捷二　先生が創設されたHydraulics and Fluid Dynamics Sumit が12月24日・25日の2日間琉球大学工学部において開催されました。
 開催に当たり、福岡先生の文部科学大臣表彰受賞（科学技術分野）を祝して、盛大にオープニングセレモニーが行われました。2日間に亘って、水理学、河川工学、流体力学に関する発表が行われ、発表者は、厳しい質問に耐え抜きました。大変素晴らしい討議であったと思います。
