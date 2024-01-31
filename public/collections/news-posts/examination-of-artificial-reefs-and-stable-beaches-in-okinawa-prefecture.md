@@ -4,8 +4,8 @@ title_en: Examination of artificial reefs and stable beaches in Okinawa Prefectu
 date: 2024/02/01
 file: /public/uploads/仲座栄三　シンポジウム発表資料-1219-2023　日本コンサルタンツ協会主催-コピー.pdf
 ---
-Examination of artificial reef in Okinawa Prefecture
+artificial reefs in Okinawa Prefecture
 
-xamination of stable beaches using J. Hsu curves
+Examination of stable beaches using J. Hsu curves
 
 Examination of disaster prevention of beaches and harbors
