@@ -8,4 +8,4 @@ Examination of artificial reef in Okinawa Prefecture
 
 xamination of stable beaches using J. Hsu curves
 
-xamination of disaster prevention of beaches and harbours
+Examination of disaster prevention of beaches and harbors
