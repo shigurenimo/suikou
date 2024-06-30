@@ -30,7 +30,7 @@ export const BoxAside: FC = () => {
       </Stack>
       <Stack paddingBottom={"4"} fontWeight={"bold"}>
         <LinkAnchor active={pathname === "/about"} href={"/about"}>
-          {"水圏工学研究室"}
+          {"新力学研究所"}
         </LinkAnchor>
       </Stack>
       <Stack paddingBottom={"4"} fontWeight={"bold"}>

@@ -203,7 +203,7 @@ collections:
     format: 'frontmatter'
     files:
       - name: 'about'
-        label: '研究室について'
+        label: '研究所について'
         file: 'public/collections/pages/about.md'
         fields:
           - name: title
