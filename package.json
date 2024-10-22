@@ -17,6 +17,7 @@
     "@chakra-ui/react": "^2.2.9",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "decap-cms-app": "^3.3.3",
     "firebase": "^9.9.3",
     "framer-motion": "^7.2.1",
     "frontmatter-markdown-loader": "^3.7.0",
