@@ -9,7 +9,6 @@ import { NewsPost } from "app/types/newsPost"
 import { SiteConfig } from "app/types/sitePage"
 import { readMdFile } from "app/utils/readMdFile"
 import { readMdFiles } from "app/utils/readMdFiles"
-import Script from "next/script"
 
 type Props = {
   posts: NewsPost[]
