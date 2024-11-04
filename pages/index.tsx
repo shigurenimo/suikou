@@ -9,6 +9,7 @@ import { NewsPost } from "app/types/newsPost"
 import { SiteConfig } from "app/types/sitePage"
 import { readMdFile } from "app/utils/readMdFile"
 import { readMdFiles } from "app/utils/readMdFiles"
+import Script from "next/script"
 
 type Props = {
   posts: NewsPost[]
@@ -25,6 +26,18 @@ const Index: FC<Props> = (props) => {
       <Head>
         <title>{props.site.title}</title>
         <meta content={props.site.description} name={"description"} />
+        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" onLoad={() => {
+          const anyWindow = window as any
+          if (anyWindow.netlifyIdentity === undefined) return
+          anyWindow.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+              anyWindow.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }}>
+        </Script>
       </Head>
       <BoxHome />
       <List spacing={{ base: 4, md: 6 }}>
