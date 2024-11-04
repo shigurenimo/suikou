@@ -31,6 +31,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     }
   }, [])
 
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    if (window.location.hash.includes("token")) {
+      window.location.assign(location.href.replace("suikou.io", "suikou.io/admin/"))
+    }
+  }, [])
+
   return (
     <ChakraProvider theme={theme}>
       <BoxAside />
