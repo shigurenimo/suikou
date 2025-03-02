@@ -28,20 +28,4 @@ Einstein's Theory of Relativity. let's open the second half of the song. You wil
 
 次回は、MVの動画が何を伝えようとしているのかについて、考えてみよう。
 
-仲座栄三
-
-
-
-
-
-
-
-
-
-
-
-この部分の歌詞は、アインシュタインの特殊相対性理論のみでなく、一般相対性理論にまでも立ち入っている。
-
-
-
-[](https://www.youtube.com/watch?v=vcp7XKBylkM)
+仲座栄三[](https://www.youtube.com/watch?v=vcp7XKBylkM)
