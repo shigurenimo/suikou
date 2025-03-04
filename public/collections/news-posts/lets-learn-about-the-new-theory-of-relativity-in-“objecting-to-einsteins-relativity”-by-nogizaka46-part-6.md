@@ -5,6 +5,9 @@ title_en: Let's learn about the new theory of relativity in “Objecting to
 date: 2025/03/04
 ---
 What does Nogizaka46's music video for “Objecting to the Theory of Relativity” represent?
+URL：
+[乃木坂46『相対性理論に異議を唱える』](<>)
+
 
 今回は、乃木坂46　「相対性理論に異議を唱える」　のMVに見る動画について考えてみたい。
 
