@@ -1,5 +1,5 @@
 ---
-title: 乃木坂46の『（アインシュあタインの）相対性理論に異議を唱える』で学ぶ　その6
+title: 乃木坂46の『（アインシュタインの）相対性理論に異議を唱える』で学ぶ　その6
 title_en: Let's learn about the new theory of relativity in “Objecting to
   Einstein's Relativity” by Nogizaka46, Part 6
 date: 2025/03/04
