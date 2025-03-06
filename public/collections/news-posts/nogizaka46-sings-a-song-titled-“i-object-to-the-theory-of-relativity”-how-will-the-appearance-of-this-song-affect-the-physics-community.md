@@ -1,5 +1,5 @@
 ---
-title: 乃木坂46の『（アインシュあタインの）相対性理論に異議を唱える』の出現は、物理学会にどのような影響を及ぼすか？
+title: 乃木坂46の『（アインシュタインの）相対性理論に異議を唱える』の出現は、物理学会にどのような影響を及ぼすか？
 title_en: Nogizaka46 sings a song titled “I object to the Theory of Relativity”.
   How will the appearance of this song affect the physics community?
 date: 2025/03/05
