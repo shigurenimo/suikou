@@ -2,6 +2,7 @@
 title: 相対性理論を学ぼう
 title_en: Preciousness of learning relativity
 date: 2025/03/10
+external_url: https://suikou.io
 ---
 相対性理論を学ぶことで、中学の理科の時間で初めて学んだガリレイの理論やニュートンの運動の法則の本当の意味を理解することができます。工学の分野では、多くの専門家がニュートンの運動の法則に基づいて、様々な力学的な予測を高精度で実現しています。
 
