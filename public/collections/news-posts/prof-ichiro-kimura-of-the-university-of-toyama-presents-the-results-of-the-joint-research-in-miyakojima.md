@@ -1,5 +1,5 @@
 ---
-title: 富山大学教授　木村一郎［博士・工学）宮古島にて研究成果報告
+title: 富山大学教授　木村一郎［博士・工学）宮古島にて共同研究の成果を報告
 title_en: Prof. Ichiro Kimura of the University of Toyama presents the results
   of the joint research in Miyakojima.
 date: 2025/03/15
