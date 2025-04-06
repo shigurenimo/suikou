@@ -12,7 +12,7 @@ The characteristics and distribution of the "huge tsunami-Ishi" (tsunami boulder
 The huge tsunami boulders have a circumference of up to 60 m and a height of about 12 m. 
 How were these huge tsunami boulders moved by the tsunami? 
 Hydraulic experiments confirm this. 
-The results of the hydraulic experiments well reproduce the movement of the tsunami stones. 
+The results of the hydraulic experiments well reproduce the movement of the tsunami boulders. 
 The experimental results show how the huge tsunami boulders were moved by the tsunami force while looking at them in the field. 
 This results should be read by tour guides. 
 It should also be used for disaster education for students on school excursions.
@@ -22,7 +22,6 @@ It should also be used for disaster education for students on school excursions.
 明和津波と津波石
 
 津波石はいかに運ばれたか
-
 
 津波石の移動に関する水理実験
 
