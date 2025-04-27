@@ -26,6 +26,6 @@ Meaning of the inertia law is limited from an object's state of rest to its acqu
 
 と説明される。
 
-
-
 仲座栄三
+
+参考文献：仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
