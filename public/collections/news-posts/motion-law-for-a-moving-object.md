@@ -1,5 +1,5 @@
 ---
-title: やり直し力学５　　一定速度で運動する物体に対する運動法則
+title: やり直し力学６　一定速度で運動する物体に対する運動法則
 title_en: Motion law for a moving object
 date: 2025/05/05
 ---
