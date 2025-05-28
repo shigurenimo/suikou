@@ -1,7 +1,7 @@
 ---
 title: やり直し力学10　相対論的電磁気理論2
 title_en: Relativistic Electromagnetic Theory 2
-date: 2025/02/28
+date: 2025/05/28
 ---
 Einstein's strange experiments on time regulation, and strange methods for measuring the length of an object in motion.
 
