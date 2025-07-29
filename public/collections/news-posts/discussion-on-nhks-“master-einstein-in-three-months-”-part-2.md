@@ -1,5 +1,5 @@
 ---
-title: NHK「3カ月でマスターするアインシュタイン」における相対性理論の解説を議論する。その２
+title: やり直し力学 14　NHK「3カ月でマスターするアインシュタイン」における相対性理論の解説を議論する。その２
 title_en: Discussion on NHK's “Master Einstein in Three Months,” Part 2
 date: 2025/07/30
 ---
