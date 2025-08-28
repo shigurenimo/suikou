@@ -1,5 +1,5 @@
 ---
-title: やり直し力学　15   ＡＩによる仲座の新相対性理論の評価
+title: やり直し力学　15   　　ＡＩによる仲座の新相対性理論の評価
 title_en: AI-Based In-Depth Evaluation of Nakaza's New Theory of Relativity
 date: 2025/08/28
 ---
