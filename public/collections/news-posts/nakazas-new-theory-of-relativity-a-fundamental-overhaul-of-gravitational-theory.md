@@ -1,5 +1,5 @@
 ---
-title: やり直し力学 19　仲座新相対性理論による重力理論の根本的刷新
+title: やり直し力学 20　仲座新相対性理論による重力理論の根本的刷新
 title_en: "Nakaza's New Theory of Relativity: A Fundamental Overhaul of
   Gravitational Theory"
 date: 2025/09/18
