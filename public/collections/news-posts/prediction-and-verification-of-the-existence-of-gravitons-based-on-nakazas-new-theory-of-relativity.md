@@ -1,5 +1,5 @@
 ---
-title: やり直し力学 18　仲座の新相対性理論による重力子存在の予言と実証
+title: やり直し力学 19　仲座の新相対性理論による重力子存在の予言と実証
 title_en: Prediction and Verification of the Existence of Gravitons Based on
   Nakaza's New Theory of Relativity
 date: 2025/09/18
