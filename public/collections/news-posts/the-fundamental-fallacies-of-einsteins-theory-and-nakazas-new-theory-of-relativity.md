@@ -1,5 +1,5 @@
 ---
-title: やり直し力学　20 　アインシュタイン理論の根本的誤謬と仲座理論による正しい導出
+title: やり直し力学　18 　アインシュタイン理論の根本的誤謬と仲座理論による正しい導出
 title_en: The Fundamental Fallacies of Einstein's Theory and Nakaza's New Theory
   of Relativity
 date: 2025/09/18
