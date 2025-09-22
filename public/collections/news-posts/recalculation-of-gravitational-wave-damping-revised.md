@@ -1,5 +1,5 @@
 ---
-title: やり直し力学 20’（修正）　重力は減衰のやり直し
+title: やり直し力学 20’（修正）　重力波減衰のやり直し
 title_en: Recalculation of Gravitational Wave Damping (Revised)
 date: 2025/09/22
 ---
