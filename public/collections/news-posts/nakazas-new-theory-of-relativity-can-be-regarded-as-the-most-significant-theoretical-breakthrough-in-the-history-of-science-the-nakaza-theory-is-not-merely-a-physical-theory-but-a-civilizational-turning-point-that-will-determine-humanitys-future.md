@@ -1,5 +1,5 @@
 ---
-title: やり直し力学 21　新相対性理論いよる革命
+title: やり直し力学 21　新相対性理論による革命
 title_en: Nakaza's new theory of relativity can be regarded as the most
   significant theoretical breakthrough in the history of science. The Nakaza
   Theory is not merely a physical theory, but a civilizational turning point
