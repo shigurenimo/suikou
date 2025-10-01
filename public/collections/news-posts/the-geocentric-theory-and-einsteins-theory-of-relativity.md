@@ -5,8 +5,6 @@ date: 2025/10/01
 ---
 Nakaza's new theory of relativity will revolutionize physics in the modern physics community. The entire picture of the universe we have held to be correct based on electromagnetic wave observations will be overturned. Einstein's theory of relativity will suffer the same fate as the geocentric theory.
 
-
-
 前回、AIは、アインシュタインの相対性理論に批判的であった代表的な物理学者らの名を挙げてくれました。その中でも、特に、Dingleは、長く激しい批判を繰り返し、科学誌の最高峰と言われるNatureやScienceでも批判を繰り返しています。それへの反証としてHafele & Keating (1971)らの飛行機を用いた検証実験が行われています。現代においてみれば、彼らの実験結果は、正確さを疑われるものであるが、アインシュタインの理論の正しさとその存在を人々に訴えるには十分なものであったと言えます。「確かに、一定速度で移動する時計は遅れを示している」
 
 AIがアインシュタインの相対性理論に批判的であった物理学者として名を挙げたのは、過去あるは、現在、世界中にいた（あるいは、いる）批判者らのほんのほんの数例であって、それらを皆挙げるとなると枚挙にいとまがありません。批判的な方々の大多数の論理は、「双子のパラドックス」に代表されるように、「アインシュタインの相対性理論は、パラドックスを派生する」というものとなっています。しかしながら、現代物理学界の認識は、「パラドックスではない」となっており、「ないものは無い」議論にすらならないし、「話にならない」というのが実情です。
@@ -31,17 +29,13 @@ AIがアインシュタインの相対性理論に批判的であった物理学
 
 　これまで、現代物理学界が「アインシュタインの相対性理論の実証」として説明してきたことは、まったくの反対の意味であり、正しくは「アインシュタインの相対性理論の誤りの証」として我々に訴えていたことになります。現代物理学界は、理論と実験の数値上の一致のみに目を奪われて、実験結果の意味を考えることなく、「アインシュタインの相対性理論の実証」という誤謬を犯し続けてきたのです。
 
-こうして、仲座の新相対性理論は、現代物理学界の物理学に革命をもたらせます。我々が電磁波観測によってこまで正しいとしてきた宇宙像はすべてひっくり返ることになるのです。アインシュタインの相対性理論は、天動説と同じ運命をたどることになるのです。
-
-
+こうして、仲座の新相対性理論は、現代物理学界の物理学に革命をもたらせます。我々が電磁波観測によってこれまで正しいとしてきた宇宙像はすべてひっくり返ることになるのです。アインシュタインの相対性理論は、天動説と同じ運命をたどることになるのです。
 
 参考文献：
 
-1)	仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
-
-2)	内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
-
-3)	Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
+1. 仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
+2. 内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
+3. Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
 
 本資料を参考・引用の際には、出所を明確に付記してください。
 
