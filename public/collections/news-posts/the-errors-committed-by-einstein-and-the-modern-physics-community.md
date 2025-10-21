@@ -11,7 +11,7 @@ Why do you think measurements from an atomic clock are acceptable?
 
 ２つの慣性系A（静止系）及びB（運動系）を想定すると、ローレンツ変換を設定したその瞬間に、それらの時空（x, y, z, t）及び（x’, y’, z’, t’）との間には、次の関係式が成立する。
 
-t’ = γ（t – vx/ｃ^2）　(1)　、　t’ = γ（x – vt）　(2)　、　y’ = y　(3)　、　z’ = z　(4)
+t’ = γ（t – vx/ｃ^2）　(1)　、　x’ = γ（x – vt）　(2)　、　y’ = y　(3)　、　z’ = z　(4)
 
 ここに、γはローレンツファクターを表す。
 
