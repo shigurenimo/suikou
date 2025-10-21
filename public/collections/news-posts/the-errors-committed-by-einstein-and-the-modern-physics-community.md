@@ -49,13 +49,13 @@ t’ = √（1 – v^2/c^2）t   (5)　、x’ = lo / √（1 – v^2/c^2）  (6
 
 という、根源的な問題に解決を与え、アインシュタイン及び現代物理学界の誤謬を正している。
 
+
+
 参考文献：
 
-1)	仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
-
-2)	内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
-
-3)	Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
+1. 仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
+2. 内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
+3. Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
 
 ・質問やコメントは、coastalen@gmail.com へご連絡ください。
 
