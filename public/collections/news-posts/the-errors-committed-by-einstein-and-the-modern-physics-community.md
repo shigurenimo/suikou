@@ -57,6 +57,6 @@ t’ = √（1 – v^2/c^2）t   (5)　、x’ = *l* / √（1 – v^2/c^2）  (
 2. 内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
 3. Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
 
-・質問やコメントは、coastalen@gmail.com へご連絡ください。
+・質問やコメントは、[coastalen@gmail.com](coastalen@gmail.com) へご連絡ください。
 
 ・本資料を参考・引用の際には、出所を明確に付記してください。
