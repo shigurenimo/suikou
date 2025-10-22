@@ -3,16 +3,13 @@ title: やり直し力学 18　仲座の新相対性理論による従来説の�
 title_en: Refutation of Conventional Theories by Nakaza's New Theory of Relativity
 date: 2025/10/22
 ---
-According to Nakaza's New Theory of Relativity: The transformation of actual spacetime in inertial frames follows the Galilean transformation. Upon this foundation of absolute spacetime, the Lorentz transformation exists as the transformation for Electromagnetic Theory.
-
-
+According to Nakaza's New Theory of Relativity: The transformation of actual spacetime between inertial frames follows the Galilean transformation. Upon this foundation of absolute spacetime, the Lorentz transformation exists as the transformation for Electromagnetic Theory.
 
 前回の説明において、アインシュタインの相対性理論で問題となったのは、以下の2点であった。
 
 １）	慣性系AとBの関係が、ローレンツ変換の存在の下に対等でなくなること
 
 ２）	時間遅れを、原子時計など計測器を用いて測定可能か？
-
 
 **１）　について**
 
@@ -56,29 +53,17 @@ t’ = t　(1)　、　x’ = x – vt　(2)　、　y’ = y　(3)　、　z’
 
 （注：飛行機やGPSの実験で原子時計に遅れが計測された、とされていることの問題点については、後に詳しく説明します。）
 
-
-
 **２）	時間遅れを、原子時計など計測器を用いて測定可能か？**
 
 結論を先に言うと、答えは「NO」「時間の流れに、遅れや進みの存在を仮定し、それを原子時計など計測器を用いて測定しようと試みても、それは無用な試みとなる」
 
-
-
 このことの説明には、少し紙幅を要するので、次回以降に回したい。
-
-
-
-
 
 **参考文献：**
 
-1)	仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
-
-2)	内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
-
-3)	Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
-
-
+1. 仲座栄三、新相対性理論（物理的思考編）、ボーダーインク、363p.、2023.
+2. 内山龍雄　訳・解説：アインシュタイン相対性理論、岩波文庫、187p.、1988.
+3. Eizo NAKAZA: NEW THEORY OF RELATIVITY THAT USES GALILEAN TRANSFORMATION AS BASIS OF TRANSFORMATION BETWEEN INERTIA COORDINATE SYSTEMS, Journal of Science, Disaster Prevention, and Environmental Research (Physics), Vol.1, No.1, 1-10, 202.
 
 ・質問やコメントは、[coastalen@gmail.com](coastalen@gmail.com) へご連絡ください。
 
