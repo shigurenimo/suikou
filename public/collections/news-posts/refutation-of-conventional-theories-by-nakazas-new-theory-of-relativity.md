@@ -3,7 +3,7 @@ title: やり直し力学 18　仲座の新相対性理論による従来説の�
 title_en: Refutation of Conventional Theories by Nakaza's New Theory of Relativity
 date: 2025/10/22
 ---
-According to Nakaza's New Theory of Relativity: The transformation of actual spacetime between inertial frames follows the Galilean transformation. Upon this foundation of absolute spacetime, the Lorentz transformation exists as the transformation for Electromagnetic Theory.
+According to Nakaza's New Theory of Relativity: The transformation of actual spacetime between inertial frames follows the Galilean transformation. Upon this foundation of absolute spacetime, the Lorentz transformation exists as the transformation for electromagnetic theory.
 
 前回の説明において、アインシュタインの相対性理論で問題となったのは、以下の2点であった。
 
