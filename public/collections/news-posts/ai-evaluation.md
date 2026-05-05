@@ -2,6 +2,7 @@
 title: やり直し力学　19    ＡＩの評価
 title_en: "AI Evaluation "
 date: 2025/10/23
+file: /public/uploads/やり直し力学　閲覧.pdf
 ---
 Simply considering that when the Lorentz transformation is applied between two inertial frames assumed to be equivalent, those frames cease to be equivalent at that very moment—this alone renders Einstein's special theory of relativity completely invalid.
 
