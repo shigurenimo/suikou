@@ -13,11 +13,11 @@ type Props = {
 export const LinkAnchor: FC<Props> = (props) => {
   return (
     <Link
+      data-slot="button"
       href={props.href}
       className={cn(
-        buttonVariants({ variant: "ghost" }),
-        "h-auto min-h-10 justify-start whitespace-normal px-3 py-2 text-sm font-bold",
-        props.active && "bg-accent text-accent-foreground",
+        buttonVariants({ variant: props.active ? "secondary" : "ghost" }),
+        "w-full justify-start",
       )}
       aria-current={props.active ? "page" : undefined}
       onClick={props.onClick}

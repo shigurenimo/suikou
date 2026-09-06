@@ -133,9 +133,9 @@
     @apply bg-background text-foreground;
     font-weight: 500;
   }
-  a:focus-visible {
+  a:not([data-slot="button"]):focus-visible {
     outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline-offset: 4px;
   }
   #__next {
     display: flex;
@@ -146,61 +146,5 @@
     #__next {
       flex-direction: row;
     }
-  }
-}
-
-#background {
-  filter: url(#both);
-}
-
-#background > div {
-  will-change: transform;
-}
-
-#background > div:nth-child(1) {
-  animation: movement-a 1.5s linear infinite;
-  animation-duration: 8s;
-}
-
-#background > div:nth-child(2) {
-  animation: movement-a 1.5s linear infinite;
-  animation-duration: 11s;
-}
-
-#background > div:nth-child(3) {
-  animation: movement-a 1.5s linear infinite;
-  animation-duration: 7s;
-}
-
-#background > div:nth-child(4) {
-  animation: movement-b 1.5s linear infinite;
-  animation-duration: 10s;
-}
-
-#background > div:nth-child(5) {
-  animation: movement-b 1.5s linear infinite;
-  animation-duration: 12s;
-}
-
-#background > div:nth-child(6) {
-  animation: movement-b 1.5s linear infinite;
-  animation-duration: 9s;
-}
-
-@keyframes movement-a {
-  0% {
-    transform: translate(-20px, -20px) rotate(0deg) translateX(-20px);
-  }
-  100% {
-    transform: translate(-20px, -20px) rotate(360deg) translateX(-20px);
-  }
-}
-
-@keyframes movement-b {
-  0% {
-    transform: translate(-32px, -32px) rotate(0deg) translateX(-32px);
-  }
-  100% {
-    transform: translate(-32px, -32px) rotate(360deg) translateX(-32px);
   }
 }

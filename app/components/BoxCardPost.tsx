@@ -10,6 +10,7 @@ import {
   CardContent,
   CardDescription,
   CardAction,
+  CardTitle,
 } from "@/app/components/ui/card";
 import { usePostFiles } from "@/app/hooks/usePostFiles";
 import { NewsPost } from "@/app/types/newsPost";
@@ -34,16 +35,17 @@ export const BoxCardPost: FC<Props> = ({ post, href, detail = false }) => {
   const Heading = detail ? "h1" : "h2";
 
   return (
-    <Card className="min-w-0 rounded-md text-base shadow-lg">
-      <CardHeader className="gap-3">
-        <div className="min-w-0 space-y-1">
-          <p className="text-sm font-bold text-muted-foreground">{toDateText(post.date)}</p>
-          <Heading className="text-xl font-bold md:text-2xl">{post.title}</Heading>
-          {post.title_en && <CardDescription className="text-sm">{post.title_en}</CardDescription>}
-        </div>
+    <Card className="min-w-0">
+      <CardHeader>
+        <CardDescription>{toDateText(post.date)}</CardDescription>
+        <CardTitle>
+          <Heading>{post.title}</Heading>
+        </CardTitle>
+        {post.title_en && <CardDescription>{post.title_en}</CardDescription>}
         {href && (
           <CardAction>
             <a
+              data-slot="button"
               href={href}
               target="_blank"
               rel="noopener noreferrer"
@@ -58,7 +60,7 @@ export const BoxCardPost: FC<Props> = ({ post, href, detail = false }) => {
       {(pdfFiles.length > 0 || externalUrl || imageFiles.length > 0 || post.content) && (
         <CardContent className="flex min-w-0 flex-col gap-4">
           {(pdfFiles.length > 0 || externalUrl) && (
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2">
               {pdfFiles.map((fileURL, index) => (
                 <ButtonAnchorURL href={fileURL} key={fileURL}>
                   {pdfFiles.length > 1 ? `PDFファイル（その${index + 1}）` : "PDFファイル"}

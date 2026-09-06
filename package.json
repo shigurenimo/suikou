@@ -5,16 +5,17 @@
   "license": "MIT",
   "scripts": {
     "fmt": "oxfmt --write .",
-    "lint": "oxlint app pages tests next.config.js postcss.config.js",
+    "lint": "oxlint app pages tests scripts next.config.js postcss.config.js && npm run lint:design",
     "check": "oxfmt --check . && npm run lint && npm run typecheck && npm test",
-    "build": "next build",
+    "build": "npm run lint:design && next build",
     "build:netlify": "npm run build",
     "dev": "next dev",
     "dev:netlify": "decap-server",
     "export": "npm run build",
     "start": "serve out -l 3000",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "tsx --tsconfig tests/tsconfig.json --test tests/*.test.ts tests/*.test.tsx"
+    "test": "tsx --tsconfig tests/tsconfig.json --test tests/*.test.ts tests/*.test.tsx",
+    "lint:design": "node scripts/check-design.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.8.0",

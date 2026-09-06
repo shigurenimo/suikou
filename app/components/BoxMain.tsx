@@ -16,7 +16,7 @@ export const BoxMain: FC<Props> = (props) => {
       </Head>
       <main
         className={
-          "flex min-w-0 flex-1 flex-col gap-4 p-4 [overflow-wrap:anywhere] md:gap-6 md:p-6"
+          "flex min-w-0 flex-1 flex-col gap-4 p-4 [overflow-wrap:anywhere] md:gap-8 md:p-8"
         }
       >
         {props.children}

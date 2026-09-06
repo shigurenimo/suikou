@@ -22,7 +22,7 @@ const ArticlesIndex: FC<Props> = (props) => {
         <meta content={props.site.description} name={"description"} />
       </Head>
       <HeadingPage>{"書籍"}</HeadingPage>
-      <ul className={"flex flex-col gap-4 md:gap-6"}>
+      <ul className={"flex flex-col gap-4 md:gap-8"}>
         {props.posts.map((post) => (
           <li key={post.id}>
             <BoxCardBook book={post} />

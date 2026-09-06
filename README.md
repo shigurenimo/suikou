@@ -38,6 +38,7 @@ npm run build   # 本番ビルドと静的書き出し
 - CMS: `/admin/`（`public/admin/` のDecap CMS。CDNから読み込み）
 - サイトのコンポーネント: `app/components/`
 - shadcn/uiの部品: `app/components/ui/`
+- デザイン規約・余白スケール: [DESIGN.md](DESIGN.md)
 - テーマ: `app/index.css`
 - shadcn設定: `components.json`
 

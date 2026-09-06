@@ -15,7 +15,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
     <ReactMarkdown
       components={{
         li(props) {
-          return <li className={"ml-4 mt-2 text-sm md:ml-6 md:text-base"}>{props.children}</li>;
+          return <li className={"ml-4 mt-2 md:ml-8"}>{props.children}</li>;
         },
         ul(props) {
           return <ul className={"mt-4 ml-0 list-disc"}>{props.children}</ul>;
@@ -28,7 +28,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
           return (
             <h1
               className={
-                isFirst ? "text-xl font-bold md:text-2xl" : "mt-12 text-xl font-bold md:text-2xl"
+                isFirst ? "text-xl font-bold md:text-2xl" : "mt-16 text-xl font-bold md:text-2xl"
               }
             >
               {props.children}
@@ -40,7 +40,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
           return (
             <h2
               className={
-                isFirst ? "text-lg font-bold md:text-xl" : "mt-6 text-lg font-bold md:text-xl"
+                isFirst ? "text-lg font-bold md:text-xl" : "mt-8 text-lg font-bold md:text-xl"
               }
             >
               {props.children}
@@ -67,7 +67,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
         a(props) {
           return (
             <a
-              className={"font-bold break-all text-blue-400 underline underline-offset-4"}
+              className={"font-bold break-all text-primary underline underline-offset-4"}
               href={props.href && toPublicPath(props.href)}
               rel={"noopener noreferrer"}
               target={"_blank"}
@@ -81,7 +81,7 @@ export const BoxMarkdown: FC<Props> = (props) => {
             <img
               {...props}
               src={typeof src === "string" ? toPublicPath(src) : src}
-              className={"my-4 h-auto w-full max-w-lg rounded-lg"}
+              className={"my-4 h-auto w-full max-w-lg"}
               loading="lazy"
             />
           );

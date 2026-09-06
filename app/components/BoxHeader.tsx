@@ -30,7 +30,7 @@ export function BoxHeader() {
             <SheetTitle>メニュー</SheetTitle>
             <SheetDescription>仲座栄三 新力学研究所</SheetDescription>
           </SheetHeader>
-          <div className="flex flex-col gap-6 px-4 pb-4">
+          <div className="flex flex-col gap-8 px-4 pb-8">
             <SiteNavigation onNavigate={() => setOpen(false)} />
             <BoxFooter />
           </div>

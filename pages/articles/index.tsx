@@ -17,7 +17,7 @@ const ArticlesIndex: FC<Props> = (props) => {
   return (
     <BoxMain title={`メディア掲載 | ${props.site.title}`} description={props.site.description}>
       <HeadingPage>{"メディア掲載"}</HeadingPage>
-      <ul className={"flex flex-col gap-4 md:gap-6"}>
+      <ul className={"flex flex-col gap-4 md:gap-8"}>
         {props.posts.map((post) => (
           <li key={post.id}>
             <BoxCardPost post={post} />
