@@ -1,14 +1,11 @@
-import { Stack } from "@chakra-ui/react"
-import React, { FC, ReactNode } from "react"
+import React, { FC, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const BoxArticle: FC<Props> = (props) => {
   return (
-    <Stack maxW={"1280px"} w={"full"} spacing={6} alignItems={"flex-start"}>
-      {props.children}
-    </Stack>
-  )
-}
+    <div className={"flex w-full max-w-[1280px] flex-col items-start gap-6"}>{props.children}</div>
+  );
+};

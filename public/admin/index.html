@@ -7,9 +7,9 @@
     <title>管理画面</title>
   </head>
   <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-identity-widget@2.0.3/build/netlify-identity-widget.js"></script>
     <!-- Keep the CMS version deterministic: minor releases can change authentication at runtime. -->
-    <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@3.16.0/dist/decap-cms.js"></script>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {

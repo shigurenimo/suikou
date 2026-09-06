@@ -1,22 +1,20 @@
-import { Box, Img } from "@chakra-ui/react"
-import { FC } from "react"
+import { FC } from "react";
+import { toPublicPath } from "@/app/utils/toPublicPath";
 
 type Props = {
-  alt: string
-  src: string
-}
+  alt: string;
+  src: string;
+};
 
 export const BoxImage: FC<Props> = (props) => {
   return (
-    <Box>
-      <Img
-        maxW={"md"}
-        borderWidth={1}
-        rounded={"lg"}
+    <div>
+      <img
+        className={"h-auto w-full max-w-md rounded-lg border"}
         alt={props.alt}
-        src={props.src}
-        w={"100%"}
+        src={toPublicPath(props.src)}
+        loading="lazy"
       />
-    </Box>
-  )
-}
+    </div>
+  );
+};

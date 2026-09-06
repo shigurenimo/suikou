@@ -1,31 +1,24 @@
-import { Heading, Stack, Text } from "@chakra-ui/react"
-import React, { FC } from "react"
-import { BoxMarkdown } from "app/components/BoxMarkdown"
-import { ClassPost } from "app/types/classPost"
+import { FC } from "react";
+import { BoxMarkdown } from "@/app/components/BoxMarkdown";
+import { Card, CardContent, CardDescription, CardHeader } from "@/app/components/ui/card";
+import { ClassPost } from "@/app/types/classPost";
+import { toDateText } from "@/app/utils/toDateText";
 
-type Props = { post: ClassPost }
+type Props = { post: ClassPost };
 
-export const BoxCardClassPost: FC<Props> = ({ post }) => {
-  const hasDate = !post.date.includes("1970")
-
-  const hasContent = post.content.length > 0
-
-  return (
-    <Stack rounded={"md"} bg={"gray.700"} spacing={4} boxShadow={"lg"} p={4}>
-      <Stack bg={"gray.600"} p={3} rounded={"md"} boxShadow={"lg"} spacing={4}>
-        <Stack spacing={1}>
-          <Heading as={"h1"} fontSize={"lg"} fontWeight={"bold"}>
-            {post.title}
-          </Heading>
-          <Text fontSize={"sm"}>{post.title_en}</Text>
-          {hasDate && (
-            <Text fontSize={"sm"}>
-              {post.date.replace("/", "月").replace("/", "日")}
-            </Text>
-          )}
-        </Stack>
-      </Stack>
-      {hasContent && <BoxMarkdown>{post.content}</BoxMarkdown>}
-    </Stack>
-  )
-}
+export const BoxCardClassPost: FC<Props> = ({ post }) => (
+  <Card className="rounded-md text-base shadow-lg">
+    <CardHeader>
+      <h2 className="text-lg font-bold">{post.title}</h2>
+      {post.title_en && <CardDescription className="text-sm">{post.title_en}</CardDescription>}
+      {post.date && !post.date.startsWith("1970/") && (
+        <p className="text-sm text-muted-foreground">{toDateText(post.date)}</p>
+      )}
+    </CardHeader>
+    {post.content && (
+      <CardContent>
+        <BoxMarkdown>{post.content}</BoxMarkdown>
+      </CardContent>
+    )}
+  </Card>
+);

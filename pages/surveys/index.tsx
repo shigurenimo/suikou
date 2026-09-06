@@ -1,19 +1,18 @@
-import { List, ListItem } from "@chakra-ui/react"
-import { GetStaticProps } from "next"
-import Head from "next/head"
-import React, { FC } from "react"
-import { BoxCardClassPost } from "app/components/BoxCardClassPost"
-import { HeadingPage } from "app/components/HeadingPage"
-import { BoxMain } from "app/components/BoxMain"
-import { ClassPost } from "app/types/classPost"
-import { SiteConfig } from "app/types/sitePage"
-import { readMdFile } from "app/utils/readMdFile"
-import { readMdFiles } from "app/utils/readMdFiles"
+import { GetStaticProps } from "next";
+import Head from "next/head";
+import React, { FC } from "react";
+import { BoxCardClassPost } from "@/app/components/BoxCardClassPost";
+import { HeadingPage } from "@/app/components/HeadingPage";
+import { BoxMain } from "@/app/components/BoxMain";
+import { ClassPost } from "@/app/types/classPost";
+import { SiteConfig } from "@/app/types/sitePage";
+import { readMdFile } from "@/app/utils/readMdFile";
+import { readMdFiles } from "@/app/utils/readMdFiles";
 
 type Props = {
-  posts: ClassPost[]
-  site: SiteConfig
-}
+  posts: ClassPost[];
+  site: SiteConfig;
+};
 
 const SurveysIndex: FC<Props> = (props) => {
   return (
@@ -23,27 +22,27 @@ const SurveysIndex: FC<Props> = (props) => {
         <meta content={props.site.description} name={"description"} />
       </Head>
       <HeadingPage>{"尾崎次郎基金による東北地方大津波災害調査"}</HeadingPage>
-      <List spacing={{ base: 4, md: 6 }}>
+      <ul className={"flex flex-col gap-4 md:gap-6"}>
         {props.posts.map((post) => (
-          <ListItem key={post.id}>
+          <li key={post.id}>
             <BoxCardClassPost post={post} />
-          </ListItem>
+          </li>
         ))}
-      </List>
+      </ul>
     </BoxMain>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const unsortedPosts = await readMdFiles<ClassPost>("survey-posts")
+  const unsortedPosts = await readMdFiles<ClassPost>("survey-posts");
 
   const posts = unsortedPosts.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
-  })
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
-  const site = await readMdFile<SiteConfig>("configs", "site")
+  const site = await readMdFile<SiteConfig>("configs", "site");
 
-  return { props: { posts, site } }
-}
+  return { props: { posts, site } };
+};
 
-export default SurveysIndex
+export default SurveysIndex;

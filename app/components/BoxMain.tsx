@@ -1,23 +1,26 @@
-import { Stack } from "@chakra-ui/react"
-import Head from "next/head"
-import React, { FC, ReactNode } from "react"
+import Head from "next/head";
+import React, { FC, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-  title?: string
-  description?: string
-}
+  children: ReactNode;
+  title?: string;
+  description?: string;
+};
 
 export const BoxMain: FC<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>{props.title}</title>
-        <meta content={props.description} name={"description"} />
+        {props.title && <title>{props.title}</title>}
+        {props.description && <meta content={props.description} name={"description"} />}
       </Head>
-      <Stack w={"full"} p={{ base: 4, md: 6 }} spacing={{ base: 4, md: 6 }}>
+      <main
+        className={
+          "flex min-w-0 flex-1 flex-col gap-4 p-4 [overflow-wrap:anywhere] md:gap-6 md:p-6"
+        }
+      >
         {props.children}
-      </Stack>
+      </main>
     </>
-  )
-}
+  );
+};

@@ -1,138 +1,101 @@
-import {
-  Box,
-  Heading,
-  Image,
-  Link,
-  ListItem,
-  OrderedList,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
-import React, { FC, ReactNode } from "react"
-import ReactMarkdown from "react-markdown"
+import React, { FC, ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
+import { toPublicPath } from "@/app/utils/toPublicPath";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const BoxMarkdown: FC<Props> = (props) => {
   if (typeof props.children !== "string") {
-    return <>{props.children}</>
+    return <>{props.children}</>;
   }
 
   return (
     <ReactMarkdown
-      linkTarget={"_blank"}
       components={{
         li(props) {
-          return (
-            <ListItem
-              fontSize={{ base: "sm", md: "md" }}
-              ml={{ base: 4, md: 6 }}
-              mt={2}
-            >
-              {props.children}
-            </ListItem>
-          )
+          return <li className={"ml-4 mt-2 text-sm md:ml-6 md:text-base"}>{props.children}</li>;
         },
         ul(props) {
-          return (
-            <UnorderedList mt={"4"} ml={0}>
-              {props.children}
-            </UnorderedList>
-          )
+          return <ul className={"mt-4 ml-0 list-disc"}>{props.children}</ul>;
         },
         ol(props) {
-          return (
-            <OrderedList mt={"4"} ml={0}>
-              {props.children}
-            </OrderedList>
-          )
+          return <ol className={"mt-4 ml-0 list-decimal"}>{props.children}</ol>;
         },
         h1(props) {
+          const isFirst = props.node?.position?.start.line === 1;
           return (
-            <Heading
-              as={"h1"}
-              fontWeight={"bold"}
-              fontSize={{ base: "xl", md: "2xl" }}
-              mt={props.node.position?.start.line === 1 ? 0 : 12}
+            <h1
+              className={
+                isFirst ? "text-xl font-bold md:text-2xl" : "mt-12 text-xl font-bold md:text-2xl"
+              }
             >
               {props.children}
-            </Heading>
-          )
+            </h1>
+          );
         },
         h2(props) {
+          const isFirst = props.node?.position?.start.line === 1;
           return (
-            <Heading
-              as={"h2"}
-              fontWeight={"bold"}
-              fontSize={{ base: "lg", md: "xl" }}
-              mt={props.node.position?.start.line === 1 ? 0 : 6}
+            <h2
+              className={
+                isFirst ? "text-lg font-bold md:text-xl" : "mt-6 text-lg font-bold md:text-xl"
+              }
             >
               {props.children}
-            </Heading>
-          )
+            </h2>
+          );
         },
         h3(props) {
-          return (
-            <Text as={"p"} whiteSpace={"pre-wrap"}>
-              {props.children}
-            </Text>
-          )
+          return <h3 className={"mt-4 text-base font-bold md:text-lg"}>{props.children}</h3>;
         },
         p(props) {
-          if (props.children.some((a) => typeof a === "string")) {
-            return (
-              <Text
-                lineHeight={1.5}
-                mt={props.node.position?.start.line === 1 ? 0 : 4}
-                whiteSpace={"pre-wrap"}
-              >
-                {props.children}
-              </Text>
-            )
-          }
-          return <>{props.children}</>
+          const isFirst = props.node?.position?.start.line === 1;
+          return (
+            <p
+              className={
+                isFirst
+                  ? "whitespace-pre-wrap leading-normal"
+                  : "mt-4 whitespace-pre-wrap leading-normal"
+              }
+            >
+              {props.children}
+            </p>
+          );
         },
         a(props) {
           return (
-            <Link
-              color={"blue.500"}
-              href={props.href as string}
-              rel={"noreferrer"}
+            <a
+              className={"font-bold break-all text-blue-400 underline underline-offset-4"}
+              href={props.href && toPublicPath(props.href)}
+              rel={"noopener noreferrer"}
               target={"_blank"}
-              fontWeight={"bold"}
-              wordBreak={"break-all"}
             >
               {props.children}
-            </Link>
-          )
+            </a>
+          );
         },
-        img(props) {
+        img({ node: _node, src, ...props }) {
           return (
-            <Image
-              alt={props.alt}
-              maxW={"lg"}
-              mx={"auto"}
-              w={"100%"}
-              rounded={"lg"}
-              ml={0}
+            <img
               {...props}
+              src={typeof src === "string" ? toPublicPath(src) : src}
+              className={"my-4 h-auto w-full max-w-lg rounded-lg"}
+              loading="lazy"
             />
-          )
+          );
         },
         blockquote(props) {
           return (
-            <Box as={"blockquote"} mt={4}>
-              <Box borderLeftWidth={8} pl={4} pb={4}>
-                {props.children}
-              </Box>
-            </Box>
-          )
+            <blockquote className={"mt-4"}>
+              <div className={"border-l-8 pl-4 pb-4"}>{props.children}</div>
+            </blockquote>
+          );
         },
       }}
     >
       {props.children}
     </ReactMarkdown>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
 export type Content = {
-  content: string | null
-  id: string
-  type: string
-}
+  content: string;
+  id: string;
+  type: string;
+};

@@ -1,80 +1,11 @@
-import { Stack } from "@chakra-ui/react"
-import { useRouter } from "next/router"
-import React, { FC } from "react"
-import { BoxFooter } from "app/components/BoxFooter"
-import { LinkAnchor } from "app/components/LinkAnchor"
+import { BoxFooter } from "@/app/components/BoxFooter";
+import { SiteNavigation } from "@/app/components/SiteNavigation";
 
-export const BoxAside: FC = () => {
-  const { pathname } = useRouter()
-
+export function BoxAside() {
   return (
-    <Stack
-      as={"aside"}
-      position={"sticky"}
-      top={0}
-      display={{ base: "none", md: "block" }}
-      minW={"14rem"}
-      h={"100%"}
-      py={{ base: 4, md: 6 }}
-      pl={{ base: 4, md: 6 }}
-    >
-      <Stack pb={4} fontWeight={"bold"}>
-        <LinkAnchor active={pathname === "/"} href={"/"}>
-          {"ホーム"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname === "/nakaza"} href={"/nakaza"}>
-          {"仲座 栄三"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname === "/about"} href={"/about"}>
-          {"新力学研究所"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname === "/access"} href={"/access"}>
-          {"アクセス"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname.startsWith("/posts")} href={"/posts"}>
-          {"お知らせ"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor
-          active={pathname.startsWith("/articles")}
-          href={"/articles"}
-        >
-          {"メディア掲載"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname.startsWith("/classes")} href={"/classes"}>
-          {"eラーニング"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor
-          active={pathname.startsWith("/feedbacks")}
-          href={"/feedbacks"}
-        >
-          {"授業の感想"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname.startsWith("/surveys")} href={"/surveys"}>
-          {"東北地方大津波災害調査"}
-        </LinkAnchor>
-      </Stack>
-      <Stack paddingBottom={"4"} fontWeight={"bold"}>
-        <LinkAnchor active={pathname.startsWith("/books")} href={"/books"}>
-          {"書籍"}
-        </LinkAnchor>
-      </Stack>
+    <aside className="sticky top-0 hidden h-dvh w-60 shrink-0 self-start overflow-y-auto p-6 pr-0 md:flex md:flex-col md:gap-6">
+      <SiteNavigation />
       <BoxFooter />
-    </Stack>
-  )
+    </aside>
+  );
 }

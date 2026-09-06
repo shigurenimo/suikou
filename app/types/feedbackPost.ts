@@ -1,6 +1,6 @@
-import { Content } from "./content"
+import { Content } from "./content";
 
 export type FeedbackPost = Content & {
-  date: string
-  title: string
-}
+  date: string;
+  title: string;
+};

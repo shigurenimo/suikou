@@ -1,6 +1,6 @@
-import { Content } from "./content"
+import { Content } from "./content";
 
 export type SiteConfig = Content & {
-  title: string
-  description: string
-}
+  title: string;
+  description: string;
+};

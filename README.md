@@ -1,30 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# suikou
 
-## Getting Started
+仲座栄三 新力学研究所の公開サイト。Next.js 16のPages RouterとReact 19でMarkdownの記事を静的HTMLに生成します。UIはshadcn/ui（Base UI / base-sera）とTailwind CSS 4、型チェックはTypeScript 7を使用しています。
 
-First, run the development server:
+## 開発
+
+Node.js 22.12以上とnpmを使用します。
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Portlessを使う場合は、Node.js 24以上とインストール済みの `portless` で次を実行します。
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+portless
+```
 
-## Learn More
+`portless.json` の設定により、開発サイトは https://suikou.io.localhost/ で開きます。`npm run dev` で直接起動した場合は http://localhost:3000 です。CMSをローカルで使う場合は、直接起動したサイトと、別のターミナルで `npm run dev:netlify` を起動し、http://localhost:3000/admin/ を開きます。
 
-To learn more about Next.js, take a look at the following resources:
+## 検証とビルド
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run check   # フォーマット・lint・型チェック・回帰テスト
+npm run fmt     # ソースコードの整形
+npm run build   # 本番ビルドと静的書き出し
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+静的ファイルは `out/` に出力します。`npm start` で書き出し後のサイトを http://localhost:3000 から確認できます。Netlifyも `npm run build` を実行し、`out/` を公開します。個別の検証は `npm run lint`、`npm run typecheck`、`npm test` で実行できます。
 
-## Deploy on Vercel
+`next.config.js` の `output: "export"` で静的出力を有効にしています。Markdownはビルド時にファイルから読み込むため、専用のwebpackローダーは不要です。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## コンテンツとUI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 記事・固定ページ: `public/collections/`
+- 添付ファイル: `public/uploads/`
+- CMS: `/admin/`（`public/admin/` のDecap CMS。CDNから読み込み）
+- サイトのコンポーネント: `app/components/`
+- shadcn/uiの部品: `app/components/ui/`
+- テーマ: `app/index.css`
+- shadcn設定: `components.json`
+
+お知らせとメディア掲載は、ともに `/posts/[id]` の詳細ページを持ちます。記事のファイル名は両コレクション間で一意にしてください。CMSで保存された `/public/uploads/` 形式の添付パスは表示時に `/uploads/` に変換します。
+
+`public/` 内のCMSコンテンツは自動整形の対象外です。
+
+依存ライブラリは検証したバージョンに固定しています。Decapのローカルサーバーが使うExpress 4の依存範囲では `qs` の修正版を取得できないため、`overrides` で6.16.0を指定しています。

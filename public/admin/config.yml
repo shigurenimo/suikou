@@ -3,6 +3,7 @@ backend:
   branch: 'main'
 local_backend: true
 media_folder: 'public/uploads'
+public_folder: '/uploads'
 site_url: 'https://suikou.io'
 display_url: 'https://suikou.io'
 locale: 'ja'
@@ -94,7 +95,7 @@ collections:
     extension: 'md'
     format: 'frontmatter'
     preview_path: 'classes/'
-    slug: 'title_en'
+    slug: '{{slug}}'
     summary: '{{title}} - {{date}}'
     sortable_fields: ['date', 'title']
     fields:

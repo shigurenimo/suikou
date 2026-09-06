@@ -1,94 +1,70 @@
-import { Box, Heading, HStack, IconButton, Stack, Text } from "@chakra-ui/react"
-import React, { FC } from "react"
-import { ButtonAnchorURL } from "app/components/ButtonAnchorURL"
-import { BoxImage } from "app/components/BoxImage"
-import { BoxMarkdown } from "app/components/BoxMarkdown"
-import { usePostFiles } from "app/hooks/usePostFiles"
-import { NewsPost } from "app/types/newsPost"
-import { toDateText } from "app/utils/toDateText"
-import { BiLinkExternal } from "react-icons/bi"
+import { FC } from "react";
+import { ExternalLinkIcon } from "lucide-react";
+import { ButtonAnchorURL } from "@/app/components/ButtonAnchorURL";
+import { BoxImage } from "@/app/components/BoxImage";
+import { BoxMarkdown } from "@/app/components/BoxMarkdown";
+import { buttonVariants } from "@/app/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardDescription,
+  CardAction,
+} from "@/app/components/ui/card";
+import { usePostFiles } from "@/app/hooks/usePostFiles";
+import { NewsPost } from "@/app/types/newsPost";
+import { toDateText } from "@/app/utils/toDateText";
 
-type Props = {
-  post: NewsPost
-  onOpen?(): void
-}
+type Props = { post: NewsPost; href?: string; detail?: boolean };
 
-export const BoxCardPost: FC<Props> = (props) => {
-  const imageFiles = usePostFiles(
-    [props.post.file, props.post.file_a, props.post.file_b, props.post.file_c],
-    [".png", ".jpg", ".jpeg"],
-  )
-
-  const pdfFiles = usePostFiles(
-    [props.post.file, props.post.file_a, props.post.file_b, props.post.file_c],
-    [".pdf"],
-  )
-
-  const hasURL = !!props.post.external_url
-
-  const hasActions = pdfFiles.length > 0
-
-  const hasContent = props.post.content.length > 0
-
-  const hasLink = typeof props.onOpen !== "undefined"
+export const BoxCardPost: FC<Props> = ({ post, href, detail = false }) => {
+  const files = [post.file, post.file_a, post.file_b, post.file_c];
+  const imageFiles = usePostFiles(files, [".png", ".jpg", ".jpeg", ".gif", ".webp"]);
+  const pdfFiles = usePostFiles(files, [".pdf"]);
+  const Heading = detail ? "h1" : "h2";
 
   return (
-    <Stack rounded={"md"} bg={"gray.700"} spacing={4} boxShadow={"lg"} p={4}>
-      <Box
-        bg={"gray.600"}
-        p={3}
-        boxShadow={"lg"}
-        overflow={"hidden"}
-        rounded={"md"}
-      >
-        <Stack direction={"row"} spacing={0} justifyContent={"space-between"}>
-          <Stack>
-            <Stack spacing={1}>
-              <Text fontSize={"sm"} fontWeight={"bold"}>
-                {toDateText(props.post.date)}
-              </Text>
-              <Heading as={"h1"} fontSize={"2xl"} fontWeight={"bold"}>
-                {props.post.title}
-              </Heading>
-              <Text fontSize={"sm"} opacity={0.8}>
-                {props.post.title_en}
-              </Text>
-            </Stack>
-            {hasActions && (
-              <HStack spacing={4}>
-                {pdfFiles.map((fileURL, index) => (
-                  <ButtonAnchorURL
-                    href={fileURL.replace("public/", "")}
-                    key={fileURL}
-                  >
-                    {pdfFiles.length > 1
-                      ? `PDFファイル（その${index + 1}）`
-                      : "PDFファイル"}
-                  </ButtonAnchorURL>
-                ))}
-                {hasURL && (
-                  <ButtonAnchorURL href={props.post.external_url}>
-                    {"外部リンク"}
-                  </ButtonAnchorURL>
-                )}
-              </HStack>
-            )}
-          </Stack>
-          {hasLink && (
-            <Stack>
-              <IconButton
-                aria-label={"リンクを開く"}
-                icon={<BiLinkExternal />}
-                onClick={props.onOpen}
-              />
-            </Stack>
+    <Card className="min-w-0 rounded-md text-base shadow-lg">
+      <CardHeader className="gap-3">
+        <div className="min-w-0 space-y-1">
+          <p className="text-sm font-bold text-muted-foreground">{toDateText(post.date)}</p>
+          <Heading className="text-xl font-bold md:text-2xl">{post.title}</Heading>
+          {post.title_en && <CardDescription className="text-sm">{post.title_en}</CardDescription>}
+        </div>
+        {href && (
+          <CardAction>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${post.title}の詳細を開く`}
+              className={buttonVariants({ size: "icon", variant: "secondary" })}
+            >
+              <ExternalLinkIcon />
+            </a>
+          </CardAction>
+        )}
+      </CardHeader>
+      {(pdfFiles.length > 0 || post.external_url || imageFiles.length > 0 || post.content) && (
+        <CardContent className="flex min-w-0 flex-col gap-4">
+          {(pdfFiles.length > 0 || post.external_url) && (
+            <div className="flex flex-wrap items-center gap-3">
+              {pdfFiles.map((fileURL, index) => (
+                <ButtonAnchorURL href={fileURL} key={fileURL}>
+                  {pdfFiles.length > 1 ? `PDFファイル（その${index + 1}）` : "PDFファイル"}
+                </ButtonAnchorURL>
+              ))}
+              {post.external_url && (
+                <ButtonAnchorURL href={post.external_url}>外部リンク</ButtonAnchorURL>
+              )}
+            </div>
           )}
-        </Stack>
-      </Box>
-      {imageFiles.map((imageURL) => (
-        <BoxImage alt={props.post.title} src={imageURL} key={imageURL} />
-      ))}
-      {hasContent && <BoxMarkdown>{props.post.content}</BoxMarkdown>}
-    </Stack>
-  )
-}
+          {imageFiles.map((imageURL) => (
+            <BoxImage alt={post.title} src={imageURL} key={imageURL} />
+          ))}
+          {post.content && <BoxMarkdown>{post.content}</BoxMarkdown>}
+        </CardContent>
+      )}
+    </Card>
+  );
+};

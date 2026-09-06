@@ -1,19 +1,18 @@
-import { List, ListItem } from "@chakra-ui/react"
-import { GetStaticProps } from "next"
-import Head from "next/head"
-import React, { FC } from "react"
-import { BoxCardBook } from "app/components/BoxCardBook"
-import { HeadingPage } from "app/components/HeadingPage"
-import { BoxMain } from "app/components/BoxMain"
-import { Book } from "app/types/book"
-import { SiteConfig } from "app/types/sitePage"
-import { readMdFile } from "app/utils/readMdFile"
-import { readMdFiles } from "app/utils/readMdFiles"
+import { GetStaticProps } from "next";
+import Head from "next/head";
+import React, { FC } from "react";
+import { BoxCardBook } from "@/app/components/BoxCardBook";
+import { HeadingPage } from "@/app/components/HeadingPage";
+import { BoxMain } from "@/app/components/BoxMain";
+import { Book } from "@/app/types/book";
+import { SiteConfig } from "@/app/types/sitePage";
+import { readMdFile } from "@/app/utils/readMdFile";
+import { readMdFiles } from "@/app/utils/readMdFiles";
 
 type Props = {
-  posts: Book[]
-  site: SiteConfig
-}
+  posts: Book[];
+  site: SiteConfig;
+};
 
 const ArticlesIndex: FC<Props> = (props) => {
   return (
@@ -23,23 +22,23 @@ const ArticlesIndex: FC<Props> = (props) => {
         <meta content={props.site.description} name={"description"} />
       </Head>
       <HeadingPage>{"書籍"}</HeadingPage>
-      <List spacing={{ base: 4, md: 6 }}>
+      <ul className={"flex flex-col gap-4 md:gap-6"}>
         {props.posts.map((post) => (
-          <ListItem key={post.id}>
+          <li key={post.id}>
             <BoxCardBook book={post} />
-          </ListItem>
+          </li>
         ))}
-      </List>
+      </ul>
     </BoxMain>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = await readMdFiles<Book>("books")
+  const posts = await readMdFiles<Book>("books");
 
-  const site = await readMdFile<SiteConfig>("configs", "site")
+  const site = await readMdFile<SiteConfig>("configs", "site");
 
-  return { props: { posts, site } }
-}
+  return { props: { posts, site } };
+};
 
-export default ArticlesIndex
+export default ArticlesIndex;

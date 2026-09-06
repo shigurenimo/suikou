@@ -1,64 +1,18 @@
-import { Box, Stack } from "@chakra-ui/react"
-import React, { FC } from "react"
+import React, { FC } from "react";
 
 export const BoxBackground: FC = () => {
   return (
-    <Stack
+    <div
       id={"background"}
-      position={"absolute"}
-      flex={1}
-      justifyContent={"center"}
-      alignItems={"center"}
+      className={"absolute flex flex-1 items-center justify-center"}
       style={{ zIndex: -1, left: "2%" }}
     >
-      <Box
-        w={32}
-        h={32}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"red.400"}
-        opacity={25}
-      />
-      <Box
-        w={32}
-        h={32}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"blue.400"}
-        opacity={75}
-      />
-      <Box
-        w={32}
-        h={32}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"blue.300"}
-        opacity={75}
-      />
-      <Box
-        w={32}
-        h={32}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"red.400"}
-        opacity={25}
-      />
-      <Box
-        w={32}
-        h={32}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"indigo.200"}
-        opacity={75}
-      />
-      <Box
-        w={40}
-        h={40}
-        rounded={"full"}
-        position={"absolute"}
-        bg={"indigo.300"}
-        opacity={75}
-      />
+      <div className={"absolute h-32 w-32 rounded-full bg-red-400 opacity-25"} />
+      <div className={"absolute h-32 w-32 rounded-full bg-blue-400 opacity-75"} />
+      <div className={"absolute h-32 w-32 rounded-full bg-blue-300 opacity-75"} />
+      <div className={"absolute h-32 w-32 rounded-full bg-red-400 opacity-25"} />
+      <div className={"absolute h-32 w-32 rounded-full bg-indigo-200 opacity-75"} />
+      <div className={"absolute h-40 w-40 rounded-full bg-indigo-300 opacity-75"} />
       <svg
         xmlns={"http://www.w3.org/2000/svg"}
         version={"1.1"}
@@ -66,18 +20,10 @@ export const BoxBackground: FC = () => {
       >
         <defs>
           <filter id={"blur"} colorInterpolationFilters={"sRGB"}>
-            <feGaussianBlur
-              in={"SourceGraphic"}
-              stdDeviation={"7 7"}
-              result={"blur"}
-            />
+            <feGaussianBlur in={"SourceGraphic"} stdDeviation={"7 7"} result={"blur"} />
           </filter>
           <filter id={"both"} colorInterpolationFilters={"sRGB"}>
-            <feGaussianBlur
-              in={"SourceGraphic"}
-              stdDeviation={"7 7"}
-              result={"blur"}
-            />
+            <feGaussianBlur in={"SourceGraphic"} stdDeviation={"7 7"} result={"blur"} />
             <feColorMatrix
               in={"blur"}
               mode={"matrix"}
@@ -87,6 +33,6 @@ export const BoxBackground: FC = () => {
           </filter>
         </defs>
       </svg>
-    </Stack>
-  )
-}
+    </div>
+  );
+};

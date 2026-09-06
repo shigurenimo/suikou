@@ -1,10 +1,10 @@
-import { Content } from "./content"
+import { Content } from "./content";
 
 export type ProjectPage = Content & {
-  title: string
-  projects: Project[]
-}
+  title: string;
+  projects: Project[];
+};
 
 type Project = {
-  title: string
-}
+  title: string;
+};
