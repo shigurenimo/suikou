@@ -36,6 +36,21 @@ test("class cards format real dates and hide ordering placeholder dates", () => 
   assert.doesNotMatch(undated, /1970/);
 });
 
+test("invalid external URLs do not create broken links or hide valid attachments", () => {
+  for (const external_url of ["Message for Marie", "https://", "javascript:alert(1)", ""]) {
+    for (const detail of [false, true]) {
+      const html = renderToStaticMarkup(
+        <BoxCardPost
+          post={{ ...post, external_url, file: "/public/uploads/report.pdf" }}
+          detail={detail}
+        />,
+      );
+      assert.doesNotMatch(html, /外部リンク/);
+      assert.match(html, /href="\/uploads\/report.pdf"/);
+    }
+  }
+});
+
 test("markdown preserves paragraphs, heading semantics and normalizes media paths", () => {
   const html = renderToStaticMarkup(
     <BoxMarkdown>

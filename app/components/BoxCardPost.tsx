@@ -17,10 +17,20 @@ import { toDateText } from "@/app/utils/toDateText";
 
 type Props = { post: NewsPost; href?: string; detail?: boolean };
 
+function getExternalUrl(value: string | null | undefined) {
+  try {
+    const url = new URL(value ?? "");
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export const BoxCardPost: FC<Props> = ({ post, href, detail = false }) => {
   const files = [post.file, post.file_a, post.file_b, post.file_c];
   const imageFiles = usePostFiles(files, [".png", ".jpg", ".jpeg", ".gif", ".webp"]);
   const pdfFiles = usePostFiles(files, [".pdf"]);
+  const externalUrl = getExternalUrl(post.external_url);
   const Heading = detail ? "h1" : "h2";
 
   return (
@@ -45,18 +55,16 @@ export const BoxCardPost: FC<Props> = ({ post, href, detail = false }) => {
           </CardAction>
         )}
       </CardHeader>
-      {(pdfFiles.length > 0 || post.external_url || imageFiles.length > 0 || post.content) && (
+      {(pdfFiles.length > 0 || externalUrl || imageFiles.length > 0 || post.content) && (
         <CardContent className="flex min-w-0 flex-col gap-4">
-          {(pdfFiles.length > 0 || post.external_url) && (
+          {(pdfFiles.length > 0 || externalUrl) && (
             <div className="flex flex-wrap items-center gap-3">
               {pdfFiles.map((fileURL, index) => (
                 <ButtonAnchorURL href={fileURL} key={fileURL}>
                   {pdfFiles.length > 1 ? `PDFファイル（その${index + 1}）` : "PDFファイル"}
                 </ButtonAnchorURL>
               ))}
-              {post.external_url && (
-                <ButtonAnchorURL href={post.external_url}>外部リンク</ButtonAnchorURL>
-              )}
+              {externalUrl && <ButtonAnchorURL href={externalUrl}>外部リンク</ButtonAnchorURL>}
             </div>
           )}
           {imageFiles.map((imageURL) => (
