@@ -1,0 +1,58 @@
+---
+title: "Reconstruction of Strong-Gravity Astrophysics,  Gravitational Waves, and
+  Cosmology   in Nakaza’s New Relativity Theory (NNRT) "
+title_en: A Unified Mapping from Real-Source Dynamics  to Observational Spacetime
+date: 2026/10/21
+file: /uploads/reconstruction-of-strong-gravity-astrophysics-gravitational-waves-and-cosmology-in-nakaza’s-new-relativity-theory-nnrt-コピー.pdf
+---
+Nakaza’s New Relativity Theory (NNRT) is not an auxiliary interpretive scheme that merely changes the 
+
+interpretation of the equations of conventional relativity while leaving their foundations intact. NNRT reverses the 
+
+very basis on which relativity is constructed. It places universal time and universal three-dimensional space at the 
+
+foundation of physical reality and assigns real inertial motion to the Galilean transformation (GT). By contrast, 
+
+the Lorentz transformation (LT) and general-relativistic metric structures are positioned as observational mappings 
+
+formed through the phase, frequency, wave number, clocks, distances, and related electromagnetic observables. 
+
+Under this reversal, relativistic effects that have conventionally been understood as the deformation or curvature 
+
+of real spacetime acquire a different physical meaning: they are phenomena observed through the transport of 
+
+electromagnetic and matter-wave phases, generated from real-source dynamics through gravitational response. 
+
+In this paper, this principle is applied consistently to strong-gravity objects, neutron-star compactness and tidal 
+
+disruption, gravitational waves, black-hole shadows, observational horizons, cosmological redshift, the cosmic 
+
+microwave background (CMB), baryon acoustic oscillations (BAO), and luminosity distance. The central structure 
+
+is a mapping in which the real state generates the observational propagation structure 𝐶𝜇𝜈, through which the 
+
+phase four-wavevector 𝐾𝜇 and the ray-bundle Jacobian 𝐷𝐵𝐴 are transported, ultimately producing observables such 
+
+as 𝑧, 𝛥𝛩, 𝐷𝐴, 𝐷𝐿, and 𝐼𝜈. NNRT does not retain the conventional theory as a parallel framework. It relocates 
+
+relativistic mathematics to the observational layer and restores universal spacetime, GT, and real matter dynamics 
+
+to the foundation. This foundational reversal changes the formulation of problems from strong gravity to 
+
+cosmology and reconstructs the physical meaning of relativity as a whole. 
+
+More specifically, NNRT replaces the black-hole horizon as a boundary of real spacetime with an output of 
+
+phase connectivity; replaces the singularity as an endpoint of spacetime with a stability problem of real matter; 
+
+replaces gravitational waves as distortions of real space with dynamical gravity-phase coupling; replaces cosmic 
+
+expansion as the stretching of real space with the real motion of the matter distribution plus observational mapping; 
+
+and separates observational acceleration from acceleration of real space. In this way, NNRT absorbs the 
+
+empirically successful mathematics of conventional relativity into the observational layer while leaving none of 
+
+its ontological foundation intact, thereby reconstructing both the physical meaning of relativity and the research 
+
+questions built upon it.
